@@ -1,0 +1,62 @@
+body {
+
+    background-color: #260836;
+    font-family: 'Quicksand';
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+
+    --default-BG-color: #260836;
+    --default-box-color: #3e097a;
+    --default-box2-color: #7558d4;
+    --default-menu-color: #d6c3ed;
+    --default-highlight-color: #fffac3;
+    --default-text-color: #ffffff;
+
+}
+
+
+
+/*Menu Bottom*/
+
+.MenuBottom{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 75px;
+    background-color: var(--default-menu-color);
+    color: var(--default-BG-color);
+    display: flex;
+    font-size: 40px;
+    justify-content: space-around;
+    padding: 2%;
+    align-items: center;
+}
+
+/*Perfil*/
+
+.Bio{
+    background-color: var(--default-box2-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;     
+}
+
+
+.Profile-Playlists{
+    background-color: var(--default-box2-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;
+}
+
+.Profile-Artists{
+    background-color: var(--default-box2-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;
+}
