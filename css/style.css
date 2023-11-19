@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    width: 1vh;
+    max-height: 1000px;
+    font-family: ;
+    
+}
+
+
+.box {
+    display: flex;
+    
+    width: 375px;           /* Ancho de 150 píxeles */
+    height: 120px;          /* Alto de 150 píxeles */
+    background: rgb(4, 4, 4);        /* Fondo de color rojo */
+    border: 1px solid #ffffff; /* Borde color negro y de 1 píxel de grosor */
+    align-items: center;
+    padding: ;
+    border-radius: 10%;
+    color: #ffffff;
+  }
+
+
+ 
+
+  .box img{
+    border-radius: 10%;
+    border: 1px solid #FCA311;
+   
+    
+    width: 100px;           /* Ancho de 150 píxeles */
+    height: 100px;          /* Alto de 150 píxeles */
+     }
+
+     .box h3 {
+        font-size: auto;
+        margin: 3rem 2rem;
+
+    }
+
+    .box p {
+        font-size: 12px;
+        margin: 1rem 0 1rem 2rem;
+
+    }
