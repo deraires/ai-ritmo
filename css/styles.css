@@ -3,7 +3,7 @@
 /* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&family=Roboto+Condensed:wght@300;700&display=swap');
 
-
+/* Initial format */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,11 +16,13 @@
 :root {
     --main-background: #000000;
     --yellow: #FFD700;
-    --gray: #9095A1;
     --purple-light: #9381FF;
     --purple-dark: #8A2BE2;
     --orange: #F6AE2D;
+    --gray-content: #9095A1;
+    --gray-background: #3f3f3f;
 } 
+
 
 .playlist-body {
     background-color: var(--main-background);
@@ -39,12 +41,13 @@ h3 {
     color: var(--orange);
 }
 
-
 .playlist-main {
     display: flex;
     justify-content: column;
 }
 
 .playlist-card {
-
+    border-radius: 5px;
+    border: none;
+    background-color: var(--gray);
 }
