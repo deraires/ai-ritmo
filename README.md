@@ -1,7 +1,5 @@
-# ai-ritmo
-Plataforma De música con mucho ritmo
-
-## Grupo: Belu y Cris
+# Grupo: Belu y Cris
+### Tarea: Ai-Ritmo
 
 ## Estructura de páginas:
 - Inicio de sesión.
