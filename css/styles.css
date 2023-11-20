@@ -76,7 +76,6 @@ body {
     align-items: center;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
-
     color: var(--color-secondary);
 }
 
