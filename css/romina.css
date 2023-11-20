@@ -19,13 +19,17 @@ body {
 
 }
 
-
+.btnLody{
+    position: fixed;
+    width: 150px;
+    right: -15px;
+}
 
 /*Menu Bottom*/
 
 .MenuBottom{
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100vw;
     height: 75px;
     background-color: var(--default-menu-color);
@@ -43,20 +47,74 @@ body {
     background-color: var(--default-box2-color);
     border-radius: 10px;
     margin: 5%;
-    display: flex;     
+    display: flex;  
+    padding: 2%;
+    color: var(--default-text-color);   
+}
+
+.Bio-btn{
+    background-color: var(--default-highlight-color);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1%;
+    color: var(--default-BG-color);
+    font-weight: 600;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.Bio-img{
+    margin: 2%;
+    width:100px;
+    height:100px;
+    border-radius:150px;
+    object-fit: cover; 
+    box-shadow:  1px 1px 4px #261c39;
+    background-color: white;
+}
+
+.Bio-info{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .Profile-Playlists{
-    background-color: var(--default-box2-color);
+    background-color: var(--default-box-color);
     border-radius: 10px;
     margin: 5%;
     display: flex;
+    padding: 2%;
+    color: var(--default-menu-color);
+    justify-content: space-around;
+}
+
+.Profile-Playlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.Playlist-img{
+    width: 155px;
+    height: 155px;
+    border-radius: 5px;
+    object-fit: cover;
+
 }
 
 .Profile-Artists{
-    background-color: var(--default-box2-color);
+    background-color: var(--default-box-color);
     border-radius: 10px;
     margin: 5%;
     display: flex;
+    padding: 2%;
+    color: var(--default-menu-color);
 }
+
+
+
