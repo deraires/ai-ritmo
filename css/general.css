@@ -23,9 +23,12 @@ body {
 
 
 
-.Fullscreen{ display: flex;
-flex-direction: column;    
-height: 100vh;}
+.Fullscreen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
 
 /*------------Reproductor musica-----------*/
 
@@ -36,7 +39,7 @@ height: 100vh;}
     bottom: 0;
     background-color: var(--default-box-color);
     height: 8%;
-    width: 100%;
+    width: 100vw;
 
 }
 
@@ -48,15 +51,15 @@ height: 100vh;}
 
 }
 
-.Rep-Circle{ 
+.Rep-Circle {
     position: relative;
-    margin-top: -9px;
+    margin-top: -6px;
     margin-bottom: 0px;
-    top:0;
-    width: 20px;
-    height: 20px;
+    top: 0;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: var(--default-highlight-color);
+    background-color: var(--default-text-color);
     animation-name: Play;
     animation-duration: 60s;
     animation-iteration-count: infinite;
@@ -76,6 +79,7 @@ height: 100vh;}
 .Rep-Song {
     width: 60px;
     height: 60px;
+    margin-left: 10px;
     padding: 10px;
 }
 
@@ -86,89 +90,113 @@ height: 100vh;}
 
 }
 
-@keyframes Play { 
-    
-0%   { left:0px; top:0px;}
-100%  {left:100%; top:0px;}
+@keyframes Play {
+
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: 100%;
+        top: 0px;
+    }
 }
 
 /*---------------------Playlist---------------------*/
 
 
 .Search-Container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 15%;
 }
 
 .Search-Container #Search-Form {
-    height: 100px;
-    min-width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.Search-Text{padding: 10px;
+.Search-Text {
+    padding: 10px;
     padding-right: 70px;
     border: none;
-    margin-top: 30px;
     font-size: 18px;
     border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;}
+    border-bottom-left-radius: 5px;
+    width: 45%;
+    height: 15px;
+    margin-left: 30px;
+}
 
 .Search-Container #Search-Form button {
 
-    padding: 11px;
+    padding: 10px;
     margin-left: 0;
-    margin-right: 10px;
-    margin-top: 30px;
-    background:var(--default-box2-color);
+    margin-left: 10px;
+    background: var(--default-box2-color);
     color: var(--default-text-color);
-    font-size: 17px;
+    font-size: 14px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
 }
 
-.Playlist{ 
+.Playlist {
     width: 90%;
     max-height: 57%;
     background-color: var(--default-box-color);
 }
 
-.Playlist-One{ display: flex;
+.Playlist-One {
+    display: flex;
     flex-direction: row;
     gap: 15px;
-     width: 100%;
+    width: 100%;
     height: 10%;
     padding: 20px;
 }
-.Playlist-Two{ display: flex;
+
+.Playlist-Two {
+    display: flex;
     flex-direction: row;
     gap: 15px;
-     width: 100%;
+    width: 100%;
     height: 10%;
     padding: 20px;
 }
-.Playlist-Three{ display: flex;
+
+.Playlist-Three {
+    display: flex;
     flex-direction: row;
     gap: 15px;
-     width: 100%;
+    width: 100%;
     height: 10%;
     padding: 20px;
 }
-.Playlist-Four{ display: flex;
+
+.Playlist-Four {
+    display: flex;
     flex-direction: row;
     gap: 15px;
-     width: 100%;
+    width: 100%;
     height: 10%;
     padding: 20px;
 }
-.Playlist-Five{ display: flex;
+
+.Playlist-Five {
+    display: flex;
     flex-direction: row;
     gap: 15px;
-     width: 100%;
+    width: 100%;
     height: 10%;
     padding: 20px;
 }
 
 
-.Playlist-Img{width: 70px;
-    height: 70px }
+.Playlist-Img {
+    width: 70px;
+    height: 70px
+}
