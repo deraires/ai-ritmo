@@ -40,6 +40,7 @@ body {
     background-color: var(--default-box-color);
     height: 8%;
     width: 100vw;
+    overflow: hidden;
 
 }
 
@@ -109,6 +110,7 @@ body {
 .Search-container {
     display: flex;
     flex-direction: row;
+    float: left;
     justify-content: space-around;
     height: 15%;
 }
@@ -117,6 +119,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: -60px;
+
 }
 
 .Search-text {
@@ -148,6 +152,8 @@ body {
     width: 90%;
     max-height: 57%;
     background-color: var(--default-box-color);
+    overflow: scroll;
+    border-radius: 10px;
 }
 
 .Playlist-one {
@@ -162,7 +168,8 @@ body {
 
 .Playlist-img {
     width: 70px;
-    height: 70px
+    height: 70px;
+    border-radius: 5px;
 }
 
 /*--------------------------- Index------------------------- */
@@ -216,4 +223,46 @@ body {
     width: 70%;
     height: 15px;
 
+}
+
+.Micro-icon {
+    color: var(--default-text-color);
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.Micro-icon :hover {
+
+    font-size: 90px;
+    color: #fffac3;
+    transition: color 0.3s;
+}
+
+.Search-container-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 15%;
+}
+
+.Search-container-center #Search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.Search-container-center #Search-form button {
+
+    padding: 10px;
+    margin-left: 0;
+    margin-left: 10px;
+    background: var(--default-box2-color);
+    color: var(--default-text-color);
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
