@@ -1,0 +1,46 @@
+* {
+    font-family: 'Montserrat';
+}
+
+body {
+    margin: 0;
+}
+
+.Brand-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Brand_img-container {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.Brand-img {
+    width: 250px;
+    
+}
+
+.Brand_logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.Brand-logo {
+    width: 32px;
+    height: 32px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+.Brand-name {
+    margin-top: 14px;
+}
+
