@@ -32,7 +32,7 @@ body {
 
 /*Menu Bottom*/
 
-.MenuBottom{
+.MenuBottom {
     position: fixed;
     bottom: 0px;
     width: 100vw;
@@ -46,7 +46,7 @@ body {
     align-items: center;
 }
 
-.MenuBottom-btn{
+.MenuBottom-btn {
     color: var(--default-box-color);
     text-decoration: none;
 }
@@ -58,7 +58,7 @@ body {
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 0;
+    bottom: 90px;
     background-color: var(--default-box-color);
     height: 8%;
     width: 100vw;
