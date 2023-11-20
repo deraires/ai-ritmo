@@ -45,6 +45,7 @@ height: 100vh;}
 
 .MenuBottom-btn{
     color: var(--default-box-color);
+    text-decoration: none;
 }
 
 

@@ -25,26 +25,6 @@ body {
     right: -15px;
 }
 
-/*Menu Bottom*/
-
-.MenuBottom{
-    position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    height: 75px;
-    background-color: var(--default-menu-color);
-    color: var(--default-BG-color);
-    display: flex;
-    font-size: 40px;
-    justify-content: space-around;
-    padding: 2%;
-    align-items: center;
-}
-
-.MenuBottom-btn{
-    color: var(--default-box-color);
-}
-
 /*Perfil*/
 .Profile{
     margin-bottom: 200px;
