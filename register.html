@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;
     0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sniglet&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <!-- --------------------------- -->
 
@@ -31,17 +32,28 @@
         <h2 class="Subtitle">Regístrate</h2>
         <div class="FormContainer">
             <form class="FormContainer-form" action="">
-                <input class="Form-inputs"type="text" placeholder="Nombre completo">
-                <input class="Form-inputs" type="email" placeholder="Email">
-                <input class="Form-inputs"type="tel" placeholder="Número de telf." pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required size="9">
-                <input class="Form-inputs" type="password" placeholder="Contraseña">
+                <input class="Form-inputs"type="text" placeholder="Nombre completo" required>
+                <input class="Form-inputs" type="email" placeholder="Email" required>
+                <input class="Form-inputs" type="number" placeholder="Número de telf." pattern="[0-9]{9}" required size="9">
+                <input class="Form-inputs" type="password" placeholder="Contraseña" required minlength="8" maxlength="14">
+                
+                <label class="TycContainer" for="Tyc">
+                    <input type="checkbox" id="Tyc">
+                    <div>
+                    Acepto los
+                    <a class="TycLink" href="tyc.html"> Términos y condiciones </a>
+                    de AI-ritmo
+                    </div>
+                    <span class="TycContainer-checkmark"></span>
+                </label>
 
                 <button class="Form-btn">Registrarse ></button>
             </form>
+        </div>
 
             <div class="OtherContainer">
                 <p class="OtherContainer-text">¿Ya tienes cuenta?</p>
-                <a class="OtherContainer-link" href="register.html">Inicia sesión</a>
+                <a class="OtherContainer-link" href="index.html">Inicia sesión</a>
             </div>
         </div>
         
