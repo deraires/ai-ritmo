@@ -16,17 +16,6 @@ body {
     align-items: center;
 }
 
-.Brand-imgContainer {
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-}
-
-.Brand-img {
-    width: 250px;
-    
-}
-
 .Brand-logoContainer {
     display: flex;
     flex-direction: row;
@@ -38,7 +27,7 @@ body {
     width: 32px;
     height: 32px;
     margin-top: 0px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
 }
 
 .Brand-name {
@@ -47,10 +36,18 @@ body {
 
 .Brand-name1 {
     margin-top: 14px;
+    margin-bottom: 12px;
     color: var(--links);
 }
 .Brand-name2 {
     margin-top: 14px;
+    margin-bottom: 12px;
+}
+
+.Subtitle {
+    margin-top: 0px;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .FormContainer {
