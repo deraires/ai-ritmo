@@ -15,7 +15,7 @@ body{
     --color-terciary:#FCA311;
     --color-quart:#CCCCCC;
 
-    background-color: var(--color-primary);
+    background-color: var(--color-primary); 
 
     margin: 0;
     padding: 0;
