@@ -23,11 +23,9 @@
     --gray-background: #3f3f3f;
 } 
 
-
 .playlist-body {
     background-color: var(--main-background);
     color: var(--gray);
-    
     font-family: 'Poppins';
 }
 
@@ -49,5 +47,6 @@ h3 {
 .playlist-card {
     border-radius: 5px;
     border: none;
-    background-color: var(--gray);
+    background-color: var(--gray-background);
+    height: 70px;
 }
