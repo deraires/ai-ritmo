@@ -1,9 +1,9 @@
-:root{
-    --color-primary:black;
+:root {
+    --color-primary: black;
     --color-secondary: white;
-    --color-terciary:#FCA311;
-    --color-terciary-low:#fca21196;
-    --color-quart:#CCCCCC;
+    --color-terciary: #FCA311;
+    --color-terciary-low: #fca21196;
+    --color-quart: #CCCCCC;
 
     background-color: var(--color-primary);
 
@@ -13,14 +13,15 @@
 
 }
 
-.Container-tit{
+.Container-tit {
     color: var(--color-terciary);
     width: 100%;
     text-align: center;
     font-size: 140%;
     margin: 0;
 }
-.Container-tit-2{
+
+.Container-tit-2 {
     font-size: 70%;
     color: var(--color-terciary);
     display: block;
@@ -28,89 +29,197 @@
     text-align: center;
 }
 
-.Container-form{
-   background-color: var(--color-quart);
-   display: flex;
-   align-items: center;
-   background-color: var(--color-terciary-low);
-   border-radius: 50px;
-   margin-top: 10px;
-   border: 0;
+.Container-form {
+    background-color: var(--color-quart);
+    display: flex;
+    align-items: center;
+    background-color: var(--color-terciary-low);
+    border-radius: 50px;
+    margin-top: 10px;
+    border: 0;
 
-   
+
 }
 
-.Container-form-input{
+.Container-form-input {
     flex-grow: 1;
     background-color: transparent;
     border: 0;
     padding: 20px;
-    color:var(--color-terciary);
-}  
-   
-
-::placeholder {
-    color:var(--color-terciary);
-  
+    color: var(--color-terciary);
 }
 
-.Container-form-button{
+
+::placeholder {
+    color: var(--color-terciary);
+
+}
+
+.Container-form-button {
     background-color: transparent;
     border: 0;
     cursor: pointer;
 }
 
-.Nav{
+.Nav {
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
 }
 
-.Nav-ai{
-    display: flex; align-items: center;
+.Nav-ai {
+    display: flex;
+    align-items: center;
 }
 
-.Nav-ai-reproductor{
-    color:white;
+.Nav-ai-reproductor {
+    color: white;
     display: flex;
     flex-direction: column;
 }
 
-.iconPause{
+.iconPause {
     color: var(--color-secondary);
     margin-right: 30px;
 }
 
 
-.Nav-list{
+.Nav-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
     padding: 0;
     margin: 0px 20px 20px 20px;
-    
-}
-.Nav-list-item{
-    
-    color:var(--color-terciary);
+
 }
 
-.Nav-list-item-icon{
+.Nav-list-item {
+
+    color: var(--color-terciary);
+}
+
+.Nav-list-item a {
+
+    color: var(--color-terciary);
+}
+
+
+.Nav-list-item-icon {
     font-size: 150%;
 }
 
-.Nav-list-item-icon--big{
-    font-size: 350%;
+.Nav-list-item-icon--big {
+    font-size: 340%;
 }
 
-.u-flex{
+.Reproductor {
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    background-color: black;
+}
+
+.Reproductor-cerrar {
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: transparent;
+
+}
+
+.Reproductor-cerrar-btn {
+    background-color: transparent;
+    border: 0;
+}
+
+.Reproductor-contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.Reproductor-contenedor-image {
+    box-shadow: 1px 1px 3px #888888;
+    width: 300px;
+    height: 300px;
+}
+
+.Reproductor-contenedor-cancion {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px
+}
+
+.Reproductor-contenedor-cancion-tit {
+    font-size: 110%;
+}
+
+.Reproductor-contenedor-cancion-artist {
+    font-weight: 200;
+}
+
+.Reproductor-contenedor-tiempos {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 60%;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.Reproductor-contenedor-tiempos-barra {
+    width: 38vh;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+}
+
+.Reproductor-contenedor-botones {
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 60px;
+
+
+}
+
+.BolaReproductor {
+    animation-name: reproducir;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes reproducir {
+    0% {
+        left: 60px;
+
+    }
+
+    100% {
+        left: 308px;
+
+    }
+}
+
+.u-flex {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
 }
+
 .u-centrar {
     position: fixed;
     top: 45%;
@@ -118,12 +227,22 @@
     transform: translate(-50%, -50%);
 }
 
-.u-marginRight{
+.u-marginRight {
     margin-right: 20px;
 }
 
-.u-colorTerciary{
+.u-colorTerciary {
     color: var(--color-terciary);
 }
 
+.u-iconBig {
+    font-size: 400%;
+}
 
+.isnot-active {
+    display: none;
+}
+
+.paused {
+    animation-play-state: paused;
+}
