@@ -63,6 +63,7 @@ body {
     height: 8%;
     width: 100vw;
     overflow: hidden;
+    box-shadow: ;
 
 }
 
@@ -123,6 +124,7 @@ body {
     100% {
         left: 100%;
         top: 0px;
+        background-color: #260836;
     }
 }
 
