@@ -1,0 +1,43 @@
+body {
+margin: 0;
+padding: 0;
+border: 2px solid black;
+}
+
+div {
+    border: 2px solid black;
+    margin-top: 16px;
+}
+
+.Header {
+   
+height: 38px;
+
+}
+
+.Title {
+    
+    height: 40px;
+   
+
+}
+
+.Search {
+   
+    height: 47px;
+    
+}
+
+.Carousel {
+    
+    width: 794px;
+    height: 320px;
+    display: flex;
+    gap: 16px;
+}
+
+.Card {
+    width: 254px;
+    height: 283px;
+    gap
+}
