@@ -1,0 +1,50 @@
+/* Styles for Ai Ritmo */
+
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&family=Roboto+Condensed:wght@300;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --main-background: #000000;
+    --yellow: #FFD700;
+    --gray: #9095A1;
+    --purple-light: #9381FF;
+    --purple-dark: #8A2BE2;
+    --orange: #F6AE2D;
+} 
+
+.playlist-body {
+    background-color: var(--main-background);
+    color: var(--gray);
+    
+    font-family: 'Poppins';
+}
+
+h1 {
+    color: var(--yellow);
+}
+h2 {
+    color: var(--purple-dark);
+}
+h3 {
+    color: var(--orange);
+}
+
+
+.playlist-main {
+    display: flex;
+    justify-content: column;
+}
+
+.playlist-card {
+
+}
