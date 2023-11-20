@@ -55,26 +55,36 @@
     </div>
     <div class="MenuInferior">
         <div class="MenuInferior-opcion">
-            <h1>1</h1>
+            <img src="img/music.svg" alt="">
         </div>
         <div class="MenuInferior-opcion">
-            <h1>2</h1>
+            <img src="img/music.svg" alt="">
         </div>
         <div class="MenuInferior-opcion">
-            <h1>3</h1>
+            <img src="img/music.svg" alt="">
         </div>
-        <div class="MenuInferior-opcion" id="Ia" onclick="myFunction()">Try it</div>
-        <div id="myDIV">
+        <div class="MenuInferior-opcion" onclick="menu()">
+            <img src="img/music.svg" alt="">
+        </div>
+        <div class="IA" id="Menu">
+            <div class="IA-option">
             </div>
+            <div class="IA-option">
+            </div>
+            <div class="IA-option">
+            </div>
+        </div>
     </div>
 </div>
 
     <script>
-        function myFunction() {
-           var element = document.getElementById("myDIV");
+        function menu() {
+           var element = document.getElementById("Menu");
            element.classList.toggle("mystyle");
         }
-        </script>
+
+    </script>
+
 
 
 </body>
