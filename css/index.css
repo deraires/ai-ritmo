@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-.Brand-container {
+.Main-container {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -15,7 +15,7 @@ body {
     align-items: center;
 }
 
-.Brand_img-container {
+.Brand-imgContainer {
     width: 100%;
     height: fit-content;
     text-align: center;
@@ -26,7 +26,7 @@ body {
     
 }
 
-.Brand_logo-container {
+.Brand-logoContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -42,5 +42,15 @@ body {
 
 .Brand-name {
     margin-top: 14px;
+}
+
+.Form-container {
+    margin-top: 75px;
+}
+
+.Form-containerForm {
+    display: flex;
+    flex-direction: column;
+    
 }
 
