@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <style>
         body {
@@ -13,12 +15,17 @@
             font-family: Arial, sans-serif;
             overflow: hidden;
             background-color: orange;
+            /* display: flex; */
+            flex-direction: column;
+            max-height: 100vh;
+            /* justify-content: space-between; */
         }
 
         .pages {
             display: flex;
-            height:100vh;
-            width: 300%; /* Ancho total de las páginas (100% * número de páginas) */
+            height: 80vh;
+            width: calc(100% * 5);
+            /* Ancho total de las páginas (100% * número de páginas) */
             transition: transform 1.5s ease;
         }
 
@@ -28,14 +35,16 @@
             color: white;
         }
 
-        #page1 { 
-            background-color: #3498db; 
+        #page1 {
+            background-color: #3498db;
         }
-        #page2 { 
-            background-color: #2ecc71; 
+
+        #page2 {
+            background-color: #2ecc71;
         }
-        #page3 { 
-            background-color: #e74c3c; 
+
+        #page3 {
+            background-color: #e74c3c;
         }
 
         a {
@@ -52,47 +61,97 @@
             background-color: white;
             color: red;
         }
+
         nav {
+            padding: 10px;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
             position: fixed;
-            display:flex;
-            bottom:0;
+            display: flex;
+            bottom: 0;
+        }
+
+        #My-box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+
+            background: red;
+
+            transition: width 2s, height 2s;
+        }
+
+        #My-box.Big {
+            width: 100px;
+            height: 100px;
+
+            transition: width 1s, height 5s;
         }
     </style>
-</head>
-<body>
+    </head>
 
-    <div class="pages">
-        <div id="page1" class="page">
-            <h1>Página 1</h1>
-            <p>Contenido de la página 1...</p>
+    <body>
+
+        <div class="pages">
+            <div id="page1" class="page">
+                <h1>Página 1</h1>
+                <p>Contenido de la página 1...</p>
+
+                <div id="My-box" class="">
+                </div>
+
+                <button onclick='document.getElementById("My-box").style.display="block"'>Mostrar</button>
+                <button onclick='document.getElementById("My-box").style.display="none"'>Ocultar</button>
+                <button onclick="changeSize('agrandar')">agrandar</button>
+                <button onclick="changeSize('achicar')">achicar</button>
+            </div>
+
+            <div id="page2" class="page">
+                <h1>Página 2</h1>
+                <p>Configuración de botones!</p>
+            </div>
+
+            <div id="page3" class="page">
+                <h1>Página 3</h1>
+                <p>Contenido de la página 3...</p>
+            </div>
         </div>
 
-        <div id="page2" class="page">
-            <h1>Página 2</h1>
-            <p>Contenido de la página 2...</p>
-        </div>
-
-        <div id="page3" class="page">
-            <h1>Página 3</h1>
-            <p>Contenido de la página 3...</p>
-        </div>
-    </div>
 
 
+        <nav>
+            <a href="#" onclick="changePage(0)">Página 1</a>
+            <a href="#" onclick="changePage(1)">Página 2</a>
+            <a href="#" onclick="changePage(2)">Página 3</a>
+        </nav>
 
-    <nav>
-        <a href="#" onclick="changePage(0)">Página 1</a>
-        <a href="#" onclick="changePage(1)">Página 2</a>
-        <a href="#" onclick="changePage(2)">Página 3</a>
-    </nav>
+        <script>
 
-    <script>
-        function changePage(pageIndex) {
-            const pagesContainer = document.querySelector('.pages');
-            const offset = pageIndex * -(100/3); // Ancho de cada página (100%) multiplicado por el índice
+            function changeSize(size) {
 
-            pagesContainer.style.transform = `translateX(${offset}%)`;
-        }
-    </script>
-</body>
+                const myBox = document.getElementById("My-box");
+
+                // Agregar o quitar clase
+                // myBox.classList.toggle("Big");
+
+                if (size == "agrandar") {
+                    myBox.classList.add("Big");
+                } else {
+                    myBox.classList.remove("Big");
+                }
+            }
+
+
+            function changePage(pageIndex) {
+                const pagesContainer = document.querySelector('.pages');
+
+
+                const offset = pageIndex * -(100 / 3); // Ancho de cada página (100%) multiplicado por el índice
+
+                pagesContainer.style.transform = `translateX(${offset}%)`;
+            }
+        </script>
+    </body>
+
 </html>
