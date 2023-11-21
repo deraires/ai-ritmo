@@ -17,7 +17,7 @@
     --main-background: #000000;
     --yellow: #FFD700;
     --purple-light: #9381FF;
-    --purple-dark: #8A2BE2;
+    --purple-dark: #7a5af5;
     --orange: #F6AE2D;
     --gray-content: #9095A1;
     --gray-background: #3f3f3f;
@@ -51,6 +51,7 @@ h3 {
 
 .playlist-header {
     padding: 0 3%;
+    margin: 0;
 }
 
 .playlist-main {
@@ -83,6 +84,10 @@ h3 {
     padding: 5px 0px;
 }
 
+.playlist-card h1 {
+    font-size: 15px;
+    font-weight: normal;
+} 
 .playlist-card h2 {
     font-size: 15px;
     font-weight: normal;
@@ -102,3 +107,257 @@ h3 {
     color: var(--yellow);
 }
 
+  /* Header Container */
+  .header-container-dera {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    margin-bottom: 5px; 
+  }
+
+  /* Greeting Message */
+  .greeting {
+    font-size: 1.2em;
+    font-weight: 600; 
+  }
+
+  /* Profile Container */
+  .profile-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+  }
+
+  /* Profile Picture */
+  .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('https://images.pexels.com/photos/7090876/pexels-photo-7090876.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Search Container */
+  .search-container-dera {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1E2128FF; 
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 2%; 
+  }
+
+  /* Search Input */
+  .search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    outline: none;
+  }
+
+  /* Search Icon */
+  .search-icon {
+    color: #b18cfe;
+    margin-right: 10px;
+  }
+
+  /* Main Container (The Player and Nav Bar) */
+  .main-container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #121212; 
+    padding: 10px;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /* Player Container */
+  .player-container {
+    width: 90%;
+    max-width: 390px;
+   
+    background: #1C1C1C;
+    border-radius: 8px;
+    box-shadow: 0px 4px 9px #171a1f, 0px 0px 2px #171a1f;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+    position: fixed;
+  }
+
+  /* Song Cover */
+  .song-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  /* Song Info */
+  .song-info {
+    flex: 1;
+  }
+
+  .song-title {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  .artist {
+    margin: 0;
+    color: #B3B3B3;
+  }
+
+  /* Play Button */
+  .play-button {
+    background-color: transparent;
+    color: #b18cfe;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+  }
+
+  /* Play Button Hover Effect */
+  .play-button:hover {
+    color: #b18cfe;
+  }
+
+  /* Nav Bar Container */
+  .nav-container-footer {
+    width: 90%;
+    max-width: 393px;
+    height: 60px;
+    background: #1E2128FF; 
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: fixed;
+  }
+
+  /* Nav Bar Item */
+  .nav-item {
+    padding: 10px 19.5px;
+    display: flex;
+    flex: 1 1 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+    background: #000000FF; 
+    border-radius: 8px; 
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  /* Nav Bar Hover Effect */
+  .nav-item:hover {
+    color: #b18cfe; 
+    background: #00000080; 
+  }
+
+  /* Nav Bar Selected Item */
+  .nav-item.selected {
+    position: relative;
+    font-weight: 700;
+    color: #b18cfe; 
+    background: #000000FF; 
+  }
+
+  /* Icon styles */
+  .nav-item i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+
+  /* Content Container */
+  .content-container {
+    width: 90%;
+    max-width: 800px; 
+    background: #121212;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; 
+    flex-grow: 1;
+    overflow-y: scroll;
+  }
+
+  /* Title styles */
+  .title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  /* See More Button */
+  .see-more-button {
+    background: #1E2128FF;
+    color: #b18cfe;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  /* See More Button Hover Effect */
+  .see-more-button:hover {
+    background: #00000080; 
+    color: #ffffff;
+  }
+
+  /* Genre and Artist Container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  /* Genre and Artist Item */
+  .grid-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 120px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+  }
+
+  /* Media query so it is responsive */
+  @media (max-width: 600px) {
+    .search-container,
+    .player-container,
+    .nav-container,
+    .content-container {
+      width: 90%;
+      max-width: none;
+    }
+  }
