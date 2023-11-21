@@ -7,7 +7,55 @@
     --links: #FD1887;
     --background1: #FDD4D8;
     --background2: #F1EAF6;
+
+
+
 }
 
 
 /* ------------------------- */
+
+/* Batman */
+
+.Aitman a {
+    width: 98px;
+    height: 99px;
+    border-radius: 126.5px;
+    border: 10px solid var(--links);
+    position: fixed;
+    right: 8px;
+    bottom: 40px;
+    background: url(../images/batman.gif);
+    background-size: 250%;
+    background-position: center;
+    background-position-y: -48px;
+    display: block;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+
+}
+
+/* ------------------------- 
+
+    <div class="Aitman">
+    <a href="#">
+    </a>
+</div>
+
+
+<div class="Title">
+    Hi, Martha
+</div>
+
+<div class="Search">
+
+    <img src="Icons/search-magnifiying-glass.svg" alt="">
+    <input type="search" placeholder="Search music">
+
+  
+
+
+</div>
+  
+  
+*/
