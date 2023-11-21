@@ -14,7 +14,7 @@
 }
 
 :root {
-    --main-background: #000000;
+    --main-background: #121212;
     --yellow: #FFD700;
     --purple-light: #9381FF;
     --purple-dark: #8A2BE2;
@@ -24,7 +24,7 @@
 } 
 
 body {
-    background-color: black;
+    background-color: var(--main-background);
 }
 
 .playlist {
