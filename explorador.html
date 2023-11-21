@@ -6,6 +6,7 @@
     <title>Explorar</title>
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+    <link rel="stylesheet" href="/java/java.javascript">
 </head>
 <body>
 
@@ -21,9 +22,22 @@
         <div>
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-            <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -30px;margin-left: -64px; position: fixed;" loop autoplay></dotlottie-player>
+            <button class="Btn-open-popup"> <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -30px;margin-left: -64px; position: fixed;" loop autoplay></dotlottie-player>
+        </button> </div>
         </div>
-        </div>
+
+        <dialog id="Popup" class="overlay">
+            <div class="Popup">
+                <form id="Popup-form">
+                    <h2>¿En que puedo ayudarte?</h2>
+                
+                    <div class="content">
+
+                <button class="Btn-close-popup">cerrar</button>
+                </form>
+                </div>
+            </div>
+        </dialog>
 
     
         <div class="Filter">
