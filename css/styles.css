@@ -27,12 +27,47 @@ body {
 
 }
 
-.fa-circle-play {
+/* .headphones {
 
-    font-size: 12rem;
-
+    font-size: 1rem;
     color: #FCA311;
     font-weight: lighter;
+
+} */
+
+.headphones {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+
+    color: #FCA311;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.headphones img {
+
+    /* align-items: center;
+    align-content: center;
+    top: 0;
+    left: 0; */
+    animation: zoomAndPan 780ms linear infinite;
+    color: #FCA311;
+}
+
+@keyframes zoomAndPan {
+
+    0%,
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.4) translate(10%, 10%);
+    }
 }
 
 
@@ -45,6 +80,10 @@ body {
     color: #FCA311;
     position: fixed;
     right: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.606);
+    padding: 1.5rem;
+    border-radius: 15%;
+
 
 }
 
