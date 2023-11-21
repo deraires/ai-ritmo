@@ -1,7 +1,5 @@
-# ai-ritmo
-Plataforma De musica con mucho ritmo
 
-- Romina - Alba R
+## Plataforma De musica con mucho ritmo
 
 # Ai-Ritmo -  Romina - Alba R
 
@@ -16,37 +14,35 @@ La tipografía escogida es "Quicksans", proveniente de GoogleFonts, que se carac
 
 En segundo lugar, el logo representa a Lody haciendo uso de unos cascos para escuchar música junto al nombre de la app "Ai-Ritmo".
 Los iconos de la app vienen de FontAwesome, una librería de fuentes e íconos basado en CSS.
-Las imagenes provienen de Pexels, un banco de imágenes de libre uso.
+Las imágenes provienen de Pexels, un banco de imágenes de libre uso.
 
 ### Páginas y contenido
 
 1. Inicio de sesión y Registro para acceder a la app, con nombre de usuario o el e-mail.
 2. Términos y condiciones
+3. *Home*, donde se encuentra Lody, para ofrecernos diferentes funcionalidades.
+4. Explorador, para realizar búsquedas de canciones y playlist.
+5. *Shorts*, donde puedes ver pequeños clips de las canciones de los artistas en formato video.
+6. Perfil, donde el usuario tendrá su información personal, sus playlist y sus artistas favoritos.
+7. Perfil del artista, sus álbumes y sus top 5 canciones.
+8. *Playlist* del usuario. 
 
 
 
+![Boceto wireframe](img/boceto.png)
+
+### Especificaciones del código
+
+Este proyecto está codificado para ser visualizado en formato móvil, siguiendo la regla Mobile-First, adaptándose concretamente a la anchura y altura del Iphone XR.
+
+El código CSS se encuentra escrito siguiendo la nomenclatura Suit CSS.
+
+Dentro de los archivos del proyecto encontramos todos los HTML y tres carpetas que separan los css creados, las imágenes usadas en la creación de la app y las funcionalidades de Javascript.
 
 
+***
 
 
-
-
-
-
-
-
-
-### Actividad:
-Crear su propio branch para ti y tu compañero/a.
-
-### Requsitios: 
-- Incluir un archivo README.md con título, descripción y todos los items que crean pertinentes.
-- Utilizar algún tipo de animacion para representar a la AI
-- Utilizar transiciones donde les parezca necesario.
-- La web app debe ser Mobile-First
-
-
-![Diagrama](img/excalidraw.png)
 
 
 
