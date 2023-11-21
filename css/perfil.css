@@ -14,18 +14,18 @@
     background-color: var(--black);
     display: flex;
     align-items: center;
+    position: fixed;
 }
 
 .Imagen{
     width: 100%;
-    height: 30%;
-    background-color:var(--black);
+    height: 40%;
 }
 
 .Imagen img{
 width: 100%;
 border-radius: 50px;
-
+margin-top: 20px;
 }
 
 .Ajustes{
@@ -54,4 +54,8 @@ border-radius: 50px;
 
 .Cerrar{
     margin-left: 35%;
+}
+
+h3{
+    font-family: 'Karla';
 }

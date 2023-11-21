@@ -11,6 +11,11 @@
 
 }
 
+h4{
+    font-family: 'Karla';
+    margin-bottom: 5px;
+}
+
 .Contenedor{
     width: 100%;
     height: 100vh;
