@@ -9,16 +9,87 @@ body {
     margin: 0;
 }
 
+.BoxPlays {
+    display: flex;
+    flex-direction: column;
+    height: 100% * 5;
+    width: 100vh;
+    /* Ancho total de las páginas (100% * número de páginas) */
+    transition: transform 1.5s ease;
+}
+
 .BoxPlay {
 
     background-image: url("https://images.pexels.com/photos/730256/pexels-photo-730256.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
-    /* margin-top: 3rem; */
+
     max-width: -13PX;
     height: 89vh;
     margin: 0;
-    /* border: 1px solid white;
-    padding: 1rem;
-    border-radius: 10%; */
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay1 {
+
+    background-image: url("https://images.pexels.com/photos/67566/palm-tree-palm-ocean-summer-67566.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay2 {
+
+    background-image: url("https://images.pexels.com/photos/2242170/pexels-photo-2242170.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay3 {
+
+    background-image: url("https://oliveriotours.com/wp-content/uploads/2023/02/Oliverio-Tours-Entradas-Posts-Banner-Vertical-Cali-Salsa-y-cultura-3.png");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay4 {
+
+    background-image: url("https://images.pexels.com/photos/2422253/pexels-photo-2422253.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
     background-repeat: no-repeat;
 
     display: flex;
@@ -83,9 +154,29 @@ body {
     background-color: rgba(0, 0, 0, 0.606);
     padding: 1.5rem;
     border-radius: 15%;
+    top: 14rem;
+    padding: 1rem;
+}
 
+.movesong {
+    height: 10rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.0rem;
+    justify-content: space-between;
+    color: #FCA311;
+    position: fixed;
+    right: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.606);
+    padding: 1.5rem;
+    border-radius: 15%;
+    bottom: 10rem;
 
 }
+
+
+
 
 .BoxProfile {
     display: flex;
@@ -128,4 +219,8 @@ body {
     width: 150px;
     height: 150px;
     background-color: blue;
+}
+
+.Nav {
+    background-color: black;
 }

@@ -24,21 +24,87 @@
 
 
     <main>
-        <div class="BoxPlay">
-            <div class="headphones">
-                <img src="img/audio.png" alt="">
+        <div class="BoxPlays">
 
+            <div class="BoxPlay">
+                <div class="headphones">
+                    <img src="img/audio.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="BoxPlay1">
+
+                <div class="headphones">
+                    <img src="img/audio.png" alt="">
+
+                </div>
+            </div>
+
+
+            <div class="BoxPlay2">
+
+                <div class="headphones">
+                    <img src="img/audio.png" alt="">
+
+                </div>
+            </div>
+
+
+            <div class="BoxPlay3">
+
+                <div class="headphones">
+                    <img src="img/audio.png" alt="">
+
+                </div>
+            </div>
+
+
+            <div class="BoxPlay4">
+
+                <div class="headphones">
+                    <img src="img/audio.png" alt="">
+
+                </div>
             </div>
 
 
 
-            <div class="RightIcons">
-                <i class="fa-regular fa-thumbs-up"></i>
-                <i class="fa-regular fa-thumbs-down"></i>
-                <i class="fa-regular fa-message"></i>
-                <i class="fa-solid fa-share"></i>
 
-            </div>
+
+        </div>
+
+
+        <div class="RightIcons">
+            <i class="fa-regular fa-thumbs-up"></i>
+            <i class="fa-regular fa-thumbs-down"></i>
+            <i class="fa-regular fa-message"></i>
+            <i class="fa-solid fa-share"></i>
+            <i class="fa fa-forward" aria-hidden="true"></i>
+            <i class="fa fa-backward" aria-hidden="true"></i>
+
+
+
+        </div>
+
+        <div class="movesong">
+            <button onclick="changeSing(0)">1</button>
+            <button onclick="changeSing(1)">2</button>
+            <button onclick="changeSing(2)">3</button>
+            <button onclick="changeSing(3)">4</button>
+            <button onclick="changeSing(4)">5</button>
+        </div>
+
+
+
+        <script>
+            function changeSing(pageIndex) {
+                const pagesContainer = document.querySelector('.BoxPlays');
+                const offset = pageIndex * -(100 / 5); // Ancho de cada página (100%) multiplicado por el índice
+
+                pagesContainer.style.transform = `translateY(${offset}%)`;
+            }
+        </script>
         </div>
 
     </main>
@@ -73,6 +139,7 @@
     </nav>
 
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
 
 
 </html>
