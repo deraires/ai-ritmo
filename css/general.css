@@ -308,3 +308,47 @@ body {
     border: none;
     cursor: pointer;
 }
+
+/*--------------Explorador------------------*/
+
+.Filter {
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    height: 70%;
+    width: 100vw;
+}
+
+.Filter-child1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+
+}
+
+.Filter-child2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+}
+
+.Filter-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--default-text-color);
+    background-color: #7558d4;
+    height: 80px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.Explorador-title {
+    color: var(--default-text-color);
+    margin-bottom: 0px;
+}
