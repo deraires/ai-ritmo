@@ -4,7 +4,7 @@
 
 ## **Miembros de nuestro equipo**
 
-- Sina 	`#FF1686` :hibiscus:
+- Sina :hibiscus:
 - Alba :cherry_blossom:
 
 
