@@ -9,7 +9,6 @@
     <title>Bienvenido a AI-RITMO</title>
 </head>
 <body>
-    <!-- LOGIN Y REGISTRO -->
     <div class="Marca">
         <img class="Marca-imagen" src="img/airitmo.png" alt="airitmo" >
         <h3 class="Marca-nombre">AI-RITMO</h3>
@@ -41,9 +40,16 @@
 
         <label for="password">Contraseña</label>
         <input type="password" name="password" id="password" placeholder="Contraseña">
-
-        <button class="Form-boton" type="submit">Inicia sesión</button>
+        <div class="Form-remember">
+            <input type="checkbox" name="check" id="check" style="margin: 0; margin-right: 10px;"> 
+            <label for="check" style="flex-grow: 1; font-size: 80%;">Recordarme</label>
     
+        </div>
+        <button class="Form-boton" type="submit">Inicia sesión</button>
+
+        <a href="registro.html" class="Form-registro">¿No tienes cuenta?</a>
+  
+       
     </div>
    </form>
 </body>

@@ -1,0 +1,49 @@
+
+.Container-tit {
+    color: var(--color-terciary);
+    width: 100%;
+    text-align: center;
+    font-size: 140%;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.Container-tit-2 {
+    font-size: 70%;
+    color: var(--color-terciary);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.Container-form {
+    background-color: var(--color-quart);
+    display: flex;
+    align-items: center;
+    background-color: var(--color-terciary-low);
+    border-radius: 50px;
+    margin-top: 10px;
+    border: 0;
+
+
+}
+
+.Container-form-input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: 0;
+    padding: 20px;
+    color: var(--color-terciary);
+}
+
+
+::placeholder {
+    color: var(--color-terciary);
+
+}
+
+.Container-form-button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
