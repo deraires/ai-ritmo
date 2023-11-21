@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+
+<body>
+
+   
+<div class="header-container">
+    <div class="greeting">
+      Hello Jordan
+    </div>
+  
+    
+    <div class="profile-container">
+      <div class="profile-picture"></div>
+    </div>
+  </div>
+  
+  
+  <div class="search-container">
+    <div class="search-icon">
+      <i class="fas fa-search"></i>
+    </div>
+    <input type="text" class="search-input" placeholder="Search">
+  </div>
+  
+  
+  <div class="content-container">
+    
+    <div class="title-container">
+      <div class="title">Genres</div>
+      <button class="see-more-button">See More</button>
+    </div>
+  
+    <!-- Genres-->
+    <div class="grid-container">
+      <!-- Row 1 -->
+      <div class="grid-item" style="background-image: url('image');">Folk</div>
+      <div class="grid-item" style="background-image: url('image');">Indie</div>
+      <!-- Row 2 -->
+      <div class="grid-item" style="background-image: url('image');">Pop</div>
+      <div class="grid-item" style="background-image: url('image');">R&B</div>
+      <!-- Row 3 -->
+      <div class="grid-item" style="background-image: url('image');">Latin</div>
+      <div class="grid-item" style="background-image: url('image');">Hip-Hop</div>
+    </div>
+  
+    
+    <div class="title-container">
+      <div class="title">Artists</div>
+      <button class="see-more-button">See More</button>
+    </div>
+  
+    <!-- Artists-->
+    <div class="grid-container">
+      <!-- Row 1 -->
+      <div class="grid-item" style="background-image: url('image');">Alt-J</div>
+      <div class="grid-item" style="background-image: url('image');">The Marias</div>
+      <!-- Row 2 -->
+      <div class="grid-item" style="background-image: url('image');">ELIZA</div>
+      <div class="grid-item" style="background-image: url('image');">DRAMA</div>
+    </div>
+  
+  </div>
+  
+  <!-- Main Container (The Player and Nav Bar) -->
+  <div class="main-container">
+  
+  
+    <div class="player-container">
+      <img src="https://i.scdn.co/image/ab6761610000e5eba37a2e21b6b2d1aa22826548" alt="Song Cover" class="song-cover">
+  
+      
+      <div class="song-info">
+        <h3 class="song-title">Ruthless</h3>
+        <p class="artist">The Marias</p>
+      </div>
+  
+      
+      <button class="play-button" id="playButton"><i class="far fa-circle-play"></i></button>
+    </div>
+  
+   
+    <div class="nav-container">
+    
+      <div class="nav-item selected" onclick="selectNav('home')">
+        <i class="far fa-house"></i>
+        Home
+      </div>
+  
+      <!-- Playlists -->
+      <div class="nav-item" onclick="selectNav('playlists')">
+        <i class="far fa-music"></i>
+        Playlists
+      </div>
+  
+      <!-- Profile -->
+      <div class="nav-item" onclick="selectNav('profile')">
+        <i class="far fa-user"></i>
+        Profile
+      </div>
+  
+      <!-- Shorts -->
+      <div class="nav-item" onclick="selectNav('shorts')">
+        <i class="far fa-video"></i>
+        Shorts
+      </div>
+  
+      <!-- AI -->
+      <div class="nav-item" onclick="selectNav('ai')">
+        <i class="far fa-message"></i>
+        AI
+      </div>
+    </div>
+  
+  </div>
+  
+  <!-- Script to play button hover effect from play to pause -->
+  <script>
+    const playButton = document.getElementById('playButton');
+  
+    playButton.addEventListener('mouseenter', function() {
+      playButton.innerHTML = '<i class="far fa-circle-pause"></i>';
+    });
+  
+    playButton.addEventListener('mouseleave', function() {
+      playButton.innerHTML = '<i class="far fa-circle-play"></i>';
+    });
+  
+    // nav bar selection
+    function selectNav(navName) {
+      // Reset all to not selected
+      const navItems = document.querySelectorAll('.nav-item');
+      navItems.forEach(navItem => navItem.classList.remove('selected'));
+  
+      // Turn on the selected nav item
+      const selectedNavItem = document.querySelector(`.nav-item.${navName}`);
+      selectedNavItem.classList.add('selected');
+    }
+  </script>
+    <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
