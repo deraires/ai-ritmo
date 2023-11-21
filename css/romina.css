@@ -90,6 +90,7 @@ body {
     height: 155px;
     border-radius: 5px;
     object-fit: cover;
+    box-shadow:  1px 1px 4px #261c39;
 }
 
 .Profile-Artists{
@@ -124,4 +125,83 @@ body {
 }
 
 
+
+/*Registro e Inicio de sesión*/
+/*animacion fondo*/
+.bg-animado{
+    position: fixed;
+    height: 100vh;
+    background: rgb(214,195,237);
+    background: linear-gradient(135deg, rgba(214,195,237,1) 0%, rgba(62,9,122,1) 100%);
+    background-size: 300% 100%;
+    animation: gradient 10s ease infinite;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.inicio{
+    position: fixed;
+    top: 300px;
+    background-color: var(--default-box2-color);
+    border-radius: 10px;
+    margin: 5%;
+    padding: 3%;
+    color: var(--default-text-color);
+    box-shadow:  3px 5px 19px  #261c39;
+
+}
+
+.inicio-btns{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+.inicio-btn{
+    background-color: var(--default-highlight-color);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 2%;
+    color: var(--default-BG-color);
+    font-weight: 600;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.anuncio{
+    background-color: var(--default-text-color);
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    color: var(--default-BG-color);
+    font-size: 13px;
+    padding: 4%;
+    margin: 10%;
+    position: relative;
+    animation: notification ease 7s infinite; 
+}
+
+@keyframes notification{
+    0% {
+        bottom: -800px;
+    }
+    50% {
+        opacity: 95%;
+    }
+    100% {
+        bottom: -600px;
+        opacity: 0;
+    }
+}
 
