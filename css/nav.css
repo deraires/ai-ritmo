@@ -86,6 +86,7 @@ body {
     padding: 10px;
     z-index: 1;
     width: 100%;
+    position: relative;
   }
 
   /* Player Container */
@@ -101,6 +102,7 @@ body {
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px; 
+    position: fixed;
   }
 
   /* Song Cover */
@@ -159,6 +161,7 @@ body {
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    position: fixed;
   }
 
   /* Nav Bar Item */
@@ -205,6 +208,8 @@ body {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px; 
+    flex-grow: 1;
+    overflow-y: scroll;
   }
 
   /* Title styles */
