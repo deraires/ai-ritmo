@@ -1,6 +1,7 @@
 # ai-ritmo
 Plataforma De musica con mucho ritmo
 
+
 ### Grupos:
 - Cristina - Belen
 - Pablo - Kike
