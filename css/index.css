@@ -2,22 +2,33 @@
     margin: 0px;
 }
 
+:root {
+    --primary: #E600A0;
+    --secondary: #0055E6;
+    --third: #BBE601;
+    --black: #000000;
+    --white: #FFFFFF;
+
+}
+
 .Contenedor{
     width: 100%;
     height: 100vh;
-    background-color: aqua;
+    /*background-color: aqua;*/
     display: flex;
     flex-direction: column;
 }
 .Atras{
     width: 100%;
     height: 10%;
-    background-color: rgb(29, 68, 68);
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
 }
 .MenuSuperior{
     width: 100%;
     height: 15%;
-    background-color: rgb(255, 247, 0);
+    background-color: var(--black);
     overflow-x: scroll;
     white-space: nowrap;
 }
@@ -31,15 +42,15 @@
     display: inline-block;
 }
 
-.MenuSuperior-opcion img{
-    height: 90%;
-    margin-left: 10%;
+.MenuSuperior-opcion i{
+    margin-left: 18%;
+    margin-top: 10%;
 }
 
 .Contenido{
     width: 100%;
     height: 70%;
-    background-color: rgb(255, 132, 0);
+    background-color:var(--black);
     overflow-y: scroll;
 }
 
@@ -54,29 +65,74 @@
 .Reproductor{
     width: 100%;
     height: 10%;
-    background-color: rgb(255, 0, 255);
-}
-.MenuInferior{
-    width: 100%;
-    height: 10%;
-    background-color: rgb(0, 255, 72);
+    background-color: var(--black);
+    position: fixed;
+    bottom:10%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-.MenuInferior-opcion{
-    width: 15%;
-    height: 80%;
-    background-color: blanchedalmond;
-    margin:8px;
-    border-radius: 20%;
+.Foto{
+    width: 20%;
+    height: 94%;
+    /*background-color: rgb(255, 255, 255);*/
     display: flex;
     justify-content: center;
 }
 
+.Foto img{
+    width: 80%;
+    border-radius: 10%;
+}
+
+.Info{
+    width: 80%;
+    height: 94%;
+    background-color: rgb(232, 39, 39); 
+    padding-left: 20px;
+}
+
+.Reproducir{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Reproducir i{
+    margin-right: 10%;
+}
+
+.MenuInferior{
+    width: 100%;
+    height: 10%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+}
+
+.MenuInferior-opcion{
+    width: 15%;
+    height: 50%;
+    /*background-color: blanchedalmond;*/
+    margin:8px;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
 .MenuInferior-opcion:active{
     background-color: aqua;
+}
+
+.MenuInferior-opcion a{
+    margin: 0px;
+    padding: 0px;
 }
 
 .IA{
@@ -84,7 +140,7 @@
 }
 
 .IA-option{
-    background-color: rgb(76, 153, 153);
+    background-color: var(--black);
     width: 50px;
     height: 50px;
     display: flex;
@@ -109,4 +165,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.icono-home {
+    font-size: 2em;
+    color: var(--white);
+}
+
+.icono-nav {
+    font-size: 2em;
+    color: var(--third);
+}
+
+.icono-superior{
+    font-size: 3em;
+    color:var(--primary);
 }

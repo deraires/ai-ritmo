@@ -1,0 +1,57 @@
+*{
+    color:white;
+}
+.Contenedor{
+    width: 100%;
+    height: 100vh;
+    /*background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+}
+.Atras{
+    width: 100%;
+    height: 10%;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+}
+
+.Imagen{
+    width: 100%;
+    height: 30%;
+    background-color:var(--black);
+}
+
+.Imagen img{
+width: 100%;
+border-radius: 50px;
+
+}
+
+.Ajustes{
+    width: 100%;
+    height: 100%;
+    background-color:var(--black);
+    overflow-y: scroll;
+}
+
+.Ajustes-card{
+    border-bottom-style: solid;
+    border-bottom-color: coral;
+    width: 90%;
+    height: 15%;
+    margin:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icono-arrow {
+    font-size: 2em;
+    color: var(--white);
+}
+
+.Cerrar{
+    margin-left: 35%;
+}

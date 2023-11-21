@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="Contenedor">
+    <div class="Atras">
+        <i class="fa-solid fa-arrow-left icono-home"></i>
+    </div>
+    <div class="MenuSuperior">
+        <div class="MenuSuperior-opcion">
+            <i class="fa-solid fa-record-vinyl icono-superior"></i>
+        </div>
+        <div class="MenuSuperior-opcion">
+            <i class="fa-solid fa-guitar icono-superior"></i>
+        </div>
+        <div class="MenuSuperior-opcion">
+            <i class="fa-solid fa-drum icono-superior"></i>
+        </div>
+        <div class="MenuSuperior-opcion">
+            <i class="fa-solid fa-compact-disc icono-superior"></i>
+        </div>
+        <div class="MenuSuperior-opcion">
+            <img src="img/music.svg" alt="">
+        </div>
+    </div>
+    <div class="Contenido">
+        <div class="Contenido-card">
+            <h1>1</h1>
+        </div>
+        <div class="Contenido-card">
+            <h1>1</h1>
+        </div>
+        <div class="Contenido-card">
+            <h1>1</h1>
+        </div>
+        <div class="Contenido-card">
+            <h1>1</h1>
+        </div>
+        <div class="Contenido-card">
+            <h1>1</h1>
+        </div>
+        <div class="Contenido-card">
+            <h1>1</h1>
+        </div>
+    </div>
+    <div class="Reproductor">
+        <div class="Foto">
+            <img src="img/portada.jpg" alt="">
+        </div>
+        <div class="Info">
+            <h2>Título canción</h2>
+            <div class="Reproducir">
+            <i class="fa-solid fa-backward icono-nav"></i>
+            <i class="fa-solid fa-play icono-nav"></i>
+            <i class="fa-solid fa-forward icono-nav"></i>
+            <i class="fa-solid fa-repeat icono-nav"></i>
+            <i class="fa-solid fa-plus icono-nav"></i>
+        </div>
+        </div>
+    </div>
+    <div class="MenuInferior">
+        <div class="MenuInferior-opcion">
+            <a href="perfil.html"><i class="fa-regular fa-user icono-nav"></i></a>
+        </div>
+        <div class="MenuInferior-opcion">
+            <a href="explorador.html"><i class="fa-solid fa-magnifying-glass icono-nav"></i></a>
+        </div>
+        <div class="MenuInferior-opcion">
+            <a href="index.html"><i class="fa-solid fa-home icono-nav"></i></a>
+        </div>
+        <div class="MenuInferior-opcion" onclick="menu()">
+            <i class="fa-regular fa-user icono-nav"></i>
+        </div>
+        <div class="IA" id="Menu">
+            <div class="IA-option">
+                <i class="fa-solid fa-arrow-left icono-home"></i>
+            </div>
+            <div class="IA-option">
+                <i class="fa-solid fa-arrow-left icono-home"></i>
+            </div>
+            <div class="IA-option">
+                <i class="fa-solid fa-arrow-left icono-home"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function menu() {
+           var element = document.getElementById("Menu");
+           element.classList.toggle("mystyle");
+        }
+
+    </script>
+
+
+
+</body>
+</html>
