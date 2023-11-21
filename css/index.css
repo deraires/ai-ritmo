@@ -1,0 +1,68 @@
+.Marca {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Marca-imagen {
+    width: 30px;
+    height: 30px;
+}
+
+.Marca-nombre {
+    color: white;
+    margin: 0;
+    font-size: 90%;
+}
+
+.WelcomeText {
+    color: white;
+    font-size: 150%;
+    width: 100%;
+    text-align: center;
+}
+
+.Botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Botones-boton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #FCA311;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.u-colorYellow{
+    color: var(--color-terciary);
+}
+
+label{
+    color: white;
+}
+
+input{
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid var(--color-terciary);
+    margin-top: 5px;
+    opacity: 0.8;
+    color: var(--color-terciary);
+    margin-bottom: 15px;
+}
+
+.Form-boton{
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #FCA311;
+    background-color: var(--color-terciary);
+    margin-top: 10px;
+    color: black;
+}
