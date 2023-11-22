@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    font-family: 'Karla';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #191414; /* Color de fondo similar al de Spotify */
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    /*background-color: #282828; /* Color del fondo de las tarjetas en Spotify */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ancho de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="checkbox"]{
+    width: 10%;
+}
+
+.Form-inicio {
+    width: 300px;
+    height: 55px;
+    border: none;
+    background-color:blueviolet;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    width: 80%;
+    height: 50px;
+    padding: 0px 25px;
+    /*background-color: white;*/
+    border: none;
+    border-radius: 10px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
