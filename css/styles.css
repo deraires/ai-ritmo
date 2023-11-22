@@ -42,11 +42,11 @@ h3 {
 .artist-container {
     background-color: var(--main-background);
     color: var(--gray);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 0 5px;
+    height: 100vh;
 }
 
 .artist-main-content {
@@ -56,7 +56,8 @@ h3 {
     flex-direction: column;
     gap: 7px;
     overflow-y: scroll;
-
+    max-height: 90%;
+    height: 60%;
 }
 
 .artist-carousel {
@@ -65,16 +66,18 @@ h3 {
     width: 100%;
     flex-direction: row;
     gap: 10px;
-    height: 310px;
+    height: max-content;
+    margin: 2%;
 }
 
 .artist-carousel-card {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    min-width: 150px;
+    width: 120px;
+    min-width: 120px;
     border-radius: 5px;
     background-color: var(--gray-background);
+    height: fit-content;
 }
 
 .artist-carousel-card img {
