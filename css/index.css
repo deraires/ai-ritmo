@@ -14,6 +14,9 @@
 h4{
     font-family: 'Karla';
     margin-bottom: 5px;
+    color:var(--white);
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 .Contenedor{
@@ -94,7 +97,7 @@ h4{
 .Info{
     width: 80%;
     height: 94%;
-    background-color: rgb(232, 39, 39); 
+    /*background-color: rgb(232, 39, 39);*/ 
     padding-left: 20px;
 }
 
@@ -178,7 +181,7 @@ h4{
 }
 
 .icono-nav {
-    font-size: 2em;
+    font-size: 1.5em;
     color: var(--third);
 }
 
