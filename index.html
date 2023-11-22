@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap">
     <title>Document</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <div class="Contenedor">
+        <div class="Logo">
+            <img class="Logo-1" src="img/logo-circulo.png" alt="">
+            <img class="Logo-2" src="img/logo-letras2.png" alt="">
+        </div>
+        <div class="Form">
+            <form class="Form-form" action="">
+                <input class="Form-input"type="email" placeholder="Email" required>
+                <input class="Form-input" type="password" placeholder="Contraseña" required>
+
+                <a href="explorador.html" class="Form-inicio">Iniciar sesión</a>
+
+            </form>
+            <div class="OtherContainer">
+                <a class="OtherContainer-link" href="explorador.html">Crear cuenta nueva</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const imagen2 = document.querySelector(".Logo-1");
+
+        // Agregar una clase para la animación al cargar la página
+        imagen2.classList.add("rotar");
+        });
+
+    </script>
 </body>
 </html>
