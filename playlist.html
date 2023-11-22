@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +12,99 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/aiRitmo.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    
-<header>
 
-</header>
+    <header>
+
+    </header>
 
 
-    <div class="box">
-        
+    <div class="BoxPlayList">
+
         <img src="img/artista1.png" alt="">
-    <div class="text">
+        <div class="text">
 
-        <h3>Nombre de artista</h3>
-        <p>Nombre de canción</p>
+            <h3>Nombre de canción</h3>
+
+            <div class="PlaySing">
+                <span>Nombre de artista</span>
+                <p>|</p>
+                <span>Genero</span>
+                <p>|</p>
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </div>
+            <p>Duración</p>
+
+        </div>
     </div>
 
+    <div class="BoxPlayList">
+
+        <img src="img/artista1.png" alt="">
+        <div class="text">
+
+            <h3>Nombre de canción</h3>
+
+            <div class="PlaySing">
+                <span>Nombre de artista</span>
+                <p>|</p>
+                <span>Genero</span>
+                <p>|</p>
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </div>
+
+
+        </div>
+
+
     </div>
-   
+    <div class="BoxPlayList">
+
+        <img src="img/artista1.png" alt="">
+        <div class="text">
+
+            <h3>Nombre de canción</h3>
+
+            <div class="PlaySing">
+                <span>Nombre de artista</span>
+                <p>|</p>
+                <span>Genero</span>
+                <p>|</p>
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="BoxPlayList">
+
+        <img src="img/artista1.png" alt="">
+        <div class="text">
+
+            <h3>Nombre de canción</h3>
+
+            <div class="PlaySing">
+                <span>Nombre de artista</span>
+                <p>|</p>
+                <span>Genero</span>
+                <p>|</p>
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
 
     <nav class="Nav">
 
@@ -40,14 +114,14 @@
                 background="transparent" speed="1" style="width: 90px; " loop autoplay>
             </dotlottie-player>
             <div class="u-flex">
-                
+
                 <div class="Nav-ai-reproductor">
                     <span>AI mucho ritmo</span>
                     <span style="font-size: 70%; font-weight: 100;">Pepita. Ritmo</span>
                 </div>
                 <i class="fa-solid fa-pause iconPause"></i>
             </div>
-            
+
         </div>
 
 
@@ -61,6 +135,14 @@
 
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
+    <script>
+        var infoplaylist = {
+            nombre: "NombreCancion",
+            artista: "NombreArtista",
+            genero: "Genero",
+
+        }
+    </script>
 
 </html>
 </body>

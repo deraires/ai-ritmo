@@ -9,6 +9,11 @@ body {
     margin: 0;
 }
 
+main {
+    display: flex;
+
+}
+
 .BoxPlays {
     display: flex;
     flex-direction: column;
@@ -223,4 +228,67 @@ body {
 
 .Nav {
     background-color: black;
+}
+
+
+.BoxPlayList {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 375px;
+    justify-content: center;
+
+    margin-bottom: 2rem;
+
+    /* Ancho de 150 píxeles */
+    height: 120px;
+    /* Alto de 150 píxeles */
+    background: rgb(4, 4, 4);
+    /* Fondo de color rojo */
+    border: 1px solid #ffffff;
+    /* Borde color negro y de 1 píxel de grosor */
+    align-items: center;
+
+    border-radius: 10%;
+    color: #ffffff;
+}
+
+
+.BoxPlayList img {
+    border-radius: 10%;
+    border: 1px solid #FCA311;
+
+
+    width: 100px;
+    /* Ancho de 150 píxeles */
+    height: 100px;
+    /* Alto de 150 píxeles */
+}
+
+.BoxPlayList h3 {
+    font-size: auto;
+    margin: 0.5rem 2rem 0 1.5rem;
+
+
+}
+
+/* .BoxPlayList p {
+    color: #FCA311;
+    font-size: 12px;
+    margin: 1rem 0 1rem 2rem;
+
+} */
+
+.PlaySing {
+    display: flex;
+    align-items: center;
+    color: #FCA311;
+    font-size: 16px;
+    justify-content: space-between;
+    margin-left: 1.5rem;
+}
+
+.PlaySing p {
+    color: #CCCCCC;
+    font-size: larger;
 }
