@@ -1,12 +1,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
     background-color: #121212;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,21 +22,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin-bottom: 20px; 
+    padding: 10px; 
+    position: fixed;
+    background-color: #1E2128FF;
+    z-index: 1000;
   }
 
   /* Greeting Message */
   .greeting {
     font-size: 1.2em;
     font-weight: 600; 
+    color: #ffffff;
+    text-align: center;
+    flex: 1;
+    
+
   }
 
   /* Profile Container */
   .profile-container {
     display: flex;
-    align-items: center;
-    margin-right: 10px; 
+    align-items:center;
+   
   }
 
   /* Profile Picture */
@@ -44,29 +54,32 @@ body {
     background-image: url('https://images.pexels.com/photos/7090876/pexels-photo-7090876.jpeg');
     background-size: cover;
     background-position: center;
+    margin-left: 10px;
   }
 
   /* Search Container */
   .search-container {
-    width: 90%;
-    max-width: 600px; 
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 0px;
     display: flex;
-    align-items: center;
     background: #1E2128FF; 
     border-radius: 8px;
     padding: 10px;
-    margin-bottom: 20px; 
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
   }
 
   /* Search Input */
   .search-input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: #ffffff;
-    font-size: 1em;
-    outline: none;
+      width: 100%;
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+      box-sizing: border-box;
   }
 
   /* Search Icon */
@@ -80,19 +93,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky;
     top: 0;
     background: #121212; 
     padding: 10px;
     z-index: 1;
     width: 100%;
-    position: relative;
+    margin-top: auto;
+    margin: 0 auto;
+    padding-top: 126px;
   }
 
   /* Player Container */
   .player-container {
-    width: 90%;
-    max-width: 390px;
+    width: 100%;
     height: 66px;
     background: #1C1C1C;
     border-radius: 8px;
@@ -101,8 +114,9 @@ body {
     align-items: center;
     padding: 10px;
     margin-top: 20px;
-    margin-bottom: 20px; 
     position: fixed;
+    bottom: 70px;
+    z-index: 1000;
   }
 
   /* Song Cover */
@@ -151,17 +165,17 @@ body {
 
   /* Nav Bar Container */
   .nav-container {
-    width: 90%;
-    max-width: 393px;
+    width: 100%;
     height: 60px;
     background: #1E2128FF; 
     border-radius: 0;
     display: flex;
     align-items: center;
     padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
     position: fixed;
+    bottom: 0;
+    z-index: 100;
   }
 
   /* Nav Bar Item */
@@ -174,7 +188,7 @@ body {
     justify-content: center;
     color: #ffffff; 
     background: #000000FF; 
-    border-radius: 8px; 
+    border-radius: 0px; 
     cursor: pointer;
     white-space: nowrap;
     transition: background 0.3s ease, color 0.3s ease;
@@ -202,30 +216,32 @@ body {
 
   /* Content Container */
   .content-container {
-    width: 90%;
-    max-width: 800px; 
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
     background: #121212;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px; 
     flex-grow: 1;
     overflow-y: scroll;
+    padding-top: 90px;
   }
 
   /* Title styles */
   .title {
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 10px;
   }
 
   /* See More Button */
   .see-more-button {
-    background: #1E2128FF;
-    color: #b18cfe;
+    background: #b18cfe;
+    color: #121212;
     border: none;
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 5px;
+    padding: 5px 10px;
     cursor: pointer;
     font-size: 1em;
     transition: background 0.3s ease, color 0.3s ease;
@@ -233,8 +249,8 @@ body {
 
   /* See More Button Hover Effect */
   .see-more-button:hover {
-    background: #00000080; 
-    color: #ffffff;
+    background: #121212; 
+    color:  #b18cfe;
   }
 
   /* Genre and Artist Container */
