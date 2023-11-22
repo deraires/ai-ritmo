@@ -19,25 +19,48 @@
                 <input class="Search-text" type="text" placeholder="Buscar playlist">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-        <div>
+        <div><a href="#Popup1">
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-            <button class="Btn-open-popup"> <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -30px;margin-left: -64px; position: fixed;" loop autoplay></dotlottie-player>
-        </button> </div>
+             <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -30px;margin-left: -64px; position: fixed;" loop autoplay></dotlottie-player>
+       </a> </div>
         </div>
 
-        <dialog id="Popup" class="overlay">
+        <div id="Popup1" class="Overlay">
             <div class="Popup">
-                <form id="Popup-form">
+                <form id="Popup-form" action="filtros/postres.html">
                     <h2>¿En que puedo ayudarte?</h2>
-                
-                    <div class="content">
+                    <input class="Search-text-popup" type="text" placeholder="Texto">
+                        <fieldset>
+    
+                            <legend>Artistas parecidos</legend>
+    
+                            <input type="radio" id="drink" name="recipe_type">
+                            <label for="drink">Bebida</label><br>
+                            <input type="radio" id="dessert" name="recipe_type">
+                            <label for="dessert">Postre</label><br>
 
-                <button class="Btn-close-popup">cerrar</button>
+    
+                        </fieldset>
+                        <fieldset class="special">
+    
+                            <legend>Características especiales</legend>
+    
+                            <input type="checkbox" id="no_gluten" name="filtro_especial">
+                            <label for="no_gluten">Sin gluten</label><br>
+                            <input type="checkbox" id="no_lactose" name="filtro_especial">
+                            <label for="no_lactose">Sin lactosa</label><br>
+                            <input type="checkbox" id="no_sugar" name="filtro_especial">
+
+    
+                        </fieldset>
+    
+                    <a class="close" href="#">&times;</a>
+                    <div class="Content">
+                    <button id="check_button">Buscar</button>
                 </form>
                 </div>
-            </div>
-        </dialog>
+            </div> </div>
 
     
         <div class="Filter">
