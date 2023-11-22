@@ -19,6 +19,8 @@
 </head>
 <body>
 
+<Main>
+
     <div class="Header">
 
         <div class="Profile-image"> <img src="Images/Logo.svg" alt=""></div>
@@ -34,40 +36,24 @@
         </a>
     </div>
 
-    <div class="ShortsContainer">
-        <div id="Short1" class="Short">
-            <video class="Short-video" width="1100px" height="900px" autoplay muted>
-                <source src="shorts/short1.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div id="Short2" class="Short">
-            <video class="Short-video" width="1100px" height="900px" autoplay muted>
-                <source src="shorts/short2.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div id="Short3" class="Short">
-            <video class="Short-video" width="1100px" height="900px" autoplay muted>
-                <source src="shorts/short1.mp4" type="video/mp4">
-            </video>
-        </div>
-
+    <div class="Short">
+        <video class="Short-video" width="1100px" height="900px" autoplay muted>
+            <source src="shorts/short1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="Short">
+        <video class="Short-video" width="1100px" height="900px" autoplay muted>
+            <source src="shorts/short2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="Short">
+        <video class="Short-video" width="1100px" height="900px" autoplay muted>
+            <source src="shorts/short3.mp4" type="video/mp4">
+        </video>
     </div>
 
-    <nav>
-        <a href="#" onclick="changeShort(0)">Página 1</a>
-        <a href="#" onclick="changeShort(1)">Página 2</a>
-        <a href="#" onclick="changeShort(2)">Página 3</a>
-    </nav>
-
-    <script>
-        function changeShort(shortsIndex) {
-            const shortContainer = document.querySelector('.ShortsContainer');
-            const offset = shortsIndex * -(100/3); // Altura de cada página (100%) multiplicado por el índice
-
-            shortContainer.style.transform = `translateY(${offset}%)`;
-        }
-        
-    </script>
+</Main>
+    
     
 </body>
 </html>
