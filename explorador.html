@@ -13,7 +13,8 @@
 
 
     <div class="Fullscreen">
-        <h1 class="Explorador-title">Explora</h1>
+
+           <h1 class="Explorador-title">Explora</h1> 
 
         <div class="Search-container">
             <form id="Search-form" action="/HTML/Playlist.html">
@@ -33,28 +34,38 @@
                     <h2>¿En que puedo ayudarte?</h2>
                     <input class="Search-text-popup" type="text" placeholder="Texto">
                         <fieldset>
-    
                             <legend>Artistas parecidos</legend>
-                                <div class="Recommended-artist">
-                            <img src="../img/Artista-Ateez.webp" alt="Artista Ateez">
-                            <img src="/img/Artista-BTS.png" alt="Artista BTS">
-                        
-                        
+
+                        <div class="Recommended-artist-list">
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-Ateez.webp" alt="Artista Ateez">
+                             <h4 class="Recommended-artist--name">Ateez</h4>
                         </div>
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-BTS.png" alt="Artista BTS">
+                            <h4 class="Recommended-artist--name">BTS</h4>
+                        </div>
+                         <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-twice.jpg" alt="Artista Twice">
+                            <h4 class="Recommended-artist--name">Twice</h4>
+                        </div>
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-TheRose.jpeg" alt="Artista The Rose">
+                             <h4 class="Recommended-artist--name">The Rose</h4>
+                            </div>
 
-
-    
+                    </div>
                         </fieldset>
-                        <fieldset class="special">
+                        <fieldset>
     
                             <legend>Características especiales</legend>
     
-                            <input type="checkbox" id="no_gluten" name="filtro_especial">
-                            <label for="no_gluten">Sin gluten</label><br>
-                            <input type="checkbox" id="no_lactose" name="filtro_especial">
-                            <label for="no_lactose">Sin lactosa</label><br>
-                            <input type="checkbox" id="no_sugar" name="filtro_especial">
-
+                            <input type="checkbox" id="no_letter" name="filtro_especial">
+                            <label class="Special" for="no_letter">Sin letra</label><br>
+                            <input type="checkbox" id="acustic" name="filtro_especial">
+                            <label class="Special" for="acustic">Acústico</label><br>
+                            <input type="checkbox" id="no_music" name="filtro_especial">
+                            <label class="Special" for="no_music">Sin música</label><br>
     
                         </fieldset>
     
@@ -138,7 +149,7 @@
     
      </div>   
     
-    
+
     
     
 </body>
