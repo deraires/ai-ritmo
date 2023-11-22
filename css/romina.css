@@ -131,6 +131,7 @@ body {
 .bg-animado{
     position: fixed;
     height: 100vh;
+    width: 100vw;
     background: rgb(214,195,237);
     background: linear-gradient(135deg, rgba(214,195,237,1) 0%, rgba(62,9,122,1) 100%);
     background-size: 300% 100%;
@@ -150,25 +151,28 @@ body {
     }
 }
 
-.inicio{
-    position: fixed;
-    top: 300px;
+.cajaLanding{
+    
     background-color: var(--default-box2-color);
     border-radius: 10px;
     margin: 5%;
     padding: 3%;
     color: var(--default-text-color);
     box-shadow:  3px 5px 19px  #261c39;
-
 }
 
-.inicio-btns{
+.bienvenida{
+    display: block;
+    margin-top: 30%;
+}
+
+.bienvenida-btns{
     display: flex;
     justify-content: space-evenly;
     margin: 5%;
 }
 
-.inicio-btn{
+.bienvenida-btn{
     background-color: var(--default-highlight-color);
     text-decoration: none;
     border-radius: 5px;
@@ -180,15 +184,65 @@ body {
     cursor: pointer;
 }
 
+.inicio{
+    display: none;
+    margin-top: 30%;
+}
+
+.registro{
+    display: none;
+    margin-top: 10%;
+    
+}
+
+.form-list{
+    list-style-type: none;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+
+.form-imput{
+    border-radius: 5px;
+    border: transparent;
+    padding: 1%;
+    width: 300px;
+    height: 40px;
+}
+
+.form-btn{
+    background-color: var(--default-highlight-color);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 0;
+    padding: 0.4em;
+    margin: 1em;
+    color: var(--default-BG-color);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Quicksand';
+}
+
+.form-link{
+    color: var(--default-highlight-color);
+}
+
 .anuncio{
     background-color: var(--default-text-color);
     border-radius: 15px;
-    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     color: var(--default-BG-color);
     font-size: 13px;
     padding: 4%;
-    margin: 10%;
+    width: 70%;
     position: relative;
+    margin-left: 7%;
     animation: notification ease 7s infinite; 
 }
 
