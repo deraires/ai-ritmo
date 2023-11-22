@@ -106,15 +106,45 @@ input {
     margin: 0;
 }
 
-.LoginForm {
-    margin: 20px 30px 30px 30px;
+.pages {
+    display: flex;
+    height: 80vh;
+    width: calc(100% * 2);
+    /* Ancho total de las páginas (100% * número de páginas) */
+    transition: transform 1.5s ease;
+
+
+}
+
+.page {
+    flex: 1;
+    padding: 10px;
 }
 
 
-.LoginForm-label{
+
+.LoginForm {
+    margin: 20px 30px 30px 10px;
+}
+
+
+.LoginForm-label {
     font-size: 78%;
 }
 
-.u-marginTop{
+.TextTC {
+    font-size: 70%;
+}
+
+.BotonTerms {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    background-color:var(--color-terciary) ;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.u-marginTop {
     margin-top: 30px;
 }

@@ -191,6 +191,9 @@
 .u-iconBig {
     font-size: 400%;
 }
+.u-iconSemiBig {
+    font-size: 170%;
+}
 
 .isnot-active {
     display: none;

@@ -7,58 +7,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" location.href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./css/aiRitmo.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>HomeAI</title>
+    <link rel="stylesheet" href="css/aiRitmo.css">
+    <title>Perfil de artista</title>
 </head>
 
-<body>
+<body style="margin: 0;">
 
-    <p class="Container-tit">¡Hola! soy Pepita Ritmo</p> <span class="Container-tit-2">Tu asistente virtual en
-        AI-RITMO </span>
-    <div class="Container u-centrar">
 
-        <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
-            background="transparent" speed="1" style="width: 350px;" loop autoplay>
-        </dotlottie-player>
-        <form class="Container-form" action="main.html" method="get">
-            <input class="Container-form-input" type="text" name="search" id="search"
-                placeholder="¿Qué estás buscando hoy?">
-            <button class="Container-form-button" type="submit"> <i
-                    class="fa-brands fa-rocketchat u-marginRight u-colorTerciary"></i></button>
-        </form>
+    <div style="margin: 0; height: 250px; position: relative;background-size: cover; background-image: url(/img/profileTroye.jpeg);">
+
+        <h1 style=" color: white;
+        font-size: 150%;
+        width: 100%;
+        position: absolute; bottom: 0; margin: 0px 0px 10px 10px; ">Troye Sivan</h1>
 
     </div>
 
-
-
     <nav class="Nav">
-        <!-- NAV ORIGINAL
         <div class="Nav-ai">
 
             <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
                 background="transparent" speed="1" style="width: 90px; " loop autoplay>
             </dotlottie-player>
             <div class="u-flex">
-                
-                <div class="Nav-ai-reproductor" style="flex-grow: 1; margin-left: 20px;" onclick="Mostrar()">
-                    <span class="NombreTema">My My My!</span>
-                    <span class="NombreArtista" style="font-size: 70%; font-weight: 100;">Troye Sivan</span>
-                </div>
-                <i class="fa-solid fa-pause iconPause"></i>
-                <i class="fa-solid fa-forward-step iconPause" onclick="TemaSiguiente()"></i>
-            </div>
-            
-        </div>
-    -->
 
-        <div class="Nav-ai"></div>
-            <div id="miniReproductor" class="u-flex" >
                 <div class="Nav-ai-reproductor" style="flex-grow: 1; margin-left: 20px;" onclick="Mostrar()">
                     <span class="NombreTema"></span>
                     <span class="NombreArtista" style="font-size: 70%; font-weight: 100;"></span>
@@ -68,8 +40,6 @@
             </div>
 
         </div>
-
-
 
         <ul class="Nav-list">
             <li class="Nav-list-item"><a href=""><i class="fa-regular fa-heart Nav-list-item-icon "></i></a></li>
@@ -81,7 +51,6 @@
             <li class="Nav-list-item"><a href=""><i class="fa-regular fa-user Nav-list-item-icon"></i></a></li>
         </ul>
     </nav>
-
 
     <!--REPRODUCTOR-->
     <div id="reproductor" class="isnot-active Reproductor">
@@ -129,8 +98,11 @@
 
     </div>
 
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    <script>
+</body>
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+<script>
+
         var reproductor = document.getElementById("reproductor");
         var animacion = document.getElementById("anim");
         var botonPlay = document.getElementById("play");
@@ -149,24 +121,8 @@
 
         }
 
-        function Pausar() {
-            anim.classList.toggle("paused");
-
-            if (botonPlay.classList.contains("fa-circle-pause")) {
-                botonPlay.classList.remove("fa-circle-pause");
-                botonPlay.classList.add("fa-circle-play");
-            } else {
-                botonPlay.classList.add("fa-circle-pause");
-                botonPlay.classList.remove("fa-circle-play");
-            }
-
-        }
-
-
-        //TRATAMIENTO DE TEMAS
-
-
-        var ListadoTemas = [
+  
+      var ListadoTemas = [
             {
                 artista: "Troye Sivan",
                 cancion: "My My My!",
@@ -201,7 +157,7 @@
         function TemaSiguiente() {
             if (temaActual < temasTotales - 1)
                 temaActual++;
-            else
+            else 
                 temaActual = 0;
 
             Actualizar();
@@ -228,13 +184,10 @@
                 tm.innerHTML = ListadoTemas[temaActual].artista;
             });
 
-    
             ImagenTema.src = ListadoTemas[temaActual].imagen;
             DuracionTema.innerHTML = ListadoTemas[temaActual].duracion
-
         }
 
 
-    </script>
-
+</script>
 </html>

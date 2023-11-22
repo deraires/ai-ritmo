@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,165 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Registro AI-Ritmo</title>
 </head>
+
 <body>
     <div class="Marca--big">
         <img class="Marca-newImg" src="img/airitmo.png" alt="airitmo">
         <h3 class="Marca-newText">AI-RITMO</h3>
     </div>
 
-    <form action="index.html" class="LoginForm" >
-        <div style="display: flex;flex-direction: column; justify-content: center;">
-            <label class="LoginForm-label" for="usuario">Nombre de usuario</label>
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
-    
-            <label class="LoginForm-label" for="mail">Correo</label>
-            <input type="email" name="mail" id="mail" placeholder="Nombre de usuario">
+    <div class="pages">
+        <form action="index.html" class="LoginForm page">
+            <div style="display: flex;flex-direction: column; justify-content: center;">
+                <label class="LoginForm-label" for="usuario">Nombre de usuario</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
 
-            <label class="LoginForm-label" for="password">Contraseña</label>
-            <input type="password" name="password" id="password" placeholder="Contraseña">
-           
-            <label class="LoginForm-label" for="conf-password">Repetir contraseña</label>
-            <input type="password" name="conf-password" id="conf-password" placeholder="Repetir contraseña">
+                <label class="LoginForm-label" for="mail">Correo</label>
+                <input type="email" name="mail" id="mail" placeholder="Nombre de usuario">
 
-            <div class="Form-remember">
-                <input required type="checkbox" name="check" id="check" style="margin: 0; margin-right: 10px;"> 
-                <label class="LoginForm-label" for="check" style="flex-grow: 1;">Acepto los <a class="u-colorYellow" href="">Términos y Condiciones</a> de AI-RITMO</label>
-        
+                <label class="LoginForm-label" for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+
+                <label class="LoginForm-label" for="conf-password">Repetir contraseña</label>
+                <input type="password" name="conf-password" id="conf-password" placeholder="Repetir contraseña">
+
+                <div class="Form-remember">
+                    <input required type="checkbox" name="check" id="check" style="margin: 0; margin-right: 10px;">
+                    <label class="LoginForm-label" for="check" style="flex-grow: 1;">Acepto los <a class="u-colorYellow"
+                            href="#" onclick="changePage(1)">Términos y Condiciones</a> de AI-RITMO</label>
+
+                </div>
+                <button class="Form-boton u-marginTop" type="submit">Crear cuenta</button>
+                <a href="index.html" class="Form-registro" >Ya tengo cuenta</a>
+
+
+
             </div>
-            <button class="Form-boton u-marginTop" type="submit">Crear cuenta</button>
+        </form>
+        <div style="    overflow: auto;color: white" class="page">
 
-      
-           
+            <button class="BotonTerms" onclick="changePage(0)">Volver</button>
+
+            <h2 class="u-colorTerciary">Términos y Condiciones de Uso de AI-RITMO</h2>
+
+            <h5 style="font-weight: lighter;">Fecha de entrada en vigor: 22/11/2023</h5>
+
+            <h3 class="u-colorTerciary">¡Bienvenido a AI-RITMO!</h3>
+
+            <span class="TextTC">
+                Antes de comenzar a disfrutar de nuestra aplicación móvil, te
+                pedimos que leas detenidamente los siguientes términos y condiciones. Al acceder o utilizar
+                AI-RITMO, aceptas cumplir con estos términos, así como con todas las leyes y regulaciones
+                aplicables. Si no estás de acuerdo con estos términos, por favor, no utilices nuestra
+                aplicación.
+            </span>
+            <h4 class="u-colorTerciary">1. Uso de la Aplicación:</h4>
+
+            <span class="TextTC">
+                1.1 AI-RITMO es una aplicación de música que utiliza inteligencia artificial para personalizar
+                la
+                experiencia del usuario. Puedes utilizar la aplicación para descubrir, reproducir y crear listas
+                de
+                reproducción de música. <br><br>
+
+                1.2 Te comprometes a utilizar AI-RITMO de manera ética y legal, respetando los derechos de
+                propiedad
+                intelectual y la privacidad de otros usuarios.
+            </span>
+
+            <h4 class="u-colorTerciary">2. Registro y Cuenta:</h4>
+
+            <span class="TextTC">
+                2.1 Para acceder a funciones específicas de AI-RITMO, puede que necesites registrarte y crear
+                una
+                cuenta. Debes proporcionar información precisa y mantener la confidencialidad de tu contraseña.
+                <br><br>
+                2.2 Eres responsable de todas las actividades que ocurran bajo tu cuenta, y nos notificarás de
+                inmediato cualquier uso no autorizado.
+            </span>
+
+            <h4 class="u-colorTerciary">3. Privacidad:</h4>
+            <span class="TextTC"> 3.1 Al utilizar AI-RITMO, aceptas nuestra política de privacidad que puedes
+                consultar en [enlace a
+                la política de privacidad].
+                <br><br>
+                3.2 AI-RITMO utiliza tecnologías de inteligencia artificial para personalizar recomendaciones de
+                música. Al usar la aplicación, consientes el procesamiento de tus datos personales de acuerdo
+                con
+                nuestra política de privacidad.</span>
+
+            <h4 class="u-colorTerciary"> 4. Contenido y Propiedad Intelectual: </h4>
+            <span class="TextTC">
+                4.1 AI-RITMO y su contenido están protegidos por derechos de autor y otras leyes de propiedad
+                intelectual.
+                <br><br>
+                4.2 Al usar AI-RITMO, no adquieres derechos de propiedad sobre la aplicación ni sobre el
+                contenido
+                al que accedes.
+            </span>
+
+
+            <h4 class="u-colorTerciary"> 5. Conducta del Usuario:</h4>
+            <span class="TextTC">5.1 No utilizarás AI-RITMO para actividades ilegales, inmorales o que violen
+                los derechos de otros
+                usuarios.
+                <br><br>
+                5.2 AI-RITMO se reserva el derecho de suspender o cerrar cuentas que violen estos términos y
+                condiciones.
+            </span>
+
+
+            <h4 class="u-colorTerciary"> 6. Actualizaciones y Cambios:</h4>
+            <span class="TextTC">6.1 AI-RITMO puede realizar actualizaciones y cambios en la aplicación para
+                mejorar la experiencia
+                del usuario.
+
+                6.2 Notificaremos los cambios significativos en los términos y condiciones a través de la
+                aplicación
+                o por otros medios apropiados.
+            </span>
+
+
+            <h4 class="u-colorTerciary"> 7. Limitación de Responsabilidad:</h4>
+
+            <span class="TextTC">
+                7.1 AI-RITMO se proporciona "tal cual" y no garantizamos su disponibilidad o rendimiento
+                continuo.
+
+                7.2 AI-RITMO no será responsable de daños directos, indirectos, incidentales, especiales o
+                consecuentes que surjan del uso de la aplicación.
+            </span>
+
+
+            <h4 class="u-colorTerciary"> 8. Disposiciones Generales:</h4>
+
+            <span class="TextTC">8.1 Estos términos y condiciones constituyen el acuerdo completo entre tú y
+                AI-RITMO.
+
+                8.2 Si alguna disposición de estos términos es considerada inválida, las demás disposiciones
+                permanecerán en pleno vigor.
+            </span>
+            <h4 style="text-align: center;" class="u-colorTerciary">¡Gracias por elegir AI-RITMO! Disfruta de tu
+                experiencia musical personalizada.</h4>
+
+
+
         </div>
-       </form>
-    
-    
+
+    </div>
+
+    <script>
+        function changePage(pageIndex) {
+            const pagesContainer = document.querySelector('.pages');
+
+            const offset = pageIndex * -(100 / 2); // Ancho de cada página (100%) multiplicado por el índice
+
+            pagesContainer.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+
+
+
 </body>
+
 </html>
