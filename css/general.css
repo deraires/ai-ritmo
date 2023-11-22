@@ -346,12 +346,51 @@ body {
     height: 80px;
     width: 80%;
     border-radius: 10px;
+    border: 3px solid var(--default-box2-color);
 }
+.Filter-text{ font-size: 20px;}
 
 .Explorador-title {
     color: var(--default-text-color);
     margin-bottom: 0px;
 }
+
+.Pop { background-image: url(/img/explorer/Explorer-pop.png);
+    background-size: cover;
+}
+
+.Rock { background-image: url(/img/explorer/Explorer-rock.png);
+    background-size: cover;
+
+    }
+.Latina {background-image: url(/img/explorer/Explorer-latina.png);
+        background-size: cover;
+    }
+.Metal {background-image: url(/img/explorer/Explorer-metal.png);
+            background-size: cover;
+        }
+
+.Jazz {background-image: url(/img/explorer/Explorer-jazz.png);
+    background-size: cover;
+}
+
+.Kpop {background-image: url(/img/explorer/Explorer-kpop.png);
+        background-size: cover;
+    }
+
+.Clasica {background-image: url(/img/explorer/Explorer-clasicos.png);
+        background-size: cover;
+        }
+
+.Flamenco {background-image: url(/img/explorer/Explorer-flamenco.png);
+        background-size: cover;
+        }
+.Rap{background-image: url(/img/explorer/Explorer-rap.png);
+        background-size: cover;
+            }
+.Baladas {background-image: url(/img/explorer/Explorer-baladas.png);
+            background-size: cover;
+                }
 
 /*---------------------------------Popup---------------------------------------*/
 
