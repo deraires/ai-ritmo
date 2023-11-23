@@ -16,14 +16,43 @@
             <input class="Search-text" type="text" placeholder="Buscar playlist">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-    <div>
+    <div><a href="#Popup1">
         <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
         <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-        <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -30px;margin-left: -64px; position: fixed; " loop autoplay></dotlottie-player>
-    </div>
+        <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -50px;margin-left: -64px; position: fixed; " loop autoplay></dotlottie-player>
+      </a> </div>
     </div>
 
+    <!---------------------------------POPUP-------------------------------->
+   <div id="Popup1" class="Overlay">
+            <div class="Popup">
+                <form id="Popup-form">
+                    <h2>¿En que puedo ayudarte?</h2>
+                    <input class="Search-text-popup" type="text" placeholder="Texto">
+                        <fieldset>
+                            <legend>Crear Playlist</legend>
 
+                        <div class="Recommended-artist-list">
+                        <form class="Create-playlist" action="">
+                           <input type="text" placeholder="Título">
+
+
+                        </form>
+                    </div>
+                        </fieldset>
+                        <fieldset>
+                           Añadir canciones
+
+
+                        </fieldset>
+    
+                    <a class="close" href="#">&times;</a>
+                    <div class="Content">
+                    <button id="check_button">Crear</button>
+                </form>
+                </div>
+            </div> </div>
+<!---------------------------------POPUP-------------------------------->
 
     <div class="Playlist">
          <div class="Playlist-one">
@@ -90,42 +119,42 @@ var aiRitmo= {
 
       imagen_portada: "/img/playlist/Playlist-Fav.jpg" ,
       nombre: "Las de siempre",
-      duracion: "23:14"
+      duracion: "23 h 14 min"
       }, {
 
       imagen_portada: "/img/playlist/Playlist-Ducha.jpg" ,
       nombre: "En la ducha",
-      duracion: "15:00"
+      duracion: "15 h 00 min"
       },{
 
       imagen_portada: "/img/playlist/Playlist-Navidad.jpg" ,
       nombre: "¡Ya es Navidad!",
-      duracion: "23:14"
+      duracion: "05 h 18 min"
       },{
 
       imagen_portada: "/img/playlist/Playlist-Workout.jpg" ,
       nombre: "Workout",
-      duracion: "23:14"
+      duracion: "02 h 39 min"
       },{
 
    imagen_portada: "/img/playlist/Playlist-Concierto.jpg" ,
    nombre: "Concierto Setlist",
-   duracion: "23:14"
+   duracion: "04 h 12 min"
    },{
 
    imagen_portada: "/img/playlist/Playlist-Dormir.jpg" ,
    nombre: "Dormir",
-   duracion: "23:14"
+   duracion: "01 h 43 min"
    },{
 
 imagen_portada: "/img/playlist/Playlist-Cofeetime.jpeg" ,
 nombre: "Cofee Time",
-duracion: "23:14"
+duracion: "03 h 59 min"
 },{
 
 imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
 nombre: "Domingo por la tarde",
-duracion: "23:14"
+duracion: "04 h 02 min"
 }]
 
 }
