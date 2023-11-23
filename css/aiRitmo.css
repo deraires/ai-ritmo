@@ -19,6 +19,7 @@
     width: 100%;
     bottom: 0;
     left: 0;
+    background-color: black;
 }
 
 .Nav-ai {
@@ -186,6 +187,10 @@
 
 .u-colorTerciary {
     color: var(--color-terciary);
+}
+
+.u-colorQuart{
+    color: var(--color-quart);
 }
 
 .u-iconBig {

@@ -1,0 +1,91 @@
+.Body {
+    margin: 0;
+}
+
+.Container {
+    display: block;
+    overflow: auto;
+    height: 78vh;
+}
+
+.Container-header {
+    margin: 0;
+    height: 250px;
+    position: relative;
+    background-size: cover;
+    background-image: url(/img/profileTroye.jpeg);
+}
+
+.Container-header-text {
+    color: white;
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Container-likes {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 0px 20px
+}
+
+.Container-likes-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-size: cover;
+}
+
+.Container-likes-icon {
+    position: absolute;
+    left: 35px;
+}
+
+.Container-likes-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 80%;
+    margin-left: 20px;
+}
+
+.Container-containerSongs {
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.Container-songs {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.Container-songs-song {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 80%;
+    margin-left: 20px;
+}
+
+.Container-destacada {
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.IconPlay {
+    font-size: 270%;
+    margin-right: 30px;
+
+
+}

@@ -8,20 +8,55 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/aiRitmo.css">
+    <link rel="stylesheet" href="css/artista.css">
     <title>Perfil de artista</title>
 </head>
 
-<body style="margin: 0;">
+<body class="Body">
+
+    <div class="Container">
 
 
-    <div style="margin: 0; height: 250px; position: relative;background-size: cover; background-image: url(/img/profileTroye.jpeg);">
+        <div class="Container-header">
 
-        <h1 style=" color: white;
-        font-size: 150%;
-        width: 100%;
-        position: absolute; bottom: 0; margin: 0px 0px 10px 10px; ">Troye Sivan</h1>
+            <div class="Container-header-text">
+                <h1 style=" font-size: 150%;">Troye Sivan</h1>
+                <i class="fa-regular fa-circle-play u-colorTerciary IconPlay"></i>
+            </div>
 
+        </div>
+
+        <div class="Container-likes">
+            <div style="position: relative;">
+                <img class="Container-likes-img" src="img/profileTroye.jpeg" alt="profile">
+                <i class="fa-solid fa-heart u-colorTerciary Container-likes-icon"></i>
+            </div>
+            <div class="Container-likes-content" >
+                <span class="u-colorTerciary">Canciones que te gustan</span>
+                <span style="color: gray;">2 canciones</span>
+            </div>
+        </div>
+
+        <div class="u-colorTerciary" style="margin-left: 20px;">
+            <h4>Publicación destacada</h4>
+
+            <div id="Destacada" class="Container-destacada">
+            </div>
+
+
+        </div>
+
+        <div class="u-colorTerciary" style=" margin-left: 20px;">
+            <h4>Canciones populares</h4>
+            <div id="canciones" class="Container-containerSongs">
+            </div>
+            <h4>Álbumes y Sencillos</h4>
+            <div id="albumes" class="Container-containerSongs">
+            </div>
+        </div>
     </div>
+
+
 
     <nav class="Nav">
         <div class="Nav-ai">
@@ -103,91 +138,202 @@
 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 <script>
 
-        var reproductor = document.getElementById("reproductor");
-        var animacion = document.getElementById("anim");
-        var botonPlay = document.getElementById("play");
+    var liked = `<i class="fa-solid fa-heart" style="color: #fca311; text-align:center; margin-right:20px"></i>`;
+    var noliked = '<i class="fa-regular fa-heart" style="color: #fca311; text-align:center; margin-right:20px"></i>';
 
-        var NombreTema = document.getElementById("NombreTema");
-        var ImagenTema = document.getElementById("ImagenTema");
+    
+    
+    /* CANCIONES */
+    var cancionesDiv = document.getElementById("canciones");
+    var cancionesTotales = [];
+   
+    var Canciones = [
+        {
+            nombre: "One Of Your Girls",
+            reproduc: "70.276.776",
+            imagen: "img/troyeDisc.webp",
+            like: noliked
+        }, {
+            nombre: "Rush",
+            reproduc: "169.158.559",
+            imagen: "img/troyeDisc.webp",
+            like: liked
+        }, {
+            nombre: "Got Me Started",
+            reproduc: "46.538.559",
+            imagen: "img/troyeDisc.webp",
+            like: liked
+        },
+        {
+            nombre: "My My My!",
+            reproduc: "67.980.124",
+            imagen: "img/troye.jpeg",
+            like: noliked
+        }
+
+    ]
+
+        
+    Canciones.forEach((c) => {
+
+        cancionesTotales.push(`<div class="Container-songs">
+                    <img src="${c.imagen}" alt="troye" style="width: 80px; height: 80px;">
+                    <div class="Container-songs-song">
+                        <span>${c.nombre}</span>
+                        <span style="color: gray;">${c.reproduc}</span>
+                        
+                    </div>
+                    ${c.like}
+                </div>`);
+    });
+
+    /* CANCION DESTACADA */
+    cancionesDiv.innerHTML = cancionesTotales.join("");
+
+    var random = Math.floor(Math.random() * Canciones.length);
+    var destacadoDiv = document.getElementById("Destacada");
+    destacadoDiv.innerHTML = `
+    <img src="${Canciones[random].imagen}" alt="troye" style="width: 80px; height: 80px;">
+                <div class="Container-songs-song">
+                    <span>${Canciones[random].nombre}</span>
+                    <span style="color: gray;">${Canciones[random].reproduc}</span>
+                </div>`
 
 
-        var Artistas = document.querySelectorAll(".NombreArtista")
-        var Temas = document.querySelectorAll(".NombreTema")
+    /* ALBUMES */
 
 
-        function Mostrar() {
+    var albumesDiv = document.getElementById("albumes");
+    var albumesTotales = [];
+    var Albumes = [
+        {
+            nombre: "Something To Give Each Other",
+            fecha: "2023",
+            imagen: "img/troyeDisc.webp"
+        }, {
+            nombre: "In A Dream",
+            fecha: "2020",
+            imagen: "img/troyeDisco3.jpeg"
+        }, {
+            nombre: "Bloom",
+            fecha: "2018",
+            imagen: "img/troye.jpeg"
+        },
+        {
+            nombre: "Blue Neighbourhood",
+            fecha: "2015",
+            imagen: "img/troyeDisco2.jpg"
+        }
 
-            reproductor.classList.toggle("isnot-active");
+    ]
+
+    Albumes.forEach((a) => {
+
+        albumesTotales.push(`<div class="Container-songs">
+                    <img src="${a.imagen}" alt="troye" style="width: 80px; height: 80px;">
+                    <div class="Container-songs-song">
+                        <span>${a.nombre}</span>
+                        <span style="color: gray;">${a.fecha}</span>
+                    </div>
+                </div>`);
+    });
+
+    albumesDiv.innerHTML = albumesTotales.join("");
+
+
+
+
+
+    /*REPRODUCTOR*/
+
+
+    var reproductor = document.getElementById("reproductor");
+    var animacion = document.getElementById("anim");
+    var botonPlay = document.getElementById("play");
+
+    var NombreTema = document.getElementById("NombreTema");
+    var ImagenTema = document.getElementById("ImagenTema");
+
+
+    var Artistas = document.querySelectorAll(".NombreArtista")
+    var Temas = document.querySelectorAll(".NombreTema")
+
+
+    function Mostrar() {
+
+        reproductor.classList.toggle("isnot-active");
+
+    }
+
+
+    var ListadoTemas = [
+        {
+            artista: "Troye Sivan",
+            cancion: "My My My!",
+            genero: "Pop",
+            duracion: "3:24",
+            imagen: "img/troye.jpeg"
+        }, {
+            artista: "Juanes",
+            cancion: "Para tu amor",
+            genero: "Pop",
+            duracion: "3:57",
+            imagen: "img/juanes.jpeg"
+
+        }, {
+            artista: "Bad Gyal",
+            cancion: "Sin carné",
+            genero: "Reggaeton",
+            duracion: "2:07",
+            imagen: "img/badgyal.jpeg"
 
         }
 
-  
-      var ListadoTemas = [
-            {
-                artista: "Troye Sivan",
-                cancion: "My My My!",
-                genero: "Pop",
-                duracion: "3:24",
-                imagen: "img/troye.jpeg"
-            }, {
-                artista: "Juanes",
-                cancion: "Para tu amor",
-                genero: "Pop",
-                duracion: "3:57",
-                imagen: "img/juanes.jpeg"
+    ]
 
-            }, {
-                artista: "Bad Gyal",
-                cancion: "Sin carné",
-                genero: "Reggaeton",
-                duracion: "2:07",
-                imagen: "img/badgyal.jpeg"
+    //console.log(ListadoTemas)
+    var temaActual = 0;
+    var temasTotales = ListadoTemas.length;
 
-            }
 
-        ]
+    Actualizar();
 
-        //console.log(ListadoTemas)
-        var temaActual = 0;
-        var temasTotales = ListadoTemas.length;
-
+    function TemaSiguiente() {
+        if (temaActual < temasTotales - 1)
+            temaActual++;
+        else
+            temaActual = 0;
 
         Actualizar();
 
-        function TemaSiguiente() {
-            if (temaActual < temasTotales - 1)
-                temaActual++;
-            else 
-                temaActual = 0;
+    }
+    function TemaAnterior() {
 
-            Actualizar();
+        if (temaActual > 0)
+            temaActual--;
+        else
+            temaActual = temasTotales - 1;
 
-        }
-        function TemaAnterior() {
-
-            if (temaActual > 0)
-                temaActual--;
-            else
-                temaActual = temasTotales - 1;
-
-            Actualizar();
+        Actualizar();
 
 
-        }
+    }
 
-        function Actualizar() {
-            Artistas.forEach((art) => {
-                art.innerHTML = ListadoTemas[temaActual].cancion;
-            });
+    function Actualizar() {
+        Artistas.forEach((art) => {
+            art.innerHTML = ListadoTemas[temaActual].cancion;
+        });
 
-            Temas.forEach((tm) => {
-                tm.innerHTML = ListadoTemas[temaActual].artista;
-            });
+        Temas.forEach((tm) => {
+            tm.innerHTML = ListadoTemas[temaActual].artista;
+        });
 
-            ImagenTema.src = ListadoTemas[temaActual].imagen;
-            DuracionTema.innerHTML = ListadoTemas[temaActual].duracion
-        }
+        ImagenTema.src = ListadoTemas[temaActual].imagen;
+        DuracionTema.innerHTML = ListadoTemas[temaActual].duracion
+    }
+
 
 
 </script>
+
 </html>
