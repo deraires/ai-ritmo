@@ -129,7 +129,7 @@ a{
     border-radius: 20%;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 18px;
 }
 
 .MenuInferior-opcion:active{
@@ -186,17 +186,17 @@ a{
 /* Clases de los estilos de iconos */
 
 .icono-atras {
-    font-size: 2em;
+    font-size: 1.2em;
     color: var(--white);
 }
 
 .icono-reproductor{
-    font-size: 1.5em;
+    font-size: 1em;
     color: var(--white);
 }
 
 .icono-nav {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: var(--violet);
 }
 
@@ -206,6 +206,6 @@ a{
 }
 
 .icono-IA{
-    font-size: 35px;
+    font-size: 20px;
     color:var(--primary);
 }
