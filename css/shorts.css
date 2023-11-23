@@ -52,3 +52,15 @@ body {
 .Short {
     flex: 1;
 }
+
+.Bottombar {
+    box-sizing: content-box;
+}
+
+.Bottombar ul {
+    box-sizing: content-box;
+}
+
+.Bottombar ul li {
+    box-sizing: content-box;
+}

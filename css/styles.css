@@ -22,6 +22,7 @@
 /* Batman */
 
 .Aitman a {
+    box-sizing: content-box;
     width: 98px;
     height: 99px;
     border-radius: 126.5px;
@@ -47,13 +48,17 @@
 .Header {
    
     height: 38px;
+    margin-top: 10px;
+    
+    }
+
+.Header a {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 110px;
-    margin-top: 10px;
-    
-    }
+    text-decoration: none;
+}
     
 .Header img {
         margin-left: 16px;
@@ -107,13 +112,14 @@ span{
     display: flex;
     align-items: center;
     margin: 0;
-    width: 335px;
+    width: 100vw;
     height: 67px;
     border-radius: 24px 24px 0px 0px;
     background: #E8DDF1;
     bottom: auto;
     position: fixed;
     bottom: 0;
+    padding-inline-start: 0px;
     
 }
 
@@ -131,12 +137,6 @@ span{
   
 ------------------  */
 
-
-</div>
-
-  
-  
-*/
 
 
 /* ----------MENÚ BOTTOM--------------- 
