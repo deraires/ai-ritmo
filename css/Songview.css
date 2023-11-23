@@ -78,5 +78,40 @@ flex-direction: column;
 
 .Subtitle {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+}
+
+.CardMusic {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    width: auto;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+   
+   
+}
+
+.CardMusic img {
+    width: 68px;
+height: 68px;
+border-radius: 8px;
+
+}
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.CardText H5 {
+    font-size: 16px;
+}
+
+.CardText H6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: grey;
 }
