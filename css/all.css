@@ -8,6 +8,7 @@
     --third: #BBE601;
     --black: #000000;
     --white: #FFFFFF;
+    --violet: blueviolet;
 
 }
 
@@ -18,17 +19,23 @@
     display: flex;
     flex-direction: column;
 }
+
+/* Flecha superior de retroceso */
+
 .Atras{
     width: 100%;
     height: 10%;
     background-color: var(--black);
     display: flex;
     align-items: center;
+    position: fixed;
 }
 
 a{
     margin-left: 10px;
 }
+
+/* Menu de navegación superior */
 
 .MenuSuperior{
     width: 100%;
@@ -36,6 +43,7 @@ a{
     background-color: var(--black);
     overflow-x: scroll;
     white-space: nowrap;
+    margin-top: 18%;
 }
 
 .MenuSuperior-opcion{
@@ -52,6 +60,8 @@ a{
     margin-top: 10%;
 }
 
+/* Reproductor fijo encima de la nav inferior */
+
 .Reproductor{
     width: 100%;
     height: 10%;
@@ -63,6 +73,7 @@ a{
     justify-content: center;
 }
 
+/* Info de la canción */
 .Foto{
     width: 20%;
     height: 94%;
@@ -83,6 +94,8 @@ a{
     padding-left: 20px;
 }
 
+/* Div de los botones de la canción */
+
 .Reproducir{
     width: 100%;
     height: 50%;
@@ -94,6 +107,8 @@ a{
     margin-right: 10%;
 }
 
+
+/* Ajustes menú inferior de navegación */
 .MenuInferior{
     width: 100%;
     height: 10%;
@@ -127,9 +142,13 @@ a{
     padding: 0px;
 }
 
+/* El botón de la aniamción */
+
 .IA{
     display: none;
 }
+
+/* Los botones que salen de la IA */
 
 .IA-option{
     background-color: var(--black);
@@ -140,7 +159,12 @@ a{
     border-radius: 50%;
     right: 10px;
     position: relative;
+    opacity: .7;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Estilo del menú que aparece de la IA */
 
 .mystyle {
     width: 20%;
@@ -159,17 +183,29 @@ a{
     justify-content: center;
 }
 
-.icono-home {
+/* Clases de los estilos de iconos */
+
+.icono-atras {
     font-size: 2em;
-    color: var(--third);
+    color: var(--white);
+}
+
+.icono-reproductor{
+    font-size: 1.5em;
+    color: var(--white);
 }
 
 .icono-nav {
     font-size: 1.5em;
-    color: var(--third);
+    color: var(--violet);
 }
 
 .icono-superior{
     font-size: 3em;
+    color:var(--primary);
+}
+
+.icono-IA{
+    font-size: 35px;
     color:var(--primary);
 }

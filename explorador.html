@@ -14,7 +14,7 @@
 
 <div class="Contenedor">
     <div class="Atras">
-        <a href="javascript: history.go(-1)"><i class="fa-solid fa-arrow-left icono-home"></i></a>
+        <a href="javascript: history.go(-1)"><i class="fa-solid fa-arrow-left icono-atras"></i></a>
     </div>
     <div class="MenuSuperior">
         <div class="MenuSuperior-opcion">
@@ -60,11 +60,11 @@
         <div class="Info">
             <h4>Título canción</h4>
             <div class="Reproducir">
-            <i class="fa-solid fa-backward icono-nav"></i>
-            <i class="fa-solid fa-play icono-nav"></i>
-            <i class="fa-solid fa-forward icono-nav"></i>
-            <i class="fa-solid fa-repeat icono-nav"></i>
-            <i class="fa-solid fa-plus icono-nav"></i>
+            <i class="fa-solid fa-backward icono-reproductor"></i>
+            <i class="fa-solid fa-play icono-reproductor"></i>
+            <i class="fa-solid fa-forward icono-reproductor"></i>
+            <i class="fa-solid fa-repeat icono-reproductor"></i>
+            <i class="fa-solid fa-plus icono-reproductor"></i>
         </div>
         </div>
     </div>
@@ -83,19 +83,20 @@
         </div>
         <div class="IA" id="Menu">
             <div class="IA-option">
-                <i class="fa-solid fa-arrow-left icono-home"></i>
+                <a href="shorts.html"><i class="fa-solid fa-shuffle icono-IA"></i></a>
             </div>
             <div class="IA-option">
-                <i class="fa-solid fa-arrow-left icono-home"></i>
+                <i class="fa-solid fa-microphone icono-IA"></i>
             </div>
             <div class="IA-option">
-                <i class="fa-solid fa-arrow-left icono-home"></i>
+                <i class="fa-solid fa-keyboard icono-IA"></i>
             </div>
         </div>
     </div>
 </div>
 
     <script>
+         // Menu de la Ia que aparece
         function menu() {
            var element = document.getElementById("Menu");
            element.classList.toggle("mystyle");
@@ -103,10 +104,10 @@
 
     </script>
     <script>
+         // Animación rotar logo
         document.addEventListener("DOMContentLoaded", function () {
         const imagen2 = document.querySelector(".Logo-1");
 
-        // Agregar una clase para la animación al cargar la página
         imagen2.classList.add("rotar");
         });
 

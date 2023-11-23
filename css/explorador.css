@@ -15,7 +15,8 @@ h4{
 }
 
 .Contenido-card{
-    background-color: aqua;
+    border: 1px solid white;
+    /*background-color: aqua;*/
     width: 90%;
     height: 50%;
     margin:20px;
