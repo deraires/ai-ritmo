@@ -2,7 +2,7 @@
 
 body {
 
-    background-color: #260836;
+    background-color: var(--default-BG-color);
     font-family: 'Quicksand';
     margin: 0;
     padding: 0;
@@ -24,11 +24,15 @@ body {
 /* Boton modo claro*/
 
 .light-mode {
-    background-color: var(--default-menu-color);
-    
-    color: var(--default-BG-color);}
+    --default-box-color: #ffffff;
+    --default-box2-color: #7558d4;
+    --default-menu-color: #3e097a;
+    --default-highlight-color: #260836;
+    --default-text-color: #322f3f;
+    --default-BG-color: #d6c3ed;
+}
 
-.lightModeBtn { 
+.lightModeBtn {
     background-color: var(--default-box2-color);
     font-size: 16px;
     margin-top: 22px;
@@ -37,7 +41,7 @@ body {
     border: solid var(--default-box2-color);
     border-radius: 10px;
     text-align: center;
-    }
+}
 
 /* -------------Boton modo claro---------------------------*/
 
@@ -291,13 +295,13 @@ body {
     font-size: 70px;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .Micro-icon :hover {
 
     font-size: 90px;
-    color: #fffac3;
+    color: var(--default-highlight-color);
     transition: color 0.3s;
 }
 
@@ -367,7 +371,10 @@ body {
     border-radius: 10px;
     border: 3px solid var(--default-box2-color);
 }
-.Filter-text{ font-size: 20px;}
+
+.Filter-text {
+    font-size: 20px;
+}
 
 .Explorador-title {
     color: var(--default-text-color);
@@ -375,42 +382,56 @@ body {
 
 }
 
-.Pop { background-image: url(/img/explorer/Explorer-pop.png);
+.Pop {
+    background-image: url(/img/explorer/Explorer-pop.png);
     background-size: cover;
 }
 
-.Rock { background-image: url(/img/explorer/Explorer-rock.png);
+.Rock {
+    background-image: url(/img/explorer/Explorer-rock.png);
     background-size: cover;
 
-    }
-.Latina {background-image: url(/img/explorer/Explorer-latina.png);
-        background-size: cover;
-    }
-.Metal {background-image: url(/img/explorer/Explorer-metal.png);
-            background-size: cover;
-        }
+}
 
-.Jazz {background-image: url(/img/explorer/Explorer-jazz.png);
+.Latina {
+    background-image: url(/img/explorer/Explorer-latina.png);
     background-size: cover;
 }
 
-.Kpop {background-image: url(/img/explorer/Explorer-kpop.png);
-        background-size: cover;
-    }
+.Metal {
+    background-image: url(/img/explorer/Explorer-metal.png);
+    background-size: cover;
+}
 
-.Clasica {background-image: url(/img/explorer/Explorer-clasicos.png);
-        background-size: cover;
-        }
+.Jazz {
+    background-image: url(/img/explorer/Explorer-jazz.png);
+    background-size: cover;
+}
 
-.Flamenco {background-image: url(/img/explorer/Explorer-flamenco.png);
-        background-size: cover;
-        }
-.Rap{background-image: url(/img/explorer/Explorer-rap.png);
-        background-size: cover;
-            }
-.Baladas {background-image: url(/img/explorer/Explorer-baladas.png);
-            background-size: cover;
-                }
+.Kpop {
+    background-image: url(/img/explorer/Explorer-kpop.png);
+    background-size: cover;
+}
+
+.Clasica {
+    background-image: url(/img/explorer/Explorer-clasicos.png);
+    background-size: cover;
+}
+
+.Flamenco {
+    background-image: url(/img/explorer/Explorer-flamenco.png);
+    background-size: cover;
+}
+
+.Rap {
+    background-image: url(/img/explorer/Explorer-rap.png);
+    background-size: cover;
+}
+
+.Baladas {
+    background-image: url(/img/explorer/Explorer-baladas.png);
+    background-size: cover;
+}
 
 /*---------------------------------Popup---------------------------------------*/
 
@@ -424,12 +445,13 @@ body {
     visibility: hidden;
     background: rgba(0, 0, 0, 0.7);
     opacity: 0;
-  }
-  .Overlay:target {
+}
+
+.Overlay:target {
     visibility: visible;
     opacity: 1;
-  }
-  
+}
+
 .Popup {
     margin: 180px auto;
     padding: 40px 20px 20px 20px;
@@ -438,15 +460,15 @@ body {
     width: 70%;
     position: relative;
     transition: all 3s ease-in-out;
-  }
-  
+}
+
 .Popup h2 {
     margin-top: 0;
     color: var(--default-text-color);
     text-align: center;
-  }
+}
 
-  .Popup .close {
+.Popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -455,9 +477,9 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: var(--default-text-color);
-  }
+}
 
-  .Popup .Content {
+.Popup .Content {
     max-height: 50%;
     overflow: auto;
     font-size: 20px;
@@ -465,12 +487,12 @@ body {
     text-align: left;
     padding: 0px 10px;
     width: 500px;
-  }
+}
 
 #popup_form {
     margin: 0px 20px;
     padding: 0;
-  }
+}
 
 #check_button {
 
@@ -483,7 +505,7 @@ body {
     text-align: center;
     margin: 10px 20px;
     color: var(--default-BG-color);
-  }
+}
 
 fieldset {
     border: 2px solid var(--default-box2-color);
@@ -497,7 +519,8 @@ legend {
     color: var(--default-menu-color);
 }
 
-.Search-text-popup{     padding: 10px;
+.Search-text-popup {
+    padding: 10px;
     padding-right: 70px;
     border: none;
     font-size: 18px;
@@ -505,33 +528,39 @@ legend {
     width: 45%;
     height: 15px;
     margin-bottom: 30px;
-margin-left: 40px;}
+    margin-left: 40px;
+}
 
-.Recommended-artist-list{display: flex;
+.Recommended-artist-list {
+    display: flex;
     flex-direction: row;
-   justify-content: center;
+    justify-content: center;
     gap: 10px;
     margin-top: 10px;
-margin-bottom: -10px;}
+    margin-bottom: -10px;
+}
 
-.Recommended-artist {display: flex;
+.Recommended-artist {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.Recommended-artist--name{
+.Recommended-artist--name {
     font-size: 12px;
     color: var(--default-text-color);
 
 }
-.Recommended-artist img{     
-    width:50px;
-    height:50px;
-    border-radius:150px;
-    object-fit: cover; 
-    box-shadow:  1px 1px 4px #261c39;}
 
-.Special{ color: var(--default-text-color);}
+.Recommended-artist img {
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    object-fit: cover;
+    box-shadow: 1px 1px 4px #261c39;
+}
 
-
+.Special {
+    color: var(--default-text-color);
+}
