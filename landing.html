@@ -49,7 +49,8 @@
                     </li>
                 </ul>
             </form>
-            <p>Aún no tengo cuenta, ir a <a class="form-link" href="">Registro</a></p>
+            <p>He olvidado mi contraseña. <a class="form-link" href="">Recuperar aquí.</a></p>
+            <p>Aún no tengo cuenta, ir a <a class="form-link" onclick="registro()">Registro</a></p>
         </div>
 
         <div class="registro cajaLanding" id="registro">
@@ -89,7 +90,7 @@
                     </li>
                 </ul>
             </form>
-            <p>Ya tengo cuenta, ir a <a class="form-link" href="">Inicio de Sesión</a></p>
+            <p>Ya tengo cuenta, ir a <a onclick="inicio()" class="form-link">Inicio de Sesión</a></p>
         </div>
 
 
@@ -119,12 +120,14 @@
         function registro() {
             boxRegistro.style.display = 'block';
             boxBienvenida.style.display = 'none';
+            boxInicio.style.display = 'none';
             boxAnuncio.style.display = 'none';
         }
 
         function inicio() {
             boxInicio.style.display = 'block';
             boxBienvenida.style.display = 'none';
+            boxRegistro.style.display = 'none';
             boxAnuncio.style.display = 'none';
         }
 
