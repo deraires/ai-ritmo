@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+   
+    .song-screen-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-top: 60px;
+      position: relative;
+    }
+
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2; 
+    }
+
+    .back-button {
+      color: #ebebeb;
+      font-size: 1.5em;
+    }
+
+    .ellipsis-button {
+      color: #ebebeb;
+      font-size: 1.5em;
+    }
+
+    .song-info-container {
+      position: relative;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .song-cover {
+      width: 100%;
+      height: 100%;
+      background:url('https://images.pexels.com/photos/5648352/pexels-photo-5648352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    #Gradient { background: linear-gradient(180deg, #ffffff, #942d45, #444444);
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    }
+
+    .song-title {
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-top: 10px;
+      z-index: 1; 
+    }
+
+
+    .artist-name {
+      margin-top: 5px;
+      color: #B3B3B3;
+      z-index: 1; 
+    }
+
+    
+    .song-progress-container {
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    
+    .song-progress-bar {
+      width: 100%;
+      height: 10px;
+      background: #333333;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    
+    .song-progress-indicator {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: #b18cfe;
+      border-radius: 50%;
+      transform: translateX(-50%);
+    }
+
+    
+    .time-marker {
+      position: absolute;
+      color: #ffffff;
+      font-size: 0.8em;
+    }
+
+    
+    .start-time-marker {
+      top: -15px;
+      left: 0;
+    }
+
+ 
+    .end-time-marker {
+      top: -15px;
+      right: 0;
+    }
+
+   
+    .song-controls-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+ 
+    .song-control-icon {
+      font-size: 1.5em;
+      color: #ebebeb;
+      cursor: pointer;
+    }
+
+    
+    .lyrics-container {
+      margin-top: 20px;
+      background-color: #b18cfe;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+    }
+
+   
+    .lyrics-text {
+      color: #ffffff;
+      font-weight: 700;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+
+    .expand-button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 1.5em;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+   
+    .share-button {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 1.5em;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="song-screen-container">
+
+ 
+  <div class="header">
+    <i class="fas fa-chevron-left back-button"></i>
+    <i class="fas fa-ellipsis-vertical ellipsis-button"></i>
+  </div>
+
+
+  <div class="song-info-container">
+    <div class="song-cover"></div>
+    <div id="Gradient"></div>
+    <div class="song-title">Things will be fine</div>
+    <div class="artist-name">Metronomy</div>
+  </div>
+
+  <div class="song-progress-container">
+    <div class="song-progress-bar">
+      <div class="song-progress-indicator"></div>
+      <div class="time-marker start-time-marker">0:00</div>
+      <div class="time-marker end-time-marker">4:00</div>
+    </div>
+  </div>
+
+ 
+  <div class="song-controls-container">
+    <i class="far fa-backward-step song-control-icon"></i>
+    <i class="far fa-circle-play song-control-icon"></i>
+    <i class="far fa-forward-step song-control-icon" style="color: #ffffff;"></i>
+  </div>
+
+
+  <div class="lyrics-container">
+    <div class="lyrics-text">
+      I remember the first time that I felt this weight on me
+      Yeah, I was only fifteen
+      And just like the first time in that teenage misery
+      Yeah, I wish things were as easy
+
+      But I might save the day
+      Yeah, I might change the world
+      Things will be fine
+      Things will be fine
+
+      The sooner you tell someone, the better you will feel
+      So please, put your trust in me
+      As soon as you do, I'll say when I've made up my mind
+      Oh, you know things will be fine
+
+      'Cause I might save the day
+      Yeah, I might change the world
+      You could be the one
+      To drag me out this hole
+
+      Yeah, I might save the day
+      Yeah, I might change the world
+      But I need you the most
+      Yeah, I need you to hold
+
+      Things will be fine
+      Things will be fine
+      Things will be fine
+      Things will be fine
+      Things will be fine
+      Things will be fine
+
+      I try to forget that I was only your lover
+    </div>
+  
+    <i class="fas fa-expand expand-button"></i>
+    <i class="fas fa-share-alt share-button"></i>
+  </div>
+
+</div>
+
+</body>
+</html>

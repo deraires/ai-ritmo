@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+
+    .shorts-screen-container {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding-top: 60px;
+      position: relative;
+    }
+
+  
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+      padding-bottom: 56.25%; 
+      overflow: hidden;
+    }
+
+
+    .video-iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+   
+    .video-controls-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    
+    .video-info {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+   
+    .video-title {
+      font-size: 1.2em;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    
+    .video-artist {
+      color: #B3B3B3;
+      font-size: 0.9em;
+    }
+
+    
+    .video-progress-bar {
+      flex: 1;
+      height: 5px;
+      background: #333333;
+      border-radius: 5px;
+      margin: 0 10px;
+      position: relative;
+    }
+
+   
+    .video-progress-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%; 
+      background: #b18cfe;
+      border-radius: 5px;
+    }
+
+    
+    .video-control-icon {
+      font-size: 1.5em;
+      color: #ebebeb;
+      cursor: pointer;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="shorts-screen-container">
+
+  
+  <div class="video-container">
+
+    <iframe class="video-iframe" src="https://player.vimeo.com/video/470603712" title="Vimeo video player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+
+ 
+  <div class="video-controls-container">
+ 
+    <div class="video-info">
+
+      <div class="video-title">So Free</div>
+    
+      <div class="video-artist">Alex Serra</div>
+    </div>
+
+  
+    <div class="video-progress-bar">
+     
+      <div class="video-progress-indicator"></div>
+    </div>
+
+   
+    <i class="far fa-heart video-control-icon"></i>
+    <i class="far fa-comment video-control-icon"></i>
+    <i class="far fa-save video-control-icon"></i>
+    <i class="fas fa-share-alt video-control-icon"></i>
+  </div>
+
+  <div class="video-container">
+    <iframe class="video-iframe" src="https://player.vimeo.com/video/554291898" title="Vimeo video player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+
+  <div class="video-controls-container">
+ 
+    <div class="video-info">
+
+      <div class="video-title">So Free</div>
+    
+      <div class="video-artist">Alex Serra</div>
+    </div>
+
+  
+    <div class="video-progress-bar">
+     
+      <div class="video-progress-indicator"></div>
+    </div>
+
+   
+    <i class="far fa-heart video-control-icon"></i>
+    <i class="far fa-comment video-control-icon"></i>
+    <i class="far fa-save video-control-icon"></i>
+    <i class="fas fa-share-alt video-control-icon"></i>
+  </div>
+  </div>
+
+  <script>
+    const videos = document.querySelectorAll('.video-container');
+    let currentVideoIndex = 0;
+  
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  
+     
+      if (scrollPosition > window.innerHeight) {
+        videos[currentVideoIndex].style.display = 'none';
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        videos[currentVideoIndex].style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
