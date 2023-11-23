@@ -43,14 +43,16 @@ body {
     display: flex;
 }
 
-.Brand-name1 {
+.Brand-nameA {
     margin-top: 14px;
     margin-bottom: 12px;
     color: var(--links);
+    font-size: 31px;
 }
-.Brand-name2 {
+.Brand-nameR {
     margin-top: 14px;
     margin-bottom: 12px;
+    font-size: 31px;
 }
 
 .Subtitle {
