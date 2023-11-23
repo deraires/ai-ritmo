@@ -266,7 +266,7 @@ body {
 
 
 .Options-emotion-general {
-    background-color: var(--default-highlight-color);
+    background-color: var(--default-menu-color);
     height: 60px;
     width: 60px;
     border-radius: 5px;
