@@ -12,6 +12,10 @@
 
 }
 
+* {
+    font-family: 'Montserrat';
+}
+
 
 /* ------------------------- */
 
@@ -32,9 +36,54 @@
     display: block;
     margin: auto;
     background-color: hsl(0, 0%, 90%);
+    z-index: 1;
 
 }
 
+/* ------------------------- */
+
+/* Header */
+
+.Header {
+   
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 110px;
+    margin-top: 10px;
+    
+    }
+    
+.Header img {
+        margin-left: 16px;
+    }
+    
+    
+span{
+        font-size: 16px;
+        font-weight: bold;
+    
+    }
+    
+.Brand-name {
+        display: flex;
+    }
+    
+.Brand-name1 {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--links);
+    }
+.Brand-name2 {
+        font-size: 16px;
+        font-weight: bold;
+        color: black;
+    }
+
+/* ------------------------- */
+
+/* HTML DE BATMAN ------
 
 /* Bottom menu */
 
@@ -89,18 +138,8 @@
     <a href="#">
     </a>
 </div>
-
-
-<div class="Title">
-    Hi, Martha
-</div>
-
-<div class="Search">
-
-    <img src="Icons/search-magnifiying-glass.svg" alt="">
-    <input type="search" placeholder="Search music">
-
   
+------------------  */
 
 
 </div>

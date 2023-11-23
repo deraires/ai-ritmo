@@ -7,8 +7,8 @@
 
 <!----------- LINKS ------------->
 
-    <link rel="stylesheet" href="../CSS/register.css">
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -23,20 +23,20 @@
         <div class="Brand-logoContainer">
             <img class="Brand-logo" src="img/Logo.png" alt="">
             <div class="Brand-name">
-                <h1 class="Brand-name1">AI</h1>
-                <h1 class="Brand-name2">-ritmo</h1>
+                <h1 class="Brand-nameA">AI</h1>
+                <h1 class="Brand-nameR">-ritmo</h1>
             </div>
         </div>
         <h2 class="Subtitle">Regístrate</h2>
         <div class="FormContainer">
-            <form class="FormContainer-form" action="">
+            <form class="FormContainer-form" action="home.html">
                 <input class="Form-inputs"type="text" placeholder="Nombre completo" required>
                 <input class="Form-inputs" type="email" placeholder="Email" required>
                 <input class="Form-inputs" type="number" placeholder="Número de telf." pattern="[0-9]{9}" required size="9">
                 <input class="Form-inputs" type="password" placeholder="Contraseña" required minlength="8" maxlength="14">
                 
                 <label class="TycContainer" for="Tyc">
-                    <input type="checkbox" id="Tyc">
+                    <input type="checkbox" id="Tyc" required>
                     <div class="TycText">
                     Acepto los
                     <a class="TycLink" href="tyc.html"> Términos y condiciones </a>
