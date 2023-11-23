@@ -18,6 +18,7 @@
 /* Batman */
 
 .Aitman a {
+    box-sizing: content-box;
     width: 98px;
     height: 99px;
     border-radius: 126.5px;
@@ -35,6 +36,59 @@
 
 }
 
+    z-index: 1;
+    transition: 3s, ease;
+
+}
+
+/* ------------------------- */
+
+/* Header */
+
+.Header {
+   
+    height: 38px;
+    margin-top: 10px;
+    
+    }
+
+.Header a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 110px;
+    text-decoration: none;
+}
+    
+.Header img {
+        margin-left: 16px;
+    }
+    
+    
+span{
+        font-size: 16px;
+        font-weight: bold;
+    
+    }
+    
+.Brand-name {
+        display: flex;
+    }
+    
+.Brand-name1 {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--links);
+    }
+.Brand-name2 {
+        font-size: 16px;
+        font-weight: bold;
+        color: black;
+    }
+
+/* ------------------------- */
+
+/* HTML DE BATMAN ------
 
 /* Bottom menu */
 
@@ -71,7 +125,14 @@
     display: flex;
     align-items: center;
     margin: 0;
-    width: 100%;
+    width: 100vw;
+    height: 67px;
+    border-radius: 24px 24px 0px 0px;
+    background: #E8DDF1;
+    bottom: auto;
+    position: fixed;
+    bottom: 0;
+    padding-inline-start: 0px;
     
     
    
@@ -103,12 +164,6 @@
 
   
 
-
-</div>
-
-  
-  
-*/
 
 
 /* ----------MENÚ BOTTOM--------------- 

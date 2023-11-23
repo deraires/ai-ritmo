@@ -1,9 +1,13 @@
-Main {
+main {
     scroll-snap-type: y mandatory;
     scroll-padding-top: 80px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.Main::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -45,10 +49,22 @@ body {
     
 }
 
-.ShortsContainer::-webkit-scrollbar {
-    display: none;
-}
+
 
 .Short {
     flex: 1;
+}
+
+.Bottombar {
+    box-sizing: content-box;
+    position: fixed;
+    z-index: 1;
+}
+
+.Bottombar ul {
+    box-sizing: content-box;
+}
+
+.Bottombar ul li {
+    box-sizing: content-box;
 }
