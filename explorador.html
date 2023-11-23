@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorar</title>
     <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/romina.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
     <link rel="stylesheet" href="/java/java.javascript">
 </head>
@@ -12,70 +13,106 @@
 
 
     <div class="Fullscreen">
-        <h1 class="Explorador-title">Explora</h1>
+
+           <h1 class="Explorador-title">Explora</h1> 
 
         <div class="Search-container">
             <form id="Search-form" action="/HTML/Playlist.html">
                 <input class="Search-text" type="text" placeholder="Buscar playlist">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-        <div>
+        <div><a href="#Popup1">
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-            <button class="Btn-open-popup"> <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -30px;margin-left: -64px; position: fixed;" loop autoplay></dotlottie-player>
-        </button> </div>
+             <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -30px;margin-left: -64px; position: fixed;" loop autoplay></dotlottie-player>
+       </a> </div>
         </div>
 
-        <dialog id="Popup" class="overlay">
+        <div id="Popup1" class="Overlay">
             <div class="Popup">
-                <form id="Popup-form">
+                <form id="Popup-form" action="filtros/postres.html">
                     <h2>¿En que puedo ayudarte?</h2>
-                
-                    <div class="content">
+                    <input class="Search-text-popup" type="text" placeholder="Texto">
+                        <fieldset>
+                            <legend>Artistas parecidos</legend>
 
-                <button class="Btn-close-popup">cerrar</button>
+                        <div class="Recommended-artist-list">
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-Ateez.webp" alt="Artista Ateez">
+                             <h4 class="Recommended-artist--name">Ateez</h4>
+                        </div>
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-BTS.png" alt="Artista BTS">
+                            <h4 class="Recommended-artist--name">BTS</h4>
+                        </div>
+                         <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-twice.jpg" alt="Artista Twice">
+                            <h4 class="Recommended-artist--name">Twice</h4>
+                        </div>
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-TheRose.jpeg" alt="Artista The Rose">
+                             <h4 class="Recommended-artist--name">The Rose</h4>
+                            </div>
+
+                    </div>
+                        </fieldset>
+                        <fieldset>
+    
+                            <legend>Características especiales</legend>
+    
+                            <input type="checkbox" id="no_letter" name="filtro_especial">
+                            <label class="Special" for="no_letter">Sin letra</label><br>
+                            <input type="checkbox" id="acustic" name="filtro_especial">
+                            <label class="Special" for="acustic">Acústico</label><br>
+                            <input type="checkbox" id="no_music" name="filtro_especial">
+                            <label class="Special" for="no_music">Sin música</label><br>
+    
+                        </fieldset>
+    
+                    <a class="close" href="#">&times;</a>
+                    <div class="Content">
+                    <button id="check_button">Buscar</button>
                 </form>
                 </div>
-            </div>
-        </dialog>
+            </div> </div>
 
     
         <div class="Filter">
         <div class="Filter-child1">
-            <div class="Filter-type">
-                Clásicos
+            <div class="Filter-type Clasica">
+                <h2 class="Filter-text">Clásica</h2>
             </div>
-            <div class="Filter-type">
-                Pop
+            <div class="Filter-type Pop"> 
+                <h2 class="Filter-text">Pop</h2>
             </div>
-            <div class="Filter-type">
-                Rock
+            <div class="Filter-type Rock">
+                <h2 class="Filter-text">Rock</h2>
             </div>
-            <div class="Filter-type">
-                Heavy Metal
+            <div class="Filter-type Metal">
+                <h2 class="Filter-text">Heavy Metal</h2>
             </div>
-            <div class="Filter-type">
-                Jazz
+            <div class="Filter-type Jazz">
+                <h2 class="Filter-text">Jazz</h2>
             </div>
 
 
 
         </div>
         <div class="Filter-child2">
-            <div class="Filter-type">
-                Kpop
+            <div class="Filter-type Kpop">
+                <h2 class="Filter-text">Kpop</h2>
             </div>
-            <div class="Filter-type">
-                Baladas
+            <div class="Filter-type Baladas">
+                <h2 class="Filter-text">Baladas</h2>
             </div>
-            <div class="Filter-type">
-                Rap
+            <div class="Filter-type Rap">
+                <h2 class="Filter-text">Rap</h2>
             </div>
-            <div class="Filter-type">
-                Flamenco
+            <div class="Filter-type Flamenco">
+                <h2 class="Filter-text">Flamenco</h2>
             </div>
-            <div class="Filter-type">
-                Latino
+            <div class="Filter-type Latina">
+                <h2 class="Filter-text">Latina</h2>
             </div>
 
 
@@ -112,7 +149,7 @@
     
      </div>   
     
-    
+
     
     
 </body>
