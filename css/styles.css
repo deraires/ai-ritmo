@@ -28,7 +28,7 @@
     border: 10px solid var(--links);
     position: fixed;
     right: 8px;
-    bottom: 40px;
+    bottom: 80px;
     background: url(../images/batman.gif);
     background-size: 250%;
     background-position: center;
@@ -85,9 +85,87 @@ span{
 
 /* HTML DE BATMAN ------
 
+/* Bottom menu */
+
+.Bottombar a {
+    list-style: none;
+    text-decoration: none;
+    padding: 16px;
+    align-items: center;
+
+
+
+}
+
+
+
+.Bottombar ul {
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 335px;
+    height: 67px;
+    border-radius: 24px 24px 0px 0px;
+    background: #E8DDF1;
+    bottom: auto;
+    position: fixed;
+    bottom: 0;
+    
+}
+
+.Bottombar ul li {
+    align-items: center;
+    position: sticky;
+}
+
+/* ------------------------- 
+
     <div class="Aitman">
     <a href="#">
     </a>
 </div>
   
 ------------------  */
+
+
+</div>
+
+  
+  
+*/
+
+
+/* ----------MENÚ BOTTOM--------------- 
+
+<!--Menú bottom-->
+
+<div class="Bottombar">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="icons/Favoritos.svg" alt="">
+            </a>
+
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="icons/Home.svg" alt="">
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#">
+                <img src="icons/Shorts.svg" alt="">
+            </a>
+
+        </li>
+    </ul>
+
+</div>
+*/
