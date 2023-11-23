@@ -124,6 +124,33 @@ body {
     font-size: 14px;
 }
 
+.Profile-Albums{
+    background-color: var(--default-box-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;
+    padding: 2%;
+    color: var(--default-menu-color);
+    gap: 15px;
+    overflow: scroll;
+}
+
+.Profile-Album{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.Album-img{
+    width: 155px;
+    height: 155px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow:  1px 1px 4px #261c39;
+}
+
 
 
 /*Registro e Inicio de sesión*/
@@ -230,9 +257,12 @@ body {
 }
 
 .form-link{
+    cursor: pointer;
+    text-decoration: underline;
     color: var(--default-highlight-color);
 }
 
+/*Anuncio y animación landing*/
 .anuncio{
     background-color: var(--default-text-color);
     border-radius: 15px;
@@ -257,5 +287,17 @@ body {
         bottom: -600px;
         opacity: 0;
     }
+}
+
+
+/*Página Términos y Condiciones*/
+
+.privacidad{
+    margin: 1em;
+    padding: 1em;
+    color: var(--default-BG-color);
+    background-color: var(--default-menu-color);
+    border-radius: 10px;
+    text-align: justify;
 }
 
