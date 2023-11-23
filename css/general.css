@@ -156,9 +156,6 @@ body {
 
 .Search-container {
     display: flex;
-    flex-direction: row;
-    float: left;
-    justify-content: space-around;
     height: 15%;
 }
 
@@ -179,7 +176,6 @@ body {
     border-bottom-left-radius: 5px;
     width: 45%;
     height: 15px;
-    margin-left: 30px;
 }
 
 .Search-container #Search-form button {
@@ -201,6 +197,8 @@ body {
     background-color: var(--default-box-color);
     overflow: scroll;
     border-radius: 10px;
+    margin-bottom: 160px;
+    margin-top: 30px;
 }
 
 .Playlist-one {
@@ -516,6 +514,7 @@ fieldset {
 legend {
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
     color: var(--default-menu-color);
 }
 
