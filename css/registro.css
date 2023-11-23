@@ -78,3 +78,19 @@ input {
     font-weight: 300;
     margin-bottom: 25px;
 }
+
+form input[type="checkbox"] {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.light{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.light label {
+    margin: 0; /* Elimina el margen del label para evitar desalineación */
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+}
