@@ -154,6 +154,11 @@ h2 {
 
 }
 
+.Card a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .Card p {
     font-size: 12px;
 }
