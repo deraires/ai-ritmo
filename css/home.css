@@ -13,19 +13,36 @@ div {
 }
 
 /*Header*/
-
 .Header {
 
     height: 38px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 110px;
+    gap: 24%;
 
 }
 
-.Header img {
+.LogoPicture-img {
     margin-left: 16px;
+}
+
+.ProfilePicture {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+
+    
+}
+
+.ProfilePicture-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 0;
 }
 
 

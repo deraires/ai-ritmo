@@ -47,6 +47,7 @@
    
     height: 38px;
     margin-top: 10px;
+    margin-bottom: 30px;
     
     }
 
@@ -58,7 +59,7 @@
     text-decoration: none;
 }
     
-.Header img {
+.LogoPicture-img {
         margin-left: 16px;
     }
     

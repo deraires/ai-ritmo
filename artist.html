@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-ritmo</title>
+
+<!----------- LINKS ------------->
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/artist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- --------------------------- -->
+
+</head>
+<body>
+
+    <div class="Header">
+
+        <div class="BackArrow">
+            <a href="#" onclick="changePage(0)"><img src="icons/chevron-arrow-left.svg" alt=""></a>
+        </div>
+
+        <a href="home.html"><div class="Brand-name">
+            <h1 class="Brand-name1">AI</h1>
+            <h1 class="Brand-name2">-ritmo</h1>
+        </div></a>
+        
+        <label class="ArtistFav">
+            <input type="checkbox">
+            <span><img src="icons/Favoritos.svg" alt=""></span>
+            <span><img src="icons/Favoritos.svg" alt=""></span>
+        </label>
+
+    </div>
+
+
+<div class="pages">
+
+    <div id="page1" class="page">
+        <div class="UserProfile">
+
+
+            <div class="Contenedor-imagen">
+            </div>
+    
+    
+            <P>Whitney Houston</P>
+            <div class="Subtitle">
+                <h5>4 canciones</h5>
+                <h6>que te gustan de este artista</h6>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="SectionTitle">Canciones populares</h3>
+            <div class="CardMusic">
+                <img src="images/Queen.svg" alt="">
+                <div class="CardText">
+                <h5>I Will Always Love You</h5>
+                <h6>30.000.045 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    
+        <div>
+            <div class="CardMusic">
+                <img src="images/Whitney.svg" alt="">
+                <div class="CardText">
+                <h5>I Wanna Dance with Somebody</h5>
+                <h6>1.070.456 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    
+    
+        <div>
+            <div class="CardMusic">
+                <img src="images/Smash.svg" alt="">
+                <div class="CardText">
+                <h5>I Have Nothing</h5>
+                <h6>734.569 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    
+        <div class="CardsScroll">
+            <div class="CardMusic">
+                <img src="images/ABBA.svg" alt="">
+                <div class="CardText">
+                <h5>Higher Love</h5>
+                <h6>557.032 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="page2" class="page">
+        
+        <div class="ConfigContainer">
+
+            <h2>Configuración de cuenta</h2>
+
+            <div class="ConfigContainer-section">
+                <h4>Nombre de usuario</h4>
+                <p>Anna</p>
+            </div>
+            <div class="ConfigContainer-section">
+                <h4>Correo electrónico</h4>
+                <p>anna23@gmail.com</p>
+            </div>
+            <div class="ConfigContainer-section">
+                <h4>Idioma</h4>
+                <p>Español</p>
+            </div>
+
+            <div class="ConfigContainer ConfigContainer--toogles">
+                <h2>Reproducción</h2>
+
+                <table class="ConfigContainer-table">
+                    <tr>
+                        <th>Audio Mono</th>
+                        <td><label class="Switch">
+                            <input type="checkbox">
+                            <span class="Switch-slider"></span>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <th>Reproducción sin pausas</th>
+                        <td><label class="Switch">
+                            <input type="checkbox">
+                            <span class="Switch-slider"></span>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <th>Activar normalización de audio</th>
+                        <td><label class="Switch">
+                            <input type="checkbox">
+                            <span class="Switch-slider"></span>
+                        </label></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    
+</body>
+</html>
