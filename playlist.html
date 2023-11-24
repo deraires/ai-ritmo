@@ -54,31 +54,31 @@
             </div> </div>
 <!---------------------------------POPUP-------------------------------->
 
-    <div class="Playlist">
-         <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Fav.jpg" alt="Img"> <h2>Las de siempre</h2>
+    <div class="Playlist" id="ListaPlaylist">
+    <!----     <div class="Playlist-one" id="Playlist-box">
+            <img id="Play-img" class="Playlist-img" > <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div>   
          <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Ducha.jpg" alt="Ducha"> <h2>En la ducha</h2>
+            <img id="Play-img" class="Playlist-img"alt="Ducha"> <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div> 
          <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Navidad.jpg" alt="Navidad"> <h2>¡Ya es Navidad!</h2>
+            <img id="Play-img" class="Playlist-img"  alt="Navidad"> <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div> 
          <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Workout.jpg" alt="Workout"> <h2>Workout</h2>
+            <img id="Play-img" class="Playlist-img" src="/img/playlist/Playlist-Workout.jpg" alt="Workout"> <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div> 
          <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Concierto.jpg" alt="Setlist"> <h2>Concierto Setlist</h2>
+            <img id="Play-img" class="Playlist-img" src="/img/playlist/Playlist-Concierto.jpg" alt="Setlist"> <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div> 
          <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Dormir.jpg" alt="Dormir"> <h2>Dormir</h2>
+            <img id="Play-img" class="Playlist-img" src="/img/playlist/Playlist-Dormir.jpg" alt="Dormir"> <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div> 
          <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Cofeetime.jpeg" alt=""> <h2>Cofee time</h2>
+            <img id="Play-img" class="Playlist-img" src="/img/playlist/Playlist-Cofeetime.jpeg" alt=""> <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div> 
          <div class="Playlist-one">
-            <img class="Playlist-img" src="/img/playlist/Playlist-Domingo.jpeg" alt=""> <h2>Domingo por la tarde</h2>
-         </div> 
+            <img id="Play-img" class="Playlist-img" src="/img/playlist/Playlist-Domingo.jpeg" alt=""> <h2 id="Play-name"></h2> <h4 id="Play-time" class="Duration-text"></h4>
+         </div> -->
 
     
     </div>
@@ -111,11 +111,9 @@
  </div>   
 
 <script>
+const ListaPlaylist=document.getElementById("ListaPlaylist")
 
-
-var aiRitmo= {
-
-   playlist: [{
+var lista= [{
 
       imagen_portada: "/img/playlist/Playlist-Fav.jpg" ,
       nombre: "Las de siempre",
@@ -155,9 +153,21 @@ var aiRitmo= {
       imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
       nombre: "Domingo por la tarde",
       duracion: "04 h 02 min"
-   }]
+   }];
 
-}
+
+var PlaylistBox=""; 
+        
+        lista.forEach(playlist => {
+            PlaylistBox = PlaylistBox  + `<div class="Playlist-one">
+                                            <img src="${playlist.imagen_portada}"  class="Playlist-img" >
+                                             <h2>${playlist.nombre}</h2>
+                                             <h4 class="Duration-text"> ${playlist.duracion}</h4>
+                                         </div> `;
+        });
+
+
+ListaPlaylist.innerHTML=PlaylistBox;
 
 </script>
 
