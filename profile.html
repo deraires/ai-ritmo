@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-ritmo</title>
+
+<!----------- LINKS ------------->
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- --------------------------- -->
+
+</head>
+<body>
+
+    <div class="Header">
+
+        <div class="BackArrow">
+            <a href="#" onclick="changePage(0)"><img src="icons/chevron-arrow-left.svg" alt=""></a>
+        </div>
+
+        <a href="home.html"><div class="Brand-name">
+            <h1 class="Brand-name1">AI</h1>
+            <h1 class="Brand-name2">-ritmo</h1>
+        </div></a>
+        
+
+        <a href="#" onclick="changePage(1)"><img src="icons/settings.svg" alt=""></a>
+
+    </div>
+
+
+<div class="pages">
+
+    <div id="page1" class="page">
+        <div class="UserProfile">
+
+
+            <div class="Contenedor-imagen">
+            </div>
+    
+    
+            <P>Anna</P>
+            <div class="Subtitle">
+                <h5>2 playlists públicas</h5>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="SectionTitle">Artistas más escuchados</h3>
+            <div class="CardMusic">
+                <img src="images/Queen.svg" alt="">
+                <div class="CardText">
+                <h5>Bohemian Rapsody</h5>
+                <h6>Queen</h6>
+            </div>
+            </div>
+        </div>
+    
+        <div>
+            <div class="CardMusic">
+                <img src="images/Whitney.svg" alt="">
+                <div class="CardText">
+                <h5>I will always love you</h5>
+                <h6>Whitney Houston</h6>
+            </div>
+            </div>
+        </div>
+    
+    
+        <div>
+            <div class="CardMusic">
+                <img src="images/Smash.svg" alt="">
+                <div class="CardText">
+                <h5>All Star</h5>
+                <h6>Smash Mouth</h6>
+            </div>
+            </div>
+        </div>
+    
+        <div class="CardsScroll">
+            <div class="CardMusic">
+                <img src="images/ABBA.svg" alt="">
+                <div class="CardText">
+                <h5>Dancing Queen</h5>
+                <h6>ABBA</h6>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="page2" class="page">
+        <h2 class="SectionTitle">Configuración de cuenta</h2>
+        <div>
+            <form action="">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+    <script>
+
+    function changePage(pageIndex) {
+                const pagesContainer = document.querySelector('.pages');
+
+
+                const offset = pageIndex * -(100 / 2); // Ancho de cada página (100%) multiplicado por el índice
+
+                pagesContainer.style.transform = `translateX(${offset}%)`;
+            }
+    </script>
+
+    
+</body>
+</html>

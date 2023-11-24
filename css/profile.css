@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% * 2);
+    height: 95vh;
+    margin-top: 14%;
+    overflow-x: hidden;
+    transition: transform 0.5s ease;
+}
+
+.page {
+    flex: 1;
+}
+
+#page1 {
+    background-color: inherit;
+}
+
+#page2 {
+    background-color: var(--background1);
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FDD4D8;;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 53px;
+    gap: 26%;
+    margin-top: 0;
+   
+}
+
+
+.Contenedor-imagen {
+    width: 70%;
+    height: 75%;
+    margin: 0 auto;
+    
+    background: url(../img/profile-img.avif);
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    box-shadow: 3px 4px 10px rgba(65, 65, 65, 0.466)
+
+   
+}
+
+.UserProfile p {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.UserProfile h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-top: 0;
+    color: var(--links);
+}
+
+.UserProfile {
+
+    background-color: #FDD4D8;
+    height: 346px;
+    width: 100vw;
+    border-radius: 0px 0px 40px 40px;
+   
+   
+}
+
+.Subtitle {
+    display: flex;
+    align-items: center;
+}
+
+.CardMusic {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    width: auto;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    
+}
+
+.CardMusic img {
+    width: 68px;
+height: 68px;
+border-radius: 8px;
+
+}
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+.CardText H5 {
+    font-size: 16px;
+    width: 200px;
+    margin-top: 10;
+    margin-bottom: 0;
+}
+
+.CardText H6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: grey;
+    width: 200px;
+    margin-top: 0;
+}
+
+.CardsScroll {
+    margin-bottom: 60px;
+    overflow: scroll;
+}
+
+.SectionTitle {
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
