@@ -1,7 +1,12 @@
+
 * {
     margin: 0;
     padding:0;
     font-family: 'Montserrat';
+}
+
+body {
+    background-color: #E1DCFF;
 }
 
 div {
@@ -9,15 +14,18 @@ div {
 }
 
 .Header {
+    background-color: #E1DCFF;
+}
+
+.Header {
     display: flex;
     justify-content: center;
-    background-color: #FDD4D8;;
+    background-color: #E1DCFF;
     margin: 0;
     position: fixed;
     width: 100vw;
    
 }
-
 
 
 .Header a {
@@ -32,99 +40,39 @@ div {
    
 }
 
+.Imagencancion img {
+    width: 235px;
+height: 235px;
+border-radius: 24px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-.Contenedor-imagen {
-    width: 100vw;
-    height: 255px;
-    
-background: url(../images/Captura\ de\ pantalla\ 2023-11-17\ a\ las\ 16.50\ 1.svg);
-background-position: center;
-background-size: 100%;
-width: 100vw;
-height: 255px;
-display: flex;
-flex-direction: column;
+}
 
+
+
+
+/*ProgressBar*/
+
+.ProgressBarPink {
    
+    width:75%;
+height: 10px;
+background-color: #CDD9E3;
+border-radius: 24px;
 }
 
-.Contentmusic p {
-    font-size: 24px;
-    font-weight: 600;
-    margin-left: 40px;
-    margin-top: 16px;
+.ProgressBar {
+    width: 207px;
+    height: 10px;
+    border-radius: 24px;
+    background-color:var(--links);
 }
 
-.Contentmusic h5 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-left: 40px;
-    margin-top: 4px;
-    color: var(--links);
-}
-
-.Contentmusic h6 {
-    font-size: 14px;
+.ProgressBarText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-size: 12px;
     font-weight: 200;
-    margin-left: 4px;
-    margin-top: 4px;
-    color: black;
-}
-
-.Contentmusic {
-
-    background-color: #FDD4D8;
-    height: 346px;
-    width: 100vw;
-    border-radius: 0px 0px 40px 40px;
-   
-   
-}
-
-.Subtitle {
-    display: flex;
-    align-items: center;
-}
-
-.CardMusic {
-    display: flex;
-    justify-content: center;
-    margin-top: 24px;
-    width: auto;
-    align-items: center;
-    padding: 8px;
-    gap: 8px;
-    
-   
-   
-}
-
-.CardMusic img {
-    width: 68px;
-height: 68px;
-border-radius: 8px;
-
-}
-
-.CardText {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.CardText H5 {
-    font-size: 16px;
-    width: 200px;
-}
-
-.CardText H6 {
-    font-size: 14px;
-    font-weight: 300;
-    color: grey;
-    width: 200px;
-}
-
-.CardsScroll {
-    margin-bottom: 60px;
-    overflow: scroll;
 }
