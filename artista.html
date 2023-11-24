@@ -31,7 +31,7 @@
                 <img class="Container-likes-img" src="img/profileTroye.jpeg" alt="profile">
                 <i class="fa-solid fa-heart u-colorTerciary Container-likes-icon"></i>
             </div>
-            <div class="Container-likes-content" >
+            <div class="Container-likes-content">
                 <span class="u-colorTerciary">Canciones que te gustan</span>
                 <span style="color: gray;">2 canciones</span>
             </div>
@@ -50,6 +50,7 @@
             <h4>Canciones populares</h4>
             <div id="canciones" class="Container-containerSongs">
             </div>
+
             <h4>Álbumes y Sencillos</h4>
             <div id="albumes" class="Container-containerSongs">
             </div>
@@ -77,7 +78,7 @@
         </div>
 
         <ul class="Nav-list">
-            <li class="Nav-list-item"><a href=""><i class="fa-regular fa-heart Nav-list-item-icon "></i></a></li>
+            <li class="Nav-list-item"><a href="listatemas.html"><i class="fa-regular fa-heart Nav-list-item-icon "></i></a></li>
             <li class="Nav-list-item"><a href=""><i class="fa-solid fa-magnifying-glass Nav-list-item-icon"></i></a>
             </li>
             <li class="Nav-list-item"><a href="main.html"><i
@@ -100,8 +101,9 @@
                 <img id="ImagenTema" class="Reproductor-contenedor-image" src="" alt="disco">
 
                 <div class="Reproductor-contenedor-cancion">
-                    <span id="NombreTema" class="Reproductor-contenedor-cancion-tit NombreTema"></span>
                     <span id="NombreArtista" class="Reproductor-contenedor-cancion-artist NombreArtista"></span>
+                    <a style="text-decoration: none; font-size: 70%;" class="u-colorTerciary" href="artista.html"><span id="NombreTema"
+                            class="Reproductor-contenedor-cancion-tit NombreTema"></span></a>
                 </div>
 
                 <div class="Reproductor-contenedor-tiempos">
@@ -121,7 +123,7 @@
                 </div>
 
                 <div id="anim" class="BolaReproductor" style="position: fixed; 
-                top: 465px; width: 10px; height: 10px; background-color: white; border-radius: 25px;">
+                top: 454px; width: 10px; height: 10px; background-color: white; border-radius: 25px;">
 
                 </div>
             </div>
@@ -138,42 +140,42 @@
 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 <script>
 
-    var liked = `<i class="fa-solid fa-heart" style="color: #fca311; text-align:center; margin-right:20px"></i>`;
-    var noliked = '<i class="fa-regular fa-heart" style="color: #fca311; text-align:center; margin-right:20px"></i>';
+    var like = `<i class="fa-solid fa-heart like" style="color: #fca311; text-align:center; margin-right:20px" onclick="Like()"></i>`;
+    var nolike = '<i class="fa-regular fa-heart" style="color: #fca311; text-align:center; margin-right:20px"></i>';
+    var totalLike = 0;
 
-    
-    
+
     /* CANCIONES */
     var cancionesDiv = document.getElementById("canciones");
     var cancionesTotales = [];
-   
+
     var Canciones = [
         {
             nombre: "One Of Your Girls",
             reproduc: "70.276.776",
             imagen: "img/troyeDisc.webp",
-            like: noliked
+
         }, {
             nombre: "Rush",
             reproduc: "169.158.559",
             imagen: "img/troyeDisc.webp",
-            like: liked
+
         }, {
             nombre: "Got Me Started",
             reproduc: "46.538.559",
             imagen: "img/troyeDisc.webp",
-            like: liked
+
         },
         {
             nombre: "My My My!",
             reproduc: "67.980.124",
             imagen: "img/troye.jpeg",
-            like: noliked
+
         }
 
     ]
 
-        
+
     Canciones.forEach((c) => {
 
         cancionesTotales.push(`<div class="Container-songs">
@@ -181,15 +183,19 @@
                     <div class="Container-songs-song">
                         <span>${c.nombre}</span>
                         <span style="color: gray;">${c.reproduc}</span>
-                        
+       
                     </div>
-                    ${c.like}
+                    ${like}
+                   
                 </div>`);
+
+
     });
 
-    /* CANCION DESTACADA */
+
     cancionesDiv.innerHTML = cancionesTotales.join("");
 
+    /* CANCION DESTACADA */
     var random = Math.floor(Math.random() * Canciones.length);
     var destacadoDiv = document.getElementById("Destacada");
     destacadoDiv.innerHTML = `

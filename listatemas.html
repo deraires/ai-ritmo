@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/aiRitmo.css">
+    <link rel="stylesheet" href="css/artista.css">
+
+    <script src="js/temas.js"></script>
+
+    <title>Tus temas favoritos</title>
+</head>
+
+<body>
+
+    <div style=" display: block; overflow: auto; height: 78vh;">
+        <div style="display: flex;flex-direction: column; align-items: center; margin-bottom: 20px;">
+            <img src="img/cat.jpeg" alt="cat" style="display: block; margin: auto; height: 150px ; width: 150px;
+        margin-top: 50px;background-size: cover;">
+
+            <h2 class="u-colorTerciary">Temas favoritos</h2>
+        </div>
+
+
+        <div class="u-colorTerciary" style=" margin-left: 20px;">
+            <div id="canciones" class="Container-containerSongs">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <nav class="Nav">
+        <div class="Nav-ai">
+
+            <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
+                background="transparent" speed="1" style="width: 90px; " loop autoplay>
+            </dotlottie-player>
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                type="module"></script>
+
+            <div class="u-flex">
+
+                <div class="Nav-ai-reproductor" style="flex-grow: 1; margin-left: 20px;" onclick="Mostrar()">
+                    <span class="NombreArtista"></span>
+                    <span class="NombreTema" style="font-size: 70%; font-weight: 100;"></span>
+                </div>
+                <i class="fa-solid fa-pause iconPause"></i>
+                <i class="fa-solid fa-forward-step iconPause" onclick="TemaSiguiente()"></i>
+            </div>
+
+        </div>
+
+        <ul class="Nav-list">
+            <li class="Nav-list-item"><a href="listatemas.html"><i
+                        class="fa-regular fa-heart Nav-list-item-icon "></i></a></li>
+            <li class="Nav-list-item"><a href=""><i class="fa-solid fa-magnifying-glass Nav-list-item-icon"></i></a>
+            </li>
+            <li class="Nav-list-item"><a href="main.html"><i
+                        class="fa-solid fa-headphones Nav-list-item-icon--big"></i></a> </li>
+            <li class="Nav-list-item"><a href=""><i class="fa-regular fa-circle Nav-list-item-icon"></i></a></li>
+            <li class="Nav-list-item"><a href=""><i class="fa-regular fa-user Nav-list-item-icon"></i></a></li>
+        </ul>
+    </nav>
+
+    <!--REPRODUCTOR-->
+    <div id="reproductor" class="isnot-active Reproductor">
+        <div style="display: flex; flex-direction: column;">
+
+            <div class="Reproductor-cerrar">
+                <button id="cerrar" class="Reproductor-cerrar-btn" onclick="Mostrar()">
+                    <i class="fa-solid fa-chevron-down" style="color: #ffffff; font-size: 120%;"></i>
+                </button>
+            </div>
+            <div class="Reproductor-contenedor">
+                <img id="ImagenTema" class="Reproductor-contenedor-image" src="" alt="disco">
+
+                <div class="Reproductor-contenedor-cancion">
+                    <span id="NombreArtista" class="Reproductor-contenedor-cancion-artist NombreArtista"></span>
+                    <a style="text-decoration: none; font-size: 70%;" class="u-colorTerciary" href="artista.html"><span id="NombreTema"
+                            class="Reproductor-contenedor-cancion-tit NombreTema"></span></a>
+                  
+                </div>
+
+                <div class="Reproductor-contenedor-tiempos">
+                    <span>0:00</span>
+                    <div class="Reproductor-contenedor-tiempos-barra"> </div>
+                    <span id="DuracionTema">3:24</span>
+                </div>
+
+                <div class="Reproductor-contenedor-botones">
+
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step u-iconSemiBig" onclick="TemaAnterior()"></i>
+                    <i id="play" class="fa-regular fa-circle-pause u-iconBig" onclick="Pausar()"></i>
+                    <i class="fa-solid fa-forward-step u-iconSemiBig" onclick="TemaSiguiente()"></i>
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+                <div id="anim" class="BolaReproductor" style="position: fixed; 
+                top: 454px; width: 10px; height: 10px; background-color: white; border-radius: 25px;">
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<script>
+
+    var cancionesDiv = document.getElementById("canciones");
+    var cancionesTotales = [];
+
+
+    var ListadoTemas = [
+        {
+            artista: "Troye Sivan",
+            cancion: "My My My!",
+            genero: "Pop",
+            duracion: "3:24",
+            imagen: "img/troye.jpeg"
+        }, {
+            artista: "Juanes",
+            cancion: "Para Tu Amor",
+            genero: "Pop",
+            duracion: "3:57",
+            imagen: "img/juanes.jpeg"
+
+        }, {
+            artista: "Bad Gyal",
+            cancion: "Sin Carné",
+            genero: "Reggaeton",
+            duracion: "2:07",
+            imagen: "img/badgyal.jpeg"
+
+        }, {
+            artista: "Troye Sivan",
+            cancion: "Rush",
+            genero: "Reggaeton",
+            duracion: "2:36",
+            imagen: "img/troyeDisc.webp"
+
+        }, {
+            artista: "Emilia,TINI",
+            cancion: "La_Original.mp3",
+            genero: "Reggaeton",
+            duracion: "2:20",
+            imagen: "img/original.jpg"
+
+        }, {
+            artista: "Bad Gyal",
+            cancion: "Sin carné",
+            genero: "Reggaeton",
+            duracion: "2:07",
+            imagen: "img/badgyal.jpeg"
+
+        }, {
+            artista: "Troye Sivan",
+            cancion: "One Of Your Girls",
+            genero: "Pop",
+            duracion: "2:36",
+            imagen: "img/troyeDisc.webp"
+
+        }, {
+            artista: "Troye Sivan",
+            cancion: "Got Me Started",
+            genero: "Pop",
+            duracion: "2:36",
+            imagen: "img/troyeDisc.webp"
+        }, {
+            artista: "Bad Gyal, Tokischa, Young Miko",
+            cancion: "Chulo pt.2",
+            genero: "Reggaeton",
+            duracion: "2:07",
+            imagen: "img/chulo.png"
+
+        }
+
+
+    ]
+
+
+    ListadoTemas.forEach((c) => {
+
+
+        cancionesTotales.push(`<div class="Container-songs">
+            <img src="${c.imagen}" alt="troye" style="width: 80px; height: 80px;">
+            <div class="Container-songs-song">
+                <span>${c.cancion}</span>
+                <span style="color: gray; font-size:80%">${c.artista}</span>
+        
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical" style="color: #fca311;margin-right:20px"></i>
+    
+
+        </div>`);
+
+
+    });
+
+    cancionesDiv.innerHTML = cancionesTotales.join("");
+
+    /* VARIABLES REPRODUCTOR*/
+
+    var reproductor = document.getElementById("reproductor");
+    var animacion = document.getElementById("anim");
+    var botonPlay = document.getElementById("play");
+
+    var NombreTema = document.getElementById("NombreTema");
+    var ImagenTema = document.getElementById("ImagenTema");
+
+
+    var Artistas = document.querySelectorAll(".NombreArtista")
+    var Temas = document.querySelectorAll(".NombreTema")
+    var reproductor = document.getElementById("reproductor");
+    var animacion = document.getElementById("anim");
+    var botonPlay = document.getElementById("play");
+
+    var NombreTema = document.getElementById("NombreTema");
+    var ImagenTema = document.getElementById("ImagenTema");
+
+
+    var Artistas = document.querySelectorAll(".NombreArtista")
+    var Temas = document.querySelectorAll(".NombreTema")
+
+    var temaActual = 0;
+    var temasTotales = ListadoTemas.length;
+
+
+    Actualizar();
+
+ 
+
+</script>
+
+</html>

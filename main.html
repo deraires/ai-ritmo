@@ -12,8 +12,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,1000&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="./css/aiRitmo.css">
     <link rel="stylesheet" href="./css/main.css">
+
+    <script src="js/temas.js"></script>
     <title>HomeAI</title>
 </head>
 
@@ -58,21 +61,22 @@
     -->
 
         <div class="Nav-ai"></div>
-            <div id="miniReproductor" class="u-flex" >
-                <div class="Nav-ai-reproductor" style="flex-grow: 1; margin-left: 20px;" onclick="Mostrar()">
-                    <span class="NombreTema"></span>
-                    <span class="NombreArtista" style="font-size: 70%; font-weight: 100;"></span>
-                </div>
-                <i class="fa-solid fa-pause iconPause"></i>
-                <i class="fa-solid fa-forward-step iconPause" onclick="TemaSiguiente()"></i>
+        <div id="miniReproductor" class="u-flex">
+            <div class="Nav-ai-reproductor" style="flex-grow: 1; margin-left: 20px;" onclick="Mostrar()">
+                <span class="NombreArtista"></span>
+                <span class="NombreTema" style="font-size: 70%; font-weight: 100;"></span>
             </div>
+            <i class="fa-solid fa-pause iconPause"></i>
+            <i class="fa-solid fa-forward-step iconPause" onclick="TemaSiguiente()"></i>
+        </div>
 
         </div>
 
 
 
         <ul class="Nav-list">
-            <li class="Nav-list-item"><a href=""><i class="fa-regular fa-heart Nav-list-item-icon "></i></a></li>
+            <li class="Nav-list-item"><a href="listatemas.html"><i
+                        class="fa-regular fa-heart Nav-list-item-icon "></i></a></li>
             <li class="Nav-list-item"><a href=""><i class="fa-solid fa-magnifying-glass Nav-list-item-icon"></i></a>
             </li>
             <li class="Nav-list-item"><a href="main.html"><i
@@ -96,8 +100,9 @@
                 <img id="ImagenTema" class="Reproductor-contenedor-image" src="" alt="disco">
 
                 <div class="Reproductor-contenedor-cancion">
-                    <span id="NombreTema" class="Reproductor-contenedor-cancion-tit NombreTema"></span>
                     <span id="NombreArtista" class="Reproductor-contenedor-cancion-artist NombreArtista"></span>
+                    <a style="text-decoration: none; font-size: 70%;" class="u-colorTerciary" href="artista.html"><span id="NombreTema"
+                            class="Reproductor-contenedor-cancion-tit NombreTema"></span></a>
                 </div>
 
                 <div class="Reproductor-contenedor-tiempos">
@@ -117,7 +122,7 @@
                 </div>
 
                 <div id="anim" class="BolaReproductor" style="position: fixed; 
-                top: 465px; width: 10px; height: 10px; background-color: white; border-radius: 25px;">
+                top: 460px; width: 10px; height: 10px; background-color: white; border-radius: 25px;">
 
                 </div>
             </div>
@@ -139,29 +144,14 @@
         var ImagenTema = document.getElementById("ImagenTema");
 
 
-        var Artistas = document.querySelectorAll(".NombreArtista")
-        var Temas = document.querySelectorAll(".NombreTema")
+
+        var Artistas = document.querySelectorAll(".NombreArtista");
+        var Temas = document.querySelectorAll(".NombreTema");
 
 
-        function Mostrar() {
-
-            reproductor.classList.toggle("isnot-active");
-
-        }
-
-        function Pausar() {
-            anim.classList.toggle("paused");
-
-            if (botonPlay.classList.contains("fa-circle-pause")) {
-                botonPlay.classList.remove("fa-circle-pause");
-                botonPlay.classList.add("fa-circle-play");
-            } else {
-                botonPlay.classList.add("fa-circle-pause");
-                botonPlay.classList.remove("fa-circle-play");
-            }
-
-        }
-
+        //console.log(ListadoTemas)
+        var temaActual = 0;
+       
 
         //TRATAMIENTO DE TEMAS
 
@@ -187,53 +177,24 @@
                 duracion: "2:07",
                 imagen: "img/badgyal.jpeg"
 
+            }, {
+                artista: "Troye Sivan",
+                cancion: "Rush",
+                genero: "Reggaeton",
+                duracion: "2:36",
+                imagen: "img/troyeDisc.webp"
+
+            }, {
+                artista: "Emilia,TINI",
+                cancion: "La_Original.mp3",
+                genero: "Reggaeton",
+                duracion: "2:20",
+                imagen: "img/original.jpg"
+
             }
-
         ]
-
-        //console.log(ListadoTemas)
-        var temaActual = 0;
-        var temasTotales = ListadoTemas.length;
-
-
         Actualizar();
-
-        function TemaSiguiente() {
-            if (temaActual < temasTotales - 1)
-                temaActual++;
-            else
-                temaActual = 0;
-
-            Actualizar();
-
-        }
-        function TemaAnterior() {
-
-            if (temaActual > 0)
-                temaActual--;
-            else
-                temaActual = temasTotales - 1;
-
-            Actualizar();
-
-
-        }
-
-        function Actualizar() {
-            Artistas.forEach((art) => {
-                art.innerHTML = ListadoTemas[temaActual].cancion;
-            });
-
-            Temas.forEach((tm) => {
-                tm.innerHTML = ListadoTemas[temaActual].artista;
-            });
-
-    
-            ImagenTema.src = ListadoTemas[temaActual].imagen;
-            DuracionTema.innerHTML = ListadoTemas[temaActual].duracion
-
-        }
-
+        var temasTotales = ListadoTemas.length;
 
     </script>
 
