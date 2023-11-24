@@ -9,11 +9,11 @@
 </head>
 <body>
  <div class="Fullscreen">
-   <h1 class="Playlist-title">Tu biblioteca</h1>
+   <h1 class="Playlist-title">Las de siempre</h1>
 
     <div class="Search-container">
         <form id="Search-form" action="/HTML/Playlist.html">
-            <input class="Search-text" type="text" placeholder="Buscar playlist">
+            <input class="Search-text" type="text" placeholder="Buscar canción">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     <div><a href="#Popup1">
@@ -40,8 +40,37 @@
                         </form>
                     </div>
                         </fieldset>
-                        <fieldset>
-                           Añadir canciones
+                        <fieldset class="Fieldset-height">
+                            <legend>Añadir canciones</legend>
+
+                           <div class="Popup-playlist"> 
+                            <div class="Popup-playlist--name">Answer</div>
+                            <div class="Popup-playlist--artist">Ateez</div>
+                           </div>
+                           <div class="Popup-playlist"> 
+                            <div class="Popup-playlist--name">Celebrate</div>
+                            <div class="Popup-playlist--artist">Ateez</div>
+                           </div>
+                           <div class="Popup-playlist"> 
+                            <div class="Popup-playlist--name">Say my name</div>
+                            <div class="Popup-playlist--artist">Ateez</div>
+                           </div>
+                           <div class="Popup-playlist"> 
+                            <div class="Popup-playlist--name">Be with you</div>
+                            <div class="Popup-playlist--artist">Ateez</div>
+                           </div>
+                           <div class="Popup-playlist"> 
+                            <div class="Popup-playlist--name">Take me home</div>
+                            <div class="Popup-playlist--artist">Ateez</div>
+                           </div>
+                           <div class="Popup-playlist"> 
+                            <div class="Popup-playlist--name">Deja vu</div>
+                            <div class="Popup-playlist--artist">Ateez</div>
+                           </div>
+                           <div class="Popup-playlist"> 
+                            <div class="Popup-playlist--name">Treasure</div>
+                            <div class="Popup-playlist--artist">Ateez</div>
+                           </div>
 
 
                         </fieldset>
@@ -55,7 +84,7 @@
 <!---------------------------------POPUP-------------------------------->
 
     <div class="Playlist" id="ListaPlaylist">
-    <!----     <div class="Playlist-one" id="Playlist-box">
+    <!---- <div class="Playlist-one" id="Playlist-box">
             <img id="Play-img" class="Playlist-img" > <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div>   
          <div class="Playlist-one">
@@ -88,18 +117,17 @@
     <div class="Reproductor">
 
         <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
+        <div class="Rep-name-song">
+        <h2 class="Rep-h2">Answer - Ateez</h2>
         <div class="Line"> <div class="Rep-circle"></div>
             <div class="Rep-icons">
                 <i class="fa-solid fa-forward fa-rotate-180"></i>
                 <div class="Play-icons"><i class="fa-solid fa-pause"></i>
                 <i class="fa-solid fa-play"></i></div>
                 <i class="fa-solid fa-forward"></i>
-            </div>
+            </div></div>
 
         </div>
-
-
-
     </div>
 
     <footer class="MenuBottom">
@@ -115,54 +143,87 @@ const ListaPlaylist=document.getElementById("ListaPlaylist")
 
 var lista= [{
 
-      imagen_portada: "/img/playlist/Playlist-Fav.jpg" ,
-      nombre: "Las de siempre",
-      duracion: "23 h 14 min"
+      imagen_portada: "/img/albums/Album-Ateez-01.jpeg" ,
+      nombre: "Answer",
+      artista: "Ateez",
+     
       }, {
 
       imagen_portada: "/img/playlist/Playlist-Ducha.jpg" ,
-      nombre: "En la ducha",
-      duracion: "15 h 00 min"
+      nombre: "One of your girls",
+      artista: "Troye Sivan",
+     
       },{
 
       imagen_portada: "/img/playlist/Playlist-Navidad.jpg" ,
-      nombre: "¡Ya es Navidad!",
-      duracion: "05 h 18 min"
+      nombre: "Maroon",
+      artista:"Taylor Swift",
+     
       },{
 
       imagen_portada: "/img/playlist/Playlist-Workout.jpg" ,
-      nombre: "Workout",
-      duracion: "02 h 39 min"
+      nombre: "Hunger",
+      artista: "Amaranthe",
+  
       },{
 
       imagen_portada: "/img/playlist/Playlist-Concierto.jpg" ,
-      nombre: "Concierto Setlist",
-      duracion: "04 h 12 min"
+      nombre: "False God",
+      artista:"Taylor Swift" ,
+    
       },{
 
       imagen_portada: "/img/playlist/Playlist-Dormir.jpg" ,
-      nombre: "Dormir",
-      duracion: "01 h 43 min"
+      nombre: "Paradise",
+      artista: "Ftisland" ,
+     
       },{
 
     imagen_portada: "/img/playlist/Playlist-Cofeetime.jpeg" ,
-      nombre: "Cofee Time",
-      duracion: "03 h 59 min"
+      nombre: "Tú eres mi canción",
+      artista: "Lucía Gil",
+    
     },{
 
       imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-      nombre: "Domingo por la tarde",
-      duracion: "04 h 02 min"
-   }];
+      nombre: "Sting",
+      artista:"Fletcher" ,
+     
+   },{
+
+        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
+        nombre: "Secret Garden",
+        artista:"Oh my girl" ,
+       
+        },{
+
+        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
+        nombre: "Sting",
+        artista:"Fletcher" ,
+       
+        },{
+
+        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
+        nombre: "Sting",
+        artista:"Fletcher" ,
+        
+        },{
+
+        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
+        nombre: "Sting",
+        artista:"Fletcher" ,
+       
+        }];
 
 
 var PlaylistBox=""; 
         
         lista.forEach(playlist => {
             PlaylistBox = PlaylistBox  + `<div class="Playlist-one">
-                                            <img src="${playlist.imagen_portada}"  class="Playlist-img" >
-                                             <h2>${playlist.nombre}</h2>
-                                             <h4 class="Duration-text"> ${playlist.duracion}</h4>
+                                            <img src="${playlist.imagen_portada}" class="Playlist-img" >
+                                             <div class= "Playlist-column"> <h2 class= "Playlist-name">${playlist.nombre}</h2>
+                                                <h3 class= "Playlist-artist">${playlist.artista}</h3>
+                                              </div> 
                                          </div> `;
         });
 
