@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     width: calc(100% * 2);
-    height: 95vh;
+    height: 100vh;
     margin-top: 14%;
     overflow-x: hidden;
     transition: transform 0.5s ease;
@@ -26,6 +26,9 @@ body {
 
 #page2 {
     background-color: var(--background1);
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow-y: hidden;
 }
 
 .Header {
@@ -142,3 +145,96 @@ border-radius: 8px;
     font-weight: 700;
 }
 
+.ConfigContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ConfigContainer--toogles {
+    margin-bottom: 0;
+    gap: 8px;
+}
+
+.ConfigContainer h2 {
+    margin-bottom: 10px;
+}
+
+.ConfigContainer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ConfigContainer-section--row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.ConfigContainer-section h4 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.ConfigContainer-section p {
+    margin: 0;
+}
+
+.Switch input {
+    display: none;
+}
+
+.Switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.Switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background2);
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.Switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 20px;
+  }
+  
+  input:checked + .Switch-slider {
+    background-color: var(--links);
+  }
+  
+  input:focus + .Switch-slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .Switch-slider:before {
+    transform: translateX(26px);
+  }
+
+.ConfigContainer-table {
+    text-align: left;
+}
+
+.ConfigContainer-table tr {
+    height: 45px;
+}
+
+.ConfigContainer-table tr td {
+    text-align: right;
+}
