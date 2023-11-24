@@ -85,53 +85,67 @@
     </div>
 
 
-    <div>
+
+    <div id="Listadetemas">
+        <!-- Lista de canciones  
         <div class="CardMusic">
             <img src="images/Queen.svg" alt="">
             <div class="CardText">
-            <h5>Bohemian Rapsody</h5>
-            <h6>Queen</h6>
+                <h5>Bohemian Rapsody</h5>
+                <h6>Queen</h6>
+            </div>
         </div>
-        </div>
-    </div>
-
-    <div>
+  
         <div class="CardMusic">
             <img src="images/Whitney.svg" alt="">
+
             <div class="CardText">
-            <h5>I will always love you</h5>
-            <h6>Whitney Houston</h6>
+                <h5>I will always love you</h5>
+                <h6>Whitney Houston</h6>
+            </div>
         </div>
-        </div>
-    </div>
-
-
-    <div>
+   
         <div class="CardMusic">
             <img src="images/Smash.svg" alt="">
             <div class="CardText">
-            <h5>All Star</h5>
-            <h6>Smash Mouth</h6>
+                <h5>All Star</h5>
+                <h6>Smash Mouth</h6>
+            </div>
         </div>
-        </div>
+     -->
+        
+        
     </div>
+
 
     <div class="CardsScroll">
-        <div class="CardMusic">
-            <img src="images/ABBA.svg" alt="">
-            <div class="CardText">
-            <h5>Dancing Queen</h5>
-            <h6>ABBA</h6>
+            <div class="CardMusic">
+                <img src="images/ABBA.svg" alt="">
+                <div class="CardText">
+                    <h5>Dancing Queen</h5>
+                    <h6>ABBA</h6>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
 
 
-    <script>
+  
+
+  
+
+
+
+<script>
 
         //var Listadecanciones = ["Tema1", "Tema2", "Tema3", "Tema4"];//
 
-        var Escuchando = {
+
+    const ListadecancionesHTML=document.getElementById ("Listadetemas");
+
+
+
+
+        var Escuchando =  {
             Nombre: "Bohemian Rapsody",
             Artista: "Queen",
         };
@@ -141,49 +155,78 @@
 
                 Nombre: "Bohemian Rapsody",
                 Artista: "Queen",
-
+                imagen: "Queen.svg"
+                
 
             }, {
 
                 Nombre: "I will always love you",
                 Artista: "Whitney Houston",
+                imagen: "Whitney.svg"
                 //generos: [  "Pop", "Rock"]//
 
             }, {
 
                 Nombre: "All Star",
                 Artista: "Smash Mouth",
+                imagen: "Smash.svg"
 
             }, {
 
                 Nombre: "Dancing Queen",
                 Artista: "ABBA",
+                imagen: "ABBA.svg"
 
             }, {
 
                 Nombre: "Whole Lotta Love",
                 Artista: "Led Zeppelin",
+                imagen: "Queen.svg"
 
             }, {
 
                 Nombre: "Highway to Hell",
                 Artista: "AC/DC",
+                imagen: "Smash.svg"
 
             }, {
 
                 Nombre: "Don't Stop Me Now",
                 Artista: "Queen",
+                imagen: "Queen.svg"
 
             }
 
 
         ];
 
+       /*  ListadoDeCanciones.innerHTML=`<div class="CardMusic">
+            <img src="images/Smash.svg" alt="">
+            <div class="CardText">
+                <h5>All Star</h5>
+                <h6>Smash Mouth</h6>
+            </div>
+        </div>`; */
 
 
+        var cajatemporalHTML='';
 
 
-    </script>
+    Listadecanciones.forEach(Tarjetacancion => {
+    
+        cajatemporalHTML= cajatemporalHTML +`<div class="CardMusic">
+                <img src="images/${Tarjetacancion.imagen}" alt="">
+                <div class="CardText">
+                    <h5>${Tarjetacancion.Nombre}</h5> <!-- Creamos una caja con un valor html que luego será el nombre de nuestra canción -->
+                    <h6>${Tarjetacancion.Artista}</h6>
+                </div>
+            </div>`;
+    });
+
+    ListadecancionesHTML.innerHTML=cajatemporalHTML;
+
+    
+</script>           
 
 </body>
 
