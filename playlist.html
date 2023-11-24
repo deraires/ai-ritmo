@@ -27,19 +27,27 @@
 
     </header>
 
+
+
     <main class="content">
 
-        <div class="BoxPlayList">
+        <div id="cajaplaylist">
 
-            <img src="img/artista1.png" alt="">
+            <h1>hola</h1>
+        </div>
+
+
+        <!-- <div class="BoxPlayList">
+
+            <img class="imgArtist" id="artist-1" src="img/artista1.png" alt="">
             <div class="text">
 
-                <h3>Nombre de canción</h3>
+                <h3 id="namesing" class="">Nombre de canción</h3>
 
                 <div class="PlaySing">
-                    <span>Nombre de artista</span>
+                    <span id="name-artist">Nombre de artista</span>
                     <p>|</p>
-                    <span>Genero</span>
+                    <span id="name-gener">Genero</span>
                     <p>|</p>
                     <i class="fa fa-play" aria-hidden="true"></i>
                 </div>
@@ -48,7 +56,7 @@
             </div>
         </div>
 
-        <div class="BoxPlayList">
+       <div class="BoxPlayList">
 
             <img src="img/artista1.png" alt="">
             <div class="text">
@@ -85,6 +93,84 @@
 
 
             </div>
+        </div> -->
+
+        <!-- <div class="BoxPlayList">
+
+                <img src="img/artista1.png" alt="">
+                <div class="text">
+
+                    <h3>Nombre de canción</h3>
+
+                    <div class="PlaySing">
+                        <span>Nombre de artista</span>
+                        <p>|</p>
+                        <span>Genero</span>
+                        <p>|</p>
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="BoxPlayList">
+
+                <img src="img/artista1.png" alt="">
+                <div class="text">
+
+                    <h3>Nombre de canción</h3>
+
+                    <div class="PlaySing">
+                        <span>Nombre de artista</span>
+                        <p>|</p>
+                        <span>Genero</span>
+                        <p>|</p>
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="BoxPlayList">
+
+                <img src="img/artista1.png" alt="">
+                <div class="text">
+
+                    <h3>Nombre de canción</h3>
+
+                    <div class="PlaySing">
+                        <span>Nombre de artista</span>
+                        <p>|</p>
+                        <span>Genero</span>
+                        <p>|</p>
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </div>
+
+
+                </div>
+
+
+            </div> 
+        <div class="BoxPlayList">
+
+            <img src="img/artista1.png" alt="">
+            <div class="text">
+
+                <h3>Nombre de canción</h3>
+
+                <div class="PlaySing">
+                    <span>Nombre de artista</span>
+                    <p>|</p>
+                    <span>Genero</span>
+                    <p>|</p>
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+
+
+            </div>
         </div>
 
         <div class="BoxPlayList">
@@ -107,84 +193,7 @@
 
 
         </div>
-        <div class="BoxPlayList">
-
-            <img src="img/artista1.png" alt="">
-            <div class="text">
-
-                <h3>Nombre de canción</h3>
-
-                <div class="PlaySing">
-                    <span>Nombre de artista</span>
-                    <p>|</p>
-                    <span>Genero</span>
-                    <p>|</p>
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="BoxPlayList">
-
-            <img src="img/artista1.png" alt="">
-            <div class="text">
-
-                <h3>Nombre de canción</h3>
-
-                <div class="PlaySing">
-                    <span>Nombre de artista</span>
-                    <p>|</p>
-                    <span>Genero</span>
-                    <p>|</p>
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                </div>
-
-
-            </div>
-
-
-        </div>
-        <div class="BoxPlayList">
-
-            <img src="img/artista1.png" alt="">
-            <div class="text">
-
-                <h3>Nombre de canción</h3>
-
-                <div class="PlaySing">
-                    <span>Nombre de artista</span>
-                    <p>|</p>
-                    <span>Genero</span>
-                    <p>|</p>
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="BoxPlayList">
-
-            <img src="img/artista1.png" alt="">
-            <div class="text">
-
-                <h3>Nombre de canción</h3>
-
-                <div class="PlaySing">
-                    <span>Nombre de artista</span>
-                    <p>|</p>
-                    <span>Genero</span>
-                    <p>|</p>
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                </div>
-
-
-            </div>
-
-
-        </div>
+        </div> -->
     </main>
 
 
@@ -217,37 +226,89 @@
 
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
+
+
     <script>
+
+        //1. Seleccionar el <div> cajaContactos con su ID
+
+        const boxplaylist = document.getElementById("cajaplaylist");
+
+        // 2. Crear la lista de objetos con los datos de cada contacto
+
+
         var infoplaylist = [
             {
-                nombre: "NombreCancion1",
-                artista: "NombreArtista1",
-                genero: "Genero",
-                imgArtista: "img/artista1.png"
+
+                genero: "Pop",
+                imgArtista: "img/Juanes.jpg",
+                color: "blue",
             },
             {
-                nombre: "NombreCancion2",
-                artista: "NombreArtista2",
-                genero: "Genero",
-                imgArtista: "img/artista2.png"
+
+                genero: "Electrónica",
+                imgArtista: "img/Guetta.jpg",
+                color: "green",
             },
 
             {
-                nombre: "NombreCancion3",
-                artista: "NombreArtista3",
-                genero: "Genero",
-                imgArtista: "img/artista3.png"
+
+                genero: "Bachata",
+                imgArtista: "img/romeo.jpg",
+                color: "red",
             },
 
             {
-                nombre: "NombreCancion4",
-                artista: "NombreArtist4a",
-                genero: "Genero",
-                imgArtista: "img/artista4.png"
+
+                genero: "Salsa",
+                imgArtista: "img/marckantony.jpg",
+                color: "pink",
+            },
+
+            {
+
+                genero: "Rock",
+                imgArtista: "img/artista4.png",
+                color: "skyblue",
+            },
+
+            {
+
+                genero: "Rock",
+                imgArtista: "img/artista4.png",
+                color: "yellowgreen",
+            },
+            {
+
+                genero: "Rock",
+                imgArtista: "img/artista4.png",
+                color: "turquesa",
             }
 
 
-        ]
+
+        ];
+
+        // 3. Recorro la lista de Personas, y para cada persona creo un <div> con sus datos
+        var datosPlaylistHTML = "";
+
+        infoplaylist.forEach(cancion => {
+            datosPlaylistHTML = datosPlaylistHTML + `
+            <div class="BoxPlayList" style="background-color:${cancion.color}">
+
+                <img class="imgArtist" id="artist-1" src="${cancion.imgArtista}" alt="">
+                <div class="text">
+
+                    <h3 id="name-gener">${cancion.genero}</h3>
+
+
+                </div>
+            </div>`;
+
+        });
+        boxplaylist.innerHTML = datosPlaylistHTML;
+
+
     </script>
 
 </html>

@@ -245,31 +245,33 @@ main {
 
 
 .BoxPlayList {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-content: center;
-    max-width: 375px;
+    width: 325px;
     justify-content: center;
-
+    color: var(--color-secondary);
     margin-bottom: 2rem;
+    padding: 1rem;
 
     /* Ancho de 150 píxeles */
     height: 120px;
     /* Alto de 150 píxeles */
-    background: rgb(4, 4, 4);
+    background: rgb(228, 39, 39);
     /* Fondo de color rojo */
-    border: 1px solid #ffffff;
+
     /* Borde color negro y de 1 píxel de grosor */
     align-items: center;
 
-    border-radius: 10%;
-    color: #ffffff;
+
+
 }
 
 
 .BoxPlayList img {
     border-radius: 10%;
-    border: 1px solid #FCA311;
+
 
 
     width: 100px;
