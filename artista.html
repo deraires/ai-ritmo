@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
     <div class="Profile">
 
         <section class="Bio">
-            <img class="Bio-img" src="./img/artistas/Artista-Ateez.webp" alt="Artista Ateez">
-            <div class="Bio-info">
-                <h2 class="Bio-name">ATEEZ</h2>
-                <p class="Bio-descp">Ateez es una boy band de Corea del Sur formada por ocho integrantes: Hongjoong, Seonghwa, Yunho, Yeosang, San, Mingi, Wooyoung y Jongho. Debutaron el 24 de octubre de 2018 con su mini álbum Treasure EP.1: All to Zero. </p>
-                <p class="Bio-oyentes">3.5M oyentes mensuales</p>
+            <div id="datosArtista">
+                <img class="Bio-banner-img" id="bio-image" src="./img/artistas/Artista-RocioJurado.jpg" alt="Artista">
+                <div class="Bio-info">
+                    <h2 class="Bio-name" id="bio-name"></h2>
+                    <p class="Bio-descp" id="bio-descp"></p>
+                    <p class="Bio-oyentes" id="bio-oyentes"></p>
+                </div>
+                <i class=" Artista-like fa-solid fa-heart"></i></button>
             </div>
+            <!--Lody-->
             <div>
                 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
                     type="module"></script>
@@ -33,38 +39,65 @@
             </div>
         </section>
 
-        <section class="Profile-Albums">
-            <div class="Profile-Album">
-                <img class="Album-img" src="./img/playlist/Playlist-Fav.jpg" alt="Playlist Canciones Favoritas">
-                <h3>Las de siempre</h3>
+        <h1 class="Profile-title">Populares</h1>
+        <section class="Artista-Top5">
+            <div class="Artista-Cancion">
+                <h3>1</h3>
+                <img class="Artista-Cancion-img" src="./img/albums/Album-Ateez-04.jpeg" alt="Playlist Canciones Favoritas">
+                <h3>BOUNCY (K-HOT CHILLI PEPPERS)</h3>
             </div>
-            <div class="Profile-Playlist">
-                <img class="Playlist-img" src="./img/playlist/Playlist-Ducha.jpg" alt="Playlist Canciones en la Ducha">
-                <h3>En la ducha</h3>
+            <div class="Artista-Cancion">
+                <h3>2</h3>
+                <img class="Artista-Cancion-img" src="./img/albums/Album-Ateez-01.jpeg" alt="Playlist Canciones Favoritas">
+                <h3>Say My Name</h3>
             </div>
-            <div class="Profile-Playlist">
-                <img class="Playlist-img" src="./img/playlist/Playlist-Navidad.jpg" alt="Playlist Canciones de Navidad">
-                <h3>¡Ya es Navidad!</h3>
+            <div class="Artista-Cancion">
+                <h3>3</h3>
+                <img class="Artista-Cancion-img" src="./img/albums/Album-Ateez-05.jpeg" alt="Playlist Canciones Favoritas">
+                <h3>ROCKY</h3>
             </div>
-            <div class="Profile-Playlist">
-                <img class="Playlist-img" src="./img/playlist/Playlist-Workout.jpg" alt="Playlist Canciones de Workout">
-                <h3>Workout</h3>
+            <div class="Artista-Cancion">
+                <h3>4</h3>
+                <img class="Artista-Cancion-img" src="./img/albums/Album-Ateez-03.jpeg" alt="Playlist Canciones Favoritas">
+                <h3>Deja Vu</h3>
             </div>
-            <div class="Profile-Playlist">
-                <img class="Playlist-img" src="./img/playlist/Playlist-Concierto.jpg"
-                    alt="Playlist Canciones para el Concierto">
-                <h3>Concierto Setlist</h3>
+            <div class="Artista-Cancion">
+                <h3>5</h3>
+                <img class="Artista-Cancion-img" src="./img/albums/Album-Ateez-02.jpeg" alt="Playlist Canciones Favoritas">
+                <h3>Pirate King</h3>
             </div>
         </section>
 
+        <h1 class="Profile-title">Top Álbums</h1>
+        <section class="Profile-Playlists">
+
+            <div class="Profile-Playlist">
+                <img class="Playlist-img" src="./img/albums/Album-Ateez-01.jpeg" alt="Playlist Canciones Favoritas">
+                <h4>TREASURE EP.2: All To Zero</h4>
+            </div>
+            <div class="Profile-Playlist">
+                <img class="Playlist-img" src="./img/albums/Album-Ateez-02.jpeg" alt="Playlist Canciones Favoritas">
+                <h4>TREASURE EP.1: All To Zero</h4>
+            </div>
+            <div class="Profile-Playlist">
+                <img class="Playlist-img" src="./img/albums/Album-Ateez-03.jpeg" alt="Playlist Canciones Favoritas">
+                <h4>ZERO: FEVER Part.3</h4>
+            </div>
+            <div class="Profile-Playlist">
+                <img class="Playlist-img" src="./img/albums/Album-Ateez-04.jpeg" alt="Playlist Canciones Favoritas">
+                <h4>THE WORLD EP.2: OUTLAW</h4>
+            </div>
+            <div class="Profile-Playlist">
+                <img class="Playlist-img" src="./img/albums/Album-Ateez-05.jpeg" alt="Playlist Canciones Favoritas">
+                <h4>TREASURE EP.3: One To All</h4>
+            </div>
+        </section>
+        
+        <h1 class="Profile-title">Artistas similares</h1>
         <section class="Profile-Artists">
             <div class="Profile-Artist">
-                <img class="Artist-img" src="./img/artistas/Artista-Ateez.webp" alt="Artista Ateez">
-                <h3 class="Artist-name">ATEEZ</h3>
-            </div>
-            <div class="Profile-Artist">
-                <img class="Artist-img" src="./img/artistas/Artista-TaylorSwift.png" alt="Artista Taylor Swift">
-                <h3 class="Artist-name">Taylor Swift</h3>
+                <img class="Artist-img" src="./img/artistas/Artista-TheRose.jpeg" alt="Artista The Rose">
+                <h3 class="Artist-name">The Rose</h3>
             </div>
             <div class="Profile-Artist">
                 <img class="Artist-img" src="./img/artistas/Artista-StrayKids.jpeg" alt="Artista Stay Kids">
@@ -79,21 +112,10 @@
                 <h3 class="Artist-name">Andy y Lucas</h3>
             </div>
             <div class="Profile-Artist">
-                <img class="Artist-img" src="./img/artistas/Artista-RocioJurado.jpg" alt="Artista Rocio Jurado">
-                <h3 class="Artist-name">Rocio Jurado</h3>
-            </div>
-            <div class="Profile-Artist">
-                <img class="Artist-img" src="./img/artistas/Artista-Fletcher.jpeg" alt="Artista Fletcher">
-                <h3 class="Artist-name">Fletcher</h3>
-            </div>
-            <div class="Profile-Artist">
                 <img class="Artist-img" src="./img/artistas/Artista-TroyeSivan.webp" alt="Artista Troye Sivan">
                 <h3 class="Artist-name">Troye Sivan</h3>
             </div>
-            <div class="Profile-Artist">
-                <img class="Artist-img" src="./img/artistas/Artista-TheRose.jpeg" alt="Artista The Rose">
-                <h3 class="Artist-name">The Rose</h3>
-            </div>
+
         </section>
 
 
@@ -129,60 +151,80 @@
 
 
         <script>
-            var aiRitmoPerfil = {
-                perfil: [{
-                    imagen_perfil: "./img/Profile-foto.jpg",
-                    nombre: "Azahara Torres",
-                    descripción: "¡La música es mi vida! Me encanta sumergirme en los ritmos de Ateez, ¡son mi banda favorita! Cada canción suya me transporta a un mundo de emociones."
+            var aiRitmoArtista = {
+                artista: [{
+                    imagen_perfil: "./img/artistas/ateez.webp",
+                    nombre: "ATEEZ",
+                    descripción: "Ateez es una boy band de Corea del Sur formada por ocho integrantes: Hongjoong, Seonghwa, Yunho, Yeosang, San, Mingi, Wooyoung y Jongho. Debutaron el 24 de octubre de 2018 con su mini álbum Treasure EP.1: All to Zero.",
+                    oyentes_mensuales: "3.5M"
                 }],
 
-                playlists: [{
-                    imagen_playlist: "./img/playlist/",
+                canciones: [{
+                    imagen_album: "./img/artistas/",
+                    nombre: "ATEEZ",
+                    duración: "",
+                    artista: ""
+                }, {
+                    imagen_album: "./img/artistas/",
+                    nombre: "ATEEZ",
+                    duración: "",
+                    artista: ""
+                }, {
+                    imagen_album: "./img/artistas/",
+                    nombre: "ATEEZ",
+                    duración: "",
+                    artista: ""
+                }, {
+                    imagen_album: "./img/artistas/",
+                    nombre: "ATEEZ",
+                    duración: "",
+                    artista: ""
+                }, {
+                    imagen_album: "./img/artistas/",
+                    nombre: "ATEEZ",
+                    duración: "",
+                    artista: ""
+                }],
+
+                albums: [{
+                    imagen_album: "./img/playlist/",
                     nombre: "Las de siempre"
-                },{
-                    imagen_playlist: "./img/playlist/",
+                }, {
+                    imagen_album: "./img/playlist/",
                     nombre: "En la ducha"
-                },{
-                    imagen_playlist: "./img/playlist/",
+                }, {
+                    imagen_album: "./img/playlist/",
                     nombre: "¡Ya es Navidad!"
-                },{
-                    imagen_playlist: "./img/playlist/",
+                }, {
+                    imagen_album: "./img/playlist/",
                     nombre: "Workout"
-                },{
-                    imagen_playlist: "./img/playlist/",
+                }, {
+                    imagen_album: "./img/playlist/",
                     nombre: "Concierto Setlist"
-                }],
-            
-                artistas: [{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "ATEEZ"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "Taylor Swift"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "Stray Kids"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "Ross Lynch"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "Andy y Lucas"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "Rocio Jurado"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "Fletcher"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "Troye Sivan"
-                },{
-                    imagen_artista: "./img/artistas/",
-                    nombre: "The Rose"
-                }]}
+                }]
+            }
 
+
+            var datosArtista = {
+                imagen_perfil: "./img/artistas/Artista-Ateez-02.jpeg",
+                nombre: "ATEEZ",
+                descrip: "Ateez es una boy band de Corea del Sur formada por ocho integrantes: Hongjoong, Seonghwa, Yunho, Yeosang, San, Mingi, Wooyoung y Jongho. Debutaron el 24 de octubre de 2018 con su mini álbum Treasure EP.1: All to Zero.",
+                oyentes: "3.5M oyentes mensuales"
+            };
+
+            const imageElement = document.getElementById('bio-image');
+            const nameElement = document.getElementById('bio-name');
+            const descriptionElement = document.getElementById('bio-descp');
+            const numberElement = document.getElementById('bio-oyentes');
+
+            imageElement.src = datosArtista.imagen_perfil;
+            nameElement.textContent = datosArtista.nombre;
+            descriptionElement.textContent = datosArtista.descrip;
+            numberElement.textContent = datosArtista.oyentes;
+
+            const userCard = document.getElementById("datosArtista");
 
         </script>
 </body>
+
 </html>

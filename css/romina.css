@@ -60,12 +60,27 @@ body {
     background-color: white;
 }
 
+.Bio-banner-img{
+    width:100%;
+    height:150px;
+    border-radius:10px;
+    object-fit: cover; 
+    box-shadow:  1px 1px 4px #261c39;
+    background-color: white;
+}
+
 .Bio-info{
     padding: 2%;
     display: flex;
     flex-direction: column;
 }
 
+.Profile-title{
+    color: var(--default-text-color);
+    margin: 2em;
+    margin-bottom: 0em;
+    font-size: 22px;
+}
 
 .Profile-Playlists{
     background-color: var(--default-box-color);
@@ -84,6 +99,8 @@ body {
     align-items: center;
     margin: 2%;
 }
+
+
 
 .Playlist-img{
     width: 155px;
@@ -150,6 +167,40 @@ body {
     object-fit: cover;
     box-shadow:  1px 1px 4px #261c39;
 }
+
+.Artista-like{
+    font-size: 30px;
+    color: var(--default-BG-color);
+    background-color: var(--default-highlight-color);
+    padding: 3%;
+    border-radius: 150px;
+    position: absolute;
+    right: 20px;
+    top: 150px;
+}
+
+.Artista-Top5{
+    background-color: var(--default-menu-color);
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    color: var(--default-BG-color);
+    margin-top: 20px;
+}
+
+.Artista-Cancion{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.Artista-Cancion-img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow:  1px 1px 3px #261c39;
+}
+
 
 
 
