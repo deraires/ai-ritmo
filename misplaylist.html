@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/misplaylist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap">
+    <title>Mis Playlists</title>
+</head>
+<body>
+    
+</body>
+<div class="Contenedor">
+    <div class="Atras">
+        <a href="javascript: history.go(-1)"><i class="fa-solid fa-arrow-left icono-atras"></i></a>
+    </div>
+    <div class="Reproductor">
+        <div class="Foto">
+            <img src="img/portada.jpg" alt="">
+        </div>
+        <div class="Info">
+            <h4>Título canción</h4>
+            <div class="Reproducir">
+            <i class="fa-solid fa-backward icono-reproductor"></i>
+            <i class="fa-solid fa-play icono-reproductor"></i>
+            <i class="fa-solid fa-forward icono-reproductor"></i>
+            <i class="fa-solid fa-repeat icono-reproductor"></i>
+            <i class="fa-solid fa-plus icono-reproductor"></i>
+        </div>
+        </div>
+    </div>
+    <div class="Contenido" id="Album">
+        <!--<div class="Card">
+            <img class="Portada" src="img/patricio.jpg" alt="">
+                <h3 class="Titulo">Bailar</h3></div>-->
+    </div>
+    <div class="MenuInferior">
+        <div class="MenuInferior-opcion">
+            <a href="perfil.html"><i class="fa-regular fa-user icono-nav"></i></a>
+        </div>
+        <div class="MenuInferior-opcion">
+            <a href="explorador.html"><i class="fa-solid fa-magnifying-glass icono-nav"></i></a>
+        </div>
+        <div class="MenuInferior-opcion">
+            <a href="index.html"><i class="fa-solid fa-home icono-nav"></i></a>
+        </div>
+        <div class="MenuInferior-opcion" onclick="menu()">
+            <img class="Logo-1" src="img/logo-circulo.png" alt="">
+        </div>
+        <div class="IA" id="Menu">
+            <div class="IA-option">
+                <a href="shorts.html"><i class="fa-solid fa-shuffle icono-IA"></i></a>
+            </div>
+            <div class="IA-option">
+                <i class="fa-solid fa-microphone icono-IA"></i>
+            </div>
+            <div class="IA-option">
+                <i class="fa-solid fa-keyboard icono-IA"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Menu de la Ia que aparece
+   function menu() {
+      var element = document.getElementById("Menu");
+      element.classList.toggle("mystyle");
+   }
+
+</script>
+<script>
+    // Animación rotar logo
+   document.addEventListener("DOMContentLoaded", function () {
+   const imagen2 = document.querySelector(".Logo-1");
+
+   imagen2.classList.add("rotar");
+   });
+
+</script>
+
+<script>   
+
+    const Prueba=document.getElementById("Album");
+
+    var misplaylists=[
+        {titulo: "Random" },
+        {titulo: "Bailar"},
+        {titulo: "Estudiar"},
+        {titulo: "Salir"},
+        {titulo: "Correr"},
+        {titulo: "Programar"}
+    ];
+
+    var albumHTML="";
+
+    misplaylists.forEach(playlist => {
+        albumHTML = albumHTML + `
+        <div class="Card">
+        <img class="Portada"src="img/patricio.jpg" alt="">
+            <h3 class="Titulo">${playlist.titulo}</h3></div>`;
+    });
+
+    Prueba.innerHTML=albumHTML;
+
+</script>
+
+<!--Para poner las imagenes cambiarlo en el src-->
+
+</html>
