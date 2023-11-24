@@ -9,6 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/aiRitmo.css">
     <link rel="stylesheet" href="css/artista.css">
+    <script src="js/temas.js"></script>
     <title>Perfil de artista</title>
 </head>
 
@@ -265,11 +266,6 @@
     var Temas = document.querySelectorAll(".NombreTema")
 
 
-    function Mostrar() {
-
-        reproductor.classList.toggle("isnot-active");
-
-    }
 
 
     var ListadoTemas = [
@@ -304,40 +300,7 @@
 
     Actualizar();
 
-    function TemaSiguiente() {
-        if (temaActual < temasTotales - 1)
-            temaActual++;
-        else
-            temaActual = 0;
-
-        Actualizar();
-
-    }
-    function TemaAnterior() {
-
-        if (temaActual > 0)
-            temaActual--;
-        else
-            temaActual = temasTotales - 1;
-
-        Actualizar();
-
-
-    }
-
-    function Actualizar() {
-        Artistas.forEach((art) => {
-            art.innerHTML = ListadoTemas[temaActual].cancion;
-        });
-
-        Temas.forEach((tm) => {
-            tm.innerHTML = ListadoTemas[temaActual].artista;
-        });
-
-        ImagenTema.src = ListadoTemas[temaActual].imagen;
-        DuracionTema.innerHTML = ListadoTemas[temaActual].duracion
-    }
-
+   
 
 
 </script>

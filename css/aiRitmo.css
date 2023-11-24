@@ -204,9 +204,14 @@
     display: none;
 }
 
+.u-blur {
+    filter: blur(3.5px);
+}
+
 .paused {
     animation-play-state: paused;
 }
 svg{
     transform: none;
 }
+

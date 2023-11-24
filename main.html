@@ -22,6 +22,7 @@
 
 <body>
 
+
     <p class="Container-tit">¡Hola! soy Pepita Ritmo</p> <span class="Container-tit-2">Tu asistente virtual en
         AI-RITMO </span>
     <div class="Container u-centrar">
@@ -29,7 +30,7 @@
         <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
             background="transparent" speed="1" style="width: 350px;" loop autoplay>
         </dotlottie-player>
-        <form class="Container-form" action="main.html" method="get">
+        <form id="form" class="Container-form" action="main.html" method="get">
             <input class="Container-form-input" type="text" name="search" id="search"
                 placeholder="¿Qué estás buscando hoy?">
             <button class="Container-form-button" type="submit"> <i
@@ -37,6 +38,35 @@
         </form>
 
     </div>
+
+
+
+    <div id="interaccion" 
+        class="u-centrar isnot-active Interaccion">
+
+        <span class="Interaccion-title">
+            Recomendación del día
+        </span>
+
+        <div id="temasR" class="Container-songs">
+
+        </div>
+
+        <span class="Interaccion-title">
+            Según tu búsqueda
+        </span>
+
+        <div id="fotosAlbum" style="display: flex; overflow: auto;">
+
+        </div>
+        <i class="fa-solid fa-circle-xmark" style="color: #fca311; position: fixed; top:15px;left: 10px;"
+        onclick="Cambio()"></i>
+
+    </div>
+
+    </div>
+
+
 
 
 
@@ -101,8 +131,8 @@
 
                 <div class="Reproductor-contenedor-cancion">
                     <span id="NombreArtista" class="Reproductor-contenedor-cancion-artist NombreArtista"></span>
-                    <a style="text-decoration: none; font-size: 70%;" class="u-colorTerciary" href="artista.html"><span id="NombreTema"
-                            class="Reproductor-contenedor-cancion-tit NombreTema"></span></a>
+                    <a style="text-decoration: none; font-size: 70%;" class="u-colorTerciary" href="artista.html"><span
+                            id="NombreTema" class="Reproductor-contenedor-cancion-tit NombreTema"></span></a>
                 </div>
 
                 <div class="Reproductor-contenedor-tiempos">
@@ -136,6 +166,29 @@
 
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script>
+
+        var form = document.getElementById("form");
+        var interDiv = document.getElementById("interaccion");
+        var cont = document.querySelector(".Container");
+        var cont2 = document.querySelector(".Container-tit");
+        var cont3 = document.querySelector(".Container-tit-2");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            Cambio();
+
+        });
+
+        function Cambio() {
+            interDiv.classList.toggle("isnot-active");
+            cont.classList.toggle("u-blur");
+            cont2.classList.toggle("u-blur");
+            cont3.classList.toggle("u-blur");
+        }
+
+
+
         var reproductor = document.getElementById("reproductor");
         var animacion = document.getElementById("anim");
         var botonPlay = document.getElementById("play");
@@ -151,7 +204,7 @@
 
         //console.log(ListadoTemas)
         var temaActual = 0;
-       
+
 
         //TRATAMIENTO DE TEMAS
 
@@ -166,7 +219,7 @@
             }, {
                 artista: "Juanes",
                 cancion: "Para tu amor",
-                genero: "Pop",
+                genero: "Pop-Rock",
                 duracion: "3:57",
                 imagen: "img/juanes.jpeg"
 
@@ -180,7 +233,7 @@
             }, {
                 artista: "Troye Sivan",
                 cancion: "Rush",
-                genero: "Reggaeton",
+                genero: "Pop",
                 duracion: "2:36",
                 imagen: "img/troyeDisc.webp"
 
@@ -195,6 +248,29 @@
         ]
         Actualizar();
         var temasTotales = ListadoTemas.length;
+
+        var random = Math.floor(Math.random() * ListadoTemas.length);
+        var destacadoDiv = document.getElementById("temasR");
+        destacadoDiv.innerHTML = `
+        <img src="${ListadoTemas[random].imagen}" alt="troye" style="width: 80px; height: 80px;">
+                <div class="Container-songs-song">
+                    <span class="u-colorTerciary">${ListadoTemas[random].cancion}</span>
+                    <span style="color: gray;">${ListadoTemas[random].artista}</span>
+                </div>`
+
+        var fotosDiv = document.getElementById("fotosAlbum");
+        var fotosTotales = [];
+
+        ListadoTemas.forEach((a) => {
+            fotosTotales.push(
+                ` <div class="Container-songs-song">
+                <img src="${a.imagen}" alt="foto" style="width: 80px; height: 80px; margin:10px 30px 5px 30px">
+                <span style="color: gray; margin-bottom:10px">${a.genero}</span>
+            </div>`);
+
+        });
+
+        fotosDiv.innerHTML = fotosTotales.join("");
 
     </script>
 
