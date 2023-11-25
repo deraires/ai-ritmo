@@ -25,7 +25,14 @@
 
     <div class="BoxPlays">
 
-        <div class="BoxPlay">
+        <div id="cajaplaylist">  </div>
+
+          
+       
+
+        
+
+        <!-- <div class="BoxPlay">
             <div class="headphones">
                 <img src="img/audio.png" alt="">
             </div>
@@ -71,7 +78,7 @@
 
 
 
-    </div>
+    </div> -->
 
 
     <div class="RightIcons">
@@ -98,11 +105,15 @@
 
     <script>
         function changeSing(pageIndex) {
-            const pagesContainer = document.querySelector('.BoxPlays');
+            const pagesContainer = document.querySelector('.cajaplaylist');
             const offset = pageIndex * -(100 / 5); // Ancho de cada página (100%) multiplicado por el índice
 
             pagesContainer.style.transform = `translateY(${offset}%)`;
+
+          
         }
+
+    
     </script>
     </div>
 
@@ -140,7 +151,11 @@
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
     <script>
-        var infoplaylist = [
+
+   const boxshorts = document.getElementById("cajaplaylist");
+
+
+        var infoSong = [
             {
                 nombre: "NombreCancion",
                 artista: "NombreArtista",
@@ -151,35 +166,68 @@
                 nombre: "NombreCancion",
                 artista: "NombreArtista",
                 duracion: "duracion",
-                imgArtista: "https://images.pexels.com/photos/67566/palm-tree-palm-ocean-summer-67566.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1"
+                imgsong: "https://images.pexels.com/photos/67566/palm-tree-palm-ocean-summer-67566.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1"
             },
 
             {
                 nombre: "NombreCancion",
                 artista: "NombreArtista",
                 duracion: "duracion",
-                imgArtista: "https://images.pexels.com/photos/2242170/pexels-photo-2242170.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1"
+                imgsong: "https://images.pexels.com/photos/2242170/pexels-photo-2242170.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1"
             },
 
             {
                 nombre: "NombreCancion",
                 artista: "NombreArtista",
                 duracion: "duracion",
-                imgArtista: "https://oliveriotours.com/wp-content/uploads/2023/02/Oliverio-Tours-Entradas-Posts-Banner-Vertical-Cali-Salsa-y-cultura-3.png"
+                imgsong: "https://oliveriotours.com/wp-content/uploads/2023/02/Oliverio-Tours-Entradas-Posts-Banner-Vertical-Cali-Salsa-y-cultura-3.png"
             },
 
             {
                 nombre: "NombreCancion",
                 artista: "NombreArtista",
                 duracion: "duracion",
-                imgArtista: "https://images.pexels.com/photos/2422253/pexels-photo-2422253.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1"
+                imgsong: "https://images.pexels.com/photos/2422253/pexels-photo-2422253.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1"
             }
 
+        ];
 
+        var datosshortsHTML = "";
 
+        infoSong.forEach(sonando => {
+            datosshortsHTML = datosshortsHTML + `
 
-        ]
-    </script>
+            <div class ="BoxPlay" id="infosong">
+
+                <div class="headphones">
+                <div id="imgaudio"  img src="img/audio.png" alt="${sonando.imgsong}"> </div>
+            
+            </div>`;
+        });
+        boxshorts.innerHTML = datosshortsHTML;
+        
+            </script>
+            
+            <div class="movesong">
+                <button onclick="changeSing(0)">1</button>
+                <button onclick="changeSing(1)">2</button>
+                <button onclick="changeSing(2)">3</button>
+                <button onclick="changeSing(3)">4</button>
+                <button onclick="changeSing(4)">5</button>
+            </div>
+        
+        
+        
+            <script>
+                function changeSing(pageIndex) {
+                    const pagesContainer = document.querySelector('.cajaplaylist');
+                    const offset = pageIndex * -(100 / 5); // Ancho de cada página (100%) multiplicado por el índice
+        
+                    pagesContainer.style.transform = `translateY(${offset}%)`;
+                }
+            </script>
+            </div>
+
 
 </html>
 </body>

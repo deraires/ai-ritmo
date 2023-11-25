@@ -21,8 +21,8 @@ main {
 .BoxPlays {
     display: flex;
     flex-direction: column;
-    height: 100% * 5;
-    width: 100vh;
+    height: 500% * 5;
+    width: 400vh;
     /* Ancho total de las páginas (100% * número de páginas) */
     transition: transform 1.5s ease;
 }

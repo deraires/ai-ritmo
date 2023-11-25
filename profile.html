@@ -23,18 +23,21 @@
 <body>
     <main class="content">
 
-        
-            <div class="BoxProfile">
 
-                <img src="img/foto.jpg" alt="">
+
+        
+            <div class="BoxProfile" >
+                <div id="infoprofile"></div>
+
+                <!-- <img src="img/foto.jpg" alt="">
                 <div class="TextProfile">
                     <h3>@conaiesmejor</h3>
                     <p>La música y las aventuras son mi vida, bienvienido a mi perfil donde encontras música de todos
                         los
                         tiempos y generos</p>
-                </div>
+                </div> -->
 
-            </div>
+            </div> 
 
             <div>
                 <div class="PersonalInfo">
@@ -42,8 +45,8 @@
 
                     <div class="profilesongs">
                         <div class="song">
-                            <p>Para tu amor </p><img src="img/Juanes.jpg" alt="">
-                        </div>
+                            <!-- <p>Para tu amor </p><img src="img/Juanes.jpg" alt="">
+                        </div> -->
                         <div class="song">
                             <p>Usted</p> <img src="img/Diego Torres.png" alt="">
                         </div>
@@ -99,34 +102,47 @@
 
 
         <script>
-            var infoplaylist =
-            {
-                imgProfile: "img/foto.png",
-                nombreUsuario: "NombreUsuario",
-                nametag: "@kike",
-                descripcion: "TextProfile",
-                canciones: ["Para tu amor", "Otro Tema"],
-                generos: ["pop", "rock", "house"]
 
+        const infoprofile=document.getElementById("infoprofile");
 
-                    < div class = "BoxProfile" >
+            var  profilusers =            [ 
+                {
+                imgProfileSrc: "..img/foto.png",
+                nombreUsuario: " Pete Pan",
+                nametag: "peterPan",
+                descripcion: "La música y las aventuras son mi vida, bienvienido a mi perfil donde encontras música de todos los tiempos y generos",
+                canciones: ["img/guetta.jpg", "Para tu amor"],
+                generos: ["pop", "rock", "house"],
+            }
+                ];
+           
+             
+           
+            var infouserHTML="";
 
-                        <img src="img/foto.jpg" alt="">
-                            <div class="TextProfile">
-                                <h3>@conaiesmejor</h3>
-                                <p>La música y las aventuras son mi vida, bienvienido a mi perfil donde encontras música de todos
-                                    los
-                                    tiempos y generos</p>
-                            </div>
+            // profiluser.forEach(persona =>
 
-                        
-                     </div>
+            profilusers.forEach(usuario => {
+                
+               imageElement = document.getElementById('imgProfileSrc'); + `
+                                                ${usuario.imgProfileSrc}" alt=""> 
+                                                <div class="TextProfile">`
 
-            };
-
-
-
-
+                infouserHTML = infouserHTML + `
+                                                    <h3>Nombre de Usuario:${usuario.nombreUsuario}</h3>
+                                                    <h2>Nick Name: @${usuario.nametag}</h2>
+                                                    <p>descripcion${usuario.descripcion}</p>
+                                                </div>
+                                                <div class="profilesongs">
+                                                <div class="song"> 
+                                                <p>${usuario.canciones} 
+                                                </div>
+                                                `;
+                                                
+            });
+            infoprofile.innerHTML=infouserHTML;
+            imageElement.src = usuario.imgProfileSrc;
+        
         </script>
 
 </html>
