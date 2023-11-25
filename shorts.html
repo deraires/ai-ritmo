@@ -14,19 +14,10 @@
         <div class="Atras">
             <a href="javascript: history.go(-1)"><i class="fa-solid fa-arrow-left icono-atras"></i></a>
         </div>
-        <div class="Contenido">
-            <div class="Contenido-video">
+        <div class="Contenido" id="Video">
+            <!--<div class="Contenido-video">
                 <video src="vid/Martes.mp4" autoplay="true" muted="true" loop="true"></video>
-            </div>
-            <div class="Contenido-video">
-                <video src="vid/Save your tears.mp4" autoplay="true" muted="true" loop="true"></video>
-            </div>
-            <div class="Contenido-video">
-                <video src="vid/Save your tears.mp4" autoplay="true" muted="true" loop="true"></video>
-            </div>
-            <div class="Contenido-video">
-                <video src="vid/Save your tears.mp4" autoplay="true" muted="true" loop="true"></video>
-            </div>
+            </div>-->
         </div>
             <div class="MenuInferior">
                 <div class="MenuInferior-opcion">
@@ -71,6 +62,31 @@
         imagen2.classList.add("rotar");
         });
 
+    </script>
+
+    <script>    
+    
+    const Shorts=document.getElementById("Video");
+
+    var allvideos = [
+    {video: "vid/amaia.mp4"},
+    {video: "vid/Marina.mp4"},
+    {video: "vid/Humbe.mp4"},
+    {video: "vid/Martes.mp4"}
+
+    ];
+
+    var shortsHTML="";
+
+    allvideos.forEach(short => {
+        shortsHTML= shortsHTML + `
+        <div class="Contenido-video">
+                <video src=${short.video} autoplay="true" muted="true" loop="true"></video>
+            </div>`;
+    });
+
+    Shorts.innerHTML=shortsHTML;
+    
     </script>
 
 </body>
