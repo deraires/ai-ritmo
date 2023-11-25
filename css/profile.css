@@ -1,11 +1,7 @@
 body {
-    margin: 0;
     overflow: hidden;
     
 }
-
-
-
 
 .pages {
     display: flex;
@@ -33,18 +29,9 @@ body {
 }
 
 .Header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     background-color: #FDD4D8;;
     position: fixed;
     top: 0;
-    width: 100vw;
-    height: 53px;
-    gap: 29%;
-    margin-top: 0;
-    padding-left: 10px;
-   
 }
 
 .UserProfile {
@@ -59,7 +46,6 @@ body {
    
    
 }
-
 
 .Contenedor-imagen {
     width: 80%;

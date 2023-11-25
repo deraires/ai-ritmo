@@ -35,13 +35,14 @@ div {
     width: 100vw;
     height: 255px;
     
-background: url(../images/Captura\ de\ pantalla\ 2023-11-17\ a\ las\ 16.50\ 1.svg);
-background-position: center;
-background-size: 100%;
-width: 100vw;
-height: 255px;
-display: flex;
-flex-direction: column;
+    background: url(../images/Captura\ de\ pantalla\ 2023-11-17\ a\ las\ 16.50\ 1.svg);
+    background-position: center;
+    background-size: 100%;
+    width: 100vw;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
 
    
 }
@@ -72,11 +73,9 @@ flex-direction: column;
 .Contentmusic {
 
     background-color: #FDD4D8;
-    height: 346px;
+    height: 385px;
     width: 100vw;
     border-radius: 0px 0px 40px 40px;
-   
-   
 }
 
 .Subtitle {
@@ -91,10 +90,12 @@ flex-direction: column;
     width: auto;
     align-items: center;
     padding: 8px;
-    gap: 8px;
-    
-   
-   
+    gap: 8px; 
+}
+
+.CardMusic a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .CardMusic img {
