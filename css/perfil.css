@@ -38,7 +38,7 @@ margin-top: 20px;
 
 .Ajustes-card{
     border-bottom-style: solid;
-    border-bottom-color: coral;
+    border-bottom-color:var(--violet);;
     width: 90%;
     height: 15%;
     margin:20px;

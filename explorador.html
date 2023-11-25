@@ -29,29 +29,15 @@
         <div class="MenuSuperior-opcion">
             <i class="fa-solid fa-compact-disc icono-superior"></i>
         </div>
-        <div class="MenuSuperior-opcion">
-            <img src="img/music.svg" alt="">
-        </div>
     </div>
-    <div class="Contenido">
-        <div class="Contenido-card">
-            <h1>1</h1>
-        </div>
-        <div class="Contenido-card">
-            <h1>1</h1>
-        </div>
-        <div class="Contenido-card">
-            <h1>1</h1>
-        </div>
-        <div class="Contenido-card">
-            <h1>1</h1>
-        </div>
-        <div class="Contenido-card">
-            <h1>1</h1>
-        </div>
-        <div class="Contenido-card">
-            <h1>1</h1>
-        </div>
+    <div class="Contenido" id="Explorar">
+        <!--<div class="Contenido-card">
+            <img class="Portada"src="img/bailar.jpg" alt="">
+            <div class="Card-info">
+                <h1 class="titulo">En el coche</h1>
+                <h4 class="subtitulo">Exclusivo para ti</h4>
+            </div>
+        </div>-->
     </div>
     <div class="Reproductor">
         <div class="Foto">
@@ -110,6 +96,36 @@
 
         imagen2.classList.add("rotar");
         });
+
+    </script>
+
+    <script>
+        
+        const Parami=document.getElementById("Explorar");
+
+        var Misrecomendaciones=[
+        {titulo: "En directo", subtitulo: "Escuchado recientemente", imagen:"img/amaia.jpg" },
+        {titulo: "En el coche", subtitulo: "Exclusivo para ti", imagen:"img/car.jpg" },
+        {titulo: "Desconectar", subtitulo: "", imagen:"img/desconectar.jpg" },
+        {titulo: "Acústico", subtitulo: "Novedad", imagen:"img/acustico.jpg" },
+        {titulo: "Exitos", subtitulo: "Basado en tus likes", imagen:"img/exitos.jpg" }
+        ];
+
+        var recomendaciones="";
+
+        Misrecomendaciones.forEach(recomendacion => {
+            recomendaciones = recomendaciones + `
+            <div class="Contenido-card">
+            <img class="Portada"src=${recomendacion.imagen} alt="">
+            <div class="Card-info">
+                <h1 class="titulo">${recomendacion.titulo}</h1>
+                <h4 class="subtitulo">${recomendacion.subtitulo}</h4>
+            </div>
+        </div>`;
+        });
+
+        Parami.innerHTML=recomendaciones;
+
 
     </script>
 

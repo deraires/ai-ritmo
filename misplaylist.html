@@ -86,12 +86,12 @@
     const Prueba=document.getElementById("Album");
 
     var misplaylists=[
-        {titulo: "Random" },
-        {titulo: "Bailar"},
-        {titulo: "Estudiar"},
-        {titulo: "Salir"},
-        {titulo: "Correr"},
-        {titulo: "Programar"}
+        {titulo: "Random", imagen:"img/random24.jpg" },
+        {titulo: "Bailar", imagen:"img/bailar.jpg"},
+        {titulo: "Estudiar", imagen:"img/juzgar.jpg"},
+        {titulo: "Salir", imagen:"img/corazon.jpg"},
+        {titulo: "Correr", imagen:"img/random.jpg"},
+        {titulo: "Programar", imagen:"img/programar.jpg"}
     ];
 
     var albumHTML="";
@@ -99,7 +99,7 @@
     misplaylists.forEach(playlist => {
         albumHTML = albumHTML + `
         <div class="Card">
-        <img class="Portada"src="img/patricio.jpg" alt="">
+        <img class="Portada"src=${playlist.imagen} alt="">
             <h3 class="Titulo">${playlist.titulo}</h3></div>`;
     });
 
