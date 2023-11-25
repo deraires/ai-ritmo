@@ -60,12 +60,27 @@ body {
     background-color: white;
 }
 
+.Bio-banner-img{
+    width:100%;
+    height:150px;
+    border-radius:10px;
+    object-fit: cover; 
+    box-shadow:  1px 1px 4px #261c39;
+    background-color: white;
+}
+
 .Bio-info{
     padding: 2%;
     display: flex;
     flex-direction: column;
 }
 
+.Profile-title{
+    color: var(--default-text-color);
+    margin: 2em;
+    margin-bottom: 0em;
+    font-size: 22px;
+}
 
 .Profile-Playlists{
     background-color: var(--default-box-color);
@@ -84,6 +99,8 @@ body {
     align-items: center;
     margin: 2%;
 }
+
+
 
 .Playlist-img{
     width: 155px;
@@ -151,6 +168,40 @@ body {
     box-shadow:  1px 1px 4px #261c39;
 }
 
+.Artista-like{
+    font-size: 30px;
+    color: var(--default-BG-color);
+    background-color: var(--default-highlight-color);
+    padding: 3%;
+    border-radius: 150px;
+    position: absolute;
+    right: 20px;
+    top: 150px;
+}
+
+.Artista-Top5{
+    background-color: var(--default-menu-color);
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    color: var(--default-BG-color);
+    margin-top: 20px;
+}
+
+.Artista-Cancion{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.Artista-Cancion-img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow:  1px 1px 3px #261c39;
+}
+
+
 
 
 /*Registro e Inicio de sesión*/
@@ -189,14 +240,19 @@ body {
 }
 
 .bienvenida{
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-top: 30%;
+    align-items: center;
+    justify-content: center;
 }
 
 .bienvenida-btns{
     display: flex;
     justify-content: space-evenly;
-    margin: 5%;
+    margin: 10%;
+    gap: 10px;
+    align-items: center;
 }
 
 .bienvenida-btn{
@@ -207,8 +263,8 @@ body {
     color: var(--default-BG-color);
     font-weight: 600;
     text-align: center;
-    width: 100px;
     cursor: pointer;
+    min-width: 100px;
 }
 
 .inicio{
@@ -254,6 +310,8 @@ body {
     text-align: center;
     cursor: pointer;
     font-family: 'Quicksand';
+    width: 150px;
+    height: 20px;
 }
 
 .form-link{
@@ -289,6 +347,11 @@ body {
     }
 }
 
+.Landing-logo{
+    width: 100px;
+    margin: 5%;
+}
+
 
 /*Página Términos y Condiciones*/
 
@@ -301,3 +364,30 @@ body {
     text-align: justify;
 }
 
+
+/*Shorts*/
+.Shorts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Shorts-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Shorts-vd{
+    height: 896px;
+
+
+}
+
+.Shorts-name{
+    color: var(--default-text-color);
+    position: absolute;
+    align-items: center;
+    margin: 5%;
+}
