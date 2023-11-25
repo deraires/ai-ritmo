@@ -71,7 +71,11 @@ body{
     justify-content: space-between;
 }
 
-
+.contentplay {
+    width: 1vh;
+    padding-bottom: 12rem;
+    padding-bottom: 20%;
+}
 
 
 .box {
