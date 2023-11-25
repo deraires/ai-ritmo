@@ -364,3 +364,30 @@ body {
     text-align: justify;
 }
 
+
+/*Shorts*/
+.Shorts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Shorts-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Shorts-vd{
+    height: 896px;
+
+
+}
+
+.Shorts-name{
+    color: var(--default-text-color);
+    position: absolute;
+    align-items: center;
+    margin: 5%;
+}
