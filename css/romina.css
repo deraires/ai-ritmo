@@ -98,6 +98,8 @@ body {
     justify-content: center;
     align-items: center;
     margin: 2%;
+    color: var(--default-menu-color);
+    text-decoration: none;
 }
 
 
@@ -126,6 +128,8 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: var(--default-menu-color);
+    text-decoration: none;
 }
 
 .Artist-img{
@@ -378,6 +382,9 @@ flex-direction: column;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    width:100vw;
+    height: 285%; 
+    transition: transform 1.5s ease;
 }
 
 .Shorts-top{

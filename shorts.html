@@ -17,21 +17,21 @@
 <body>
     <main class="Shorts">
 
-        <div class="Shorts-top" id="Shorts-top">
+        <div class="Shorts-top" onclick="changeShort(1)">
             <h3 class="Shorts-name" id="Shorts-name">Artist Name</h3>
             <video class="Shorts-vd" autoplay muted>
                 <source src="./img/shorts/Short-01.mp4" type="video/mp4">
             </video>  
         </div>
 
-        <div class="Shorts-top" id="Shorts-top">
+        <div class="Shorts-top" onclick="changeShort(2)">
             <h3 class="Shorts-name" id="Shorts-name">Artist Name</h3>
             <video class="Shorts-vd" autoplay muted>
                 <source src="./img/shorts/Short-02.mp4" type="video/mp4">
             </video>  
         </div>
 
-        <div class="Shorts-top" id="Shorts-top">
+        <div class="Shorts-top" onclick="changeShort(0)">
             <h3 class="Shorts-name" id="Shorts-name">Artist Name</h3>
             <video class="Shorts-vd" autoplay muted>
                 <source src="./img/shorts/Short-03.mp4" type="video/mp4">
@@ -59,13 +59,23 @@
         </div> --->
 
         <!-------------Menú Bottom Bar-------------------->
-        <footer class="MenuBottom">
-            <a class="MenuBottom-btn" href="../Index.html"><i class="fa-brands fa-octopus-deploy"></i></a>
-            <a class="MenuBottom-btn" href="./Shorts.html"><i class="fa-solid fa-film"></i></a>
-            <a class="MenuBottom-btn" href="./Explorador.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a class="MenuBottom-btn" href="./Perfil.html"><i class="fa-solid fa-headphones"></i></a>
-        </footer>
+        
     </main>
+    <footer class="MenuBottom">
+        <a class="MenuBottom-btn" href="../Index.html"><i class="fa-brands fa-octopus-deploy"></i></a>
+        <a class="MenuBottom-btn" href="./Shorts.html"><i class="fa-solid fa-film"></i></a>
+        <a class="MenuBottom-btn" href="./Explorador.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a class="MenuBottom-btn" href="./Perfil.html"><i class="fa-solid fa-headphones"></i></a>
+    </footer>
+
+    <script>
+         function changeShort(shortIndex) {
+            const shortsContainer = document.querySelector('.Shorts');
+            const offset = shortIndex * -(100/3); // Ancho de cada página (100%) multiplicado por el índice
+
+            shortsContainer.style.transform = `translateY(${offset}%)`;
+        }
+    </script>
     
 </body>
 </html>
