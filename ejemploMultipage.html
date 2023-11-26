@@ -17,8 +17,9 @@
 
         .pages {
             display: flex;
-            height:100vh;
-            width: 300%; /* Ancho total de las páginas (100% * número de páginas) */
+            flex-direction: column;
+            width:100vw;
+            height: 3000px; /* Ancho total de las páginas (100% * número de páginas) */
             transition: transform 1.5s ease;
         }
 
@@ -62,17 +63,17 @@
 <body>
 
     <div class="pages">
-        <div id="page1" class="page">
+        <div id="page1" class="page" onclick="changePage(1)">
             <h1>Página 1</h1>
             <p>Contenido de la página 1...</p>
         </div>
 
-        <div id="page2" class="page">
+        <div id="page2" class="page" onclick="changePage(2)">
             <h1>Página 2</h1>
             <p>Contenido de la página 2...</p>
         </div>
 
-        <div id="page3" class="page">
+        <div id="page3" class="page" onclick="changePage(0)">
             <h1>Página 3</h1>
             <p>Contenido de la página 3...</p>
         </div>
@@ -80,18 +81,18 @@
 
 
 
-    <nav>
+    <!-- <nav>
         <a href="#" onclick="changePage(0)">Página 1</a>
         <a href="#" onclick="changePage(1)">Página 2</a>
         <a href="#" onclick="changePage(2)">Página 3</a>
-    </nav>
+    </nav> -->
 
     <script>
         function changePage(pageIndex) {
             const pagesContainer = document.querySelector('.pages');
             const offset = pageIndex * -(100/3); // Ancho de cada página (100%) multiplicado por el índice
 
-            pagesContainer.style.transform = `translateX(${offset}%)`;
+            pagesContainer.style.transform = `translateY(${offset}%)`;
         }
     </script>
 </body>
