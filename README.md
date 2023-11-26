@@ -13,10 +13,12 @@ AI-RITMO es un proyecto que busca desarrollar una app de reproducción de músic
 Pablo| Kike |
 | ---------| ---------|
 | Navegador + Botón flotante | Shorts |
-| AI HOME | Lista de temas |
+| AI HOME |Perfil Personal |
 | Reproductor | Explorador |
-| Login/Registro/TyC | Perfil Personal |
+| Login/Registro/TyC |  |
 | Perfil Artista |  |
+| Lista de temas |  |
+
 
 
 
