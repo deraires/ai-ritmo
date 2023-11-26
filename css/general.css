@@ -42,6 +42,7 @@ body {
     border-radius: 10px;
     text-align: center;
 }
+a{text-decoration: none;}
 
 /* -------------Boton modo claro---------------------------*/
 
@@ -95,7 +96,8 @@ body {
     background-color: var(--default-text-color);
     width: 75%;
     height: 3%;
-    margin-top: 20px;
+    margin: auto;
+    margin-top: 10px;
 
 }
 
@@ -114,14 +116,34 @@ body {
     animation-timing-function: linear;
 }
 
+.Rep-name-song {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.Rep-h2 {
+    font-size: 12px;
+    color: var(--default-text-color);
+    margin: 0 auto;
+}
+
+.Rep-h3 {
+    font-size: 8px;
+    color: var(--default-text-color);
+    margin: 0 auto;
+}
+
 .Rep-icons {
     color: var(--default-text-color);
     display: flex;
     flex-direction: row;
+
     justify-content: space-around;
     align-items: center;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 14px;
+
 }
 
 .Rep-song {
@@ -206,8 +228,7 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    width: 100%;
-    height: 8%;
+    height: 4%;
     padding: 25px;
     color: var(--default-text-color);
     font-size: 10px;
@@ -216,8 +237,8 @@ body {
 
 
 .Playlist-img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -227,6 +248,59 @@ body {
     margin-bottom: 0px;
 }
 
+.Playlist-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Fieldset-height {
+    max-height: 150px;
+    overflow: scroll;
+}
+
+.Popup-title {
+    position: fixed;
+    color: var(--default-text-color);
+    margin-bottom: 30px;
+}
+
+.Popup-playlist {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 2px 2px 10px var(--default-box2-color);
+    background-color: var(--default-BG-color);
+}
+
+.Popup-playlist--name {
+    font-size: 14px;
+    color: var(--default-text-color);
+}
+
+.Popup-playlist--artist {
+    font-size: 8px;
+    color: var(--default-text-color);
+}
+
+.Playlist-artist {
+    margin-top: -11px;
+    font-size: 10px;
+}
+.SearchText-popup-playlist{padding: 10px;
+    padding-right: 70px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 45%;
+    height: 10px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+
+}
+
+
+
 
 /*--------------------------- Index------------------------- */
 
@@ -235,12 +309,15 @@ body {
     background-color: var(--default-menu-color);
     height: 200px;
     border-radius: 50%;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .Ai-words {
     color: var(--default-text-color);
-    font-size: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .Options {
@@ -281,6 +358,7 @@ body {
     padding-right: 70px;
     border: none;
     font-size: 18px;
+    border: 2px solid var(--default-menu-color);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 70%;
@@ -324,7 +402,7 @@ body {
     margin-left: 10px;
     background: var(--default-box2-color);
     color: var(--default-text-color);
-    font-size: 14px;
+    font-size: 18px;
     border-radius: 5px;
     border: none;
     cursor: pointer;

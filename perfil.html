@@ -29,7 +29,7 @@
                 <a class="Bio-btn" href="./landing.html">Editar Perfil</a>
             </div>
             
-            <div>
+            <div><a href="#Popup1">
                 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
                     type="module"></script>
                 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
@@ -38,8 +38,45 @@
                     background="transparent" speed="1"
                     style="width: 160px; height: 186px; float: right; margin-top: -55px;margin-left: -95px; position: fixed; "
                     loop autoplay></dotlottie-player>
-            </div>
+                </a></div>
         </section>
+
+         <!---------------------------------POPUP-------------------------------->
+   <div id="Popup1" class="Overlay">
+    <div class="Popup">
+        <form id="Popup-form">
+            <h2>¿En que puedo ayudarte?</h2>
+            <input class="Search-text-popup" type="text" placeholder="Texto">
+                <fieldset class="Fieldset-profile">
+                    <legend>Nueva Playlist</legend>
+
+                <div class="Recommended-artist-list">
+                <form class="Create-playlist" action="">
+                   <input class="SearchText-popup-playlist" type="text" placeholder="Título">
+                </form>
+            </div>
+            <h3>Añadir canciones</h3>
+                </fieldset>
+                <fieldset class="Fieldset-profile">
+                    <legend>Buscar artista</legend>
+
+                    <div class="Recommended-artist-list">
+                    <form class="Create-playlist" action="">
+                        <input class="SearchText-popup-playlist" type="text" placeholder="Artista">
+                     </form></div>
+
+                </fieldset>
+
+            <a class="close" href="#">&times;</a>
+            <div class="Content">
+            <button id="check_button"> <a href="/playlist.html">Crear</a></button>
+        </form>
+        </div>
+    </div> </div>
+
+
+
+
 
         <h1 class="Profile-title">Mis Playlists</h1>
         <section class="Profile-Playlists">
@@ -110,22 +147,23 @@
 
 
 
-        <!-------------Reproductor-------------------->
-        <div class="Reproductor">
+    <!-------------Reproductor-------------------->
 
-            <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
-            <div class="Line">
-                <div class="Rep-circle"></div>
-                <div class="Rep-icons">
-                    <i class="fa-solid fa-forward fa-rotate-180"></i>
-                    <div class="Play-icons"><i class="fa-solid fa-pause"></i>
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                    <i class="fa-solid fa-forward"></i>
-                </div>
+    <div class="Reproductor">
 
-            </div>
+        <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
+        <div class="Rep-name-song">
+        <h2 class="Rep-h2">Answer - Ateez</h2>
+        <div class="Line"> <div class="Rep-circle"></div>
+            <div class="Rep-icons">
+                <i class="fa-solid fa-forward fa-rotate-180"></i>
+                <div class="Play-icons"><i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-play"></i></div>
+                <i class="fa-solid fa-forward"></i>
+            </div></div>
+
         </div>
+    </div>
 
         <!-------------Menú Bottom Bar-------------------->
         <footer class="MenuBottom">
