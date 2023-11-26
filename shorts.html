@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,38 +12,94 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-------------------------------> 
+    <!------------------------------->
 
 </head>
+
 <body>
     <main class="Shorts">
 
         <div class="Shorts-top" onclick="changeShort(1)">
             <h3 class="Shorts-name" id="Shorts-name">Taylor Swift</h3>
-            <video class="Shorts-vd" autoplay muted>
+            <div class="Shorts-nav">
+                <a class="Shorts-vol" href="#" onclick="toggleMute()"><i class="fa-solid fa-volume-low"></i></a>
+                <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+            <video class="Shorts-vd" autoplay muted loop controls>
                 <source src="./img/shorts/Short-01.mp4" type="video/mp4">
-            </video>  
+            </video>
         </div>
 
         <div class="Shorts-top" onclick="changeShort(2)">
-            <h3 class="Shorts-name" id="Shorts-name">Artist Name</h3>
-            <video class="Shorts-vd" autoplay muted>
+            <h3 class="Shorts-name" id="Shorts-name">Stray Kids</h3>
+            <video class="Shorts-vd" autoplay muted loop>
+                <source src="./img/shorts/Short-10.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="Shorts-top" onclick="changeShort(3)">
+            <h3 class="Shorts-name" id="Shorts-name">Taylor Swift</h3>
+            <video class="Shorts-vd" autoplay muted loop>
+                <source src="./img/shorts/Short-06.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="Shorts-top" onclick="changeShort(4)">
+            <h3 class="Shorts-name" id="Shorts-name">Stray Kids</h3>
+            <video class="Shorts-vd" autoplay muted loop>
                 <source src="./img/shorts/Short-02.mp4" type="video/mp4">
-            </video>  
+            </video>
+        </div>
+
+        <div class="Shorts-top" onclick="changeShort(5)">
+            <h3 class="Shorts-name" id="Shorts-name">Taylor Swift</h3>
+            <video class="Shorts-vd" autoplay muted loop>
+                <source src="./img/shorts/Short-05.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="Shorts-top" onclick="changeShort(6)">
+            <h3 class="Shorts-name" id="Shorts-name">ATEEZ</h3>
+            <video class="Shorts-vd" autoplay muted loop>
+                <source src="./img/shorts/Short-09.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="Shorts-top" onclick="changeShort(7)">
+            <h3 class="Shorts-name" id="Shorts-name">Taylor Swift</h3>
+            <video class="Shorts-vd" autoplay muted loop>
+                <source src="./img/shorts/Short-08.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="Shorts-top" onclick="changeShort(8)">
+            <h3 class="Shorts-name" id="Shorts-name">Fletcher</h3>
+            <video class="Shorts-vd" autoplay muted loop>
+                <source src="./img/shorts/Short-04.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="Shorts-top" onclick="changeShort(9)">
+            <h3 class="Shorts-name" id="Shorts-name">Taylor Swift</h3>
+            <video class="Shorts-vd" autoplay muted loop>
+                <source src="./img/shorts/Short-07.mp4" type="video/mp4">
+            </video>
         </div>
 
         <div class="Shorts-top" onclick="changeShort(0)">
-            <h3 class="Shorts-name" id="Shorts-name">Artist Name</h3>
-            <video class="Shorts-vd" autoplay muted>
+            <h3 class="Shorts-name" id="Shorts-name">Ross Lynch</h3>
+            <video class="Shorts-vd" autoplay muted loop>
                 <source src="./img/shorts/Short-03.mp4" type="video/mp4">
-            </video>  
+            </video>
         </div>
 
 
 
 
         <!-------------Reproductor-------------------->
-         <!--<div class="Reproductor">
+        <!--<div class="Reproductor">
 
             <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
             <div class="Line">
@@ -61,20 +118,36 @@
 
     <!-------------Menú Bottom Bar-------------------->
     <footer class="MenuBottom">
-        <a class="MenuBottom-btn" href="../Index.html"><i class="fa-brands fa-octopus-deploy"></i></a>
+        <a class="MenuBottom-btn" href="../Index.html"><img class="Logo-icon" src="./img/logo/pulpologo.svg"
+                alt="Logo Ai-Ritmo"></a>
         <a class="MenuBottom-btn" href="./Shorts.html"><i class="fa-solid fa-film"></i></a>
         <a class="MenuBottom-btn" href="./Explorador.html"><i class="fa-solid fa-magnifying-glass"></i></a>
         <a class="MenuBottom-btn" href="./Perfil.html"><i class="fa-solid fa-headphones"></i></a>
     </footer>
 
     <script>
-         function changeShort(shortIndex) {
+        // Deslizar el video y reproducir siguiente
+        function changeShort(shortIndex) {
             const shortsContainer = document.querySelector('.Shorts');
-            const offset = shortIndex * -(100/3); // Ancho de cada página (100%) multiplicado por el índice
+            const offset = shortIndex * -(100 / 10); // Ancho de cada página (100%) multiplicado por el índice
 
             shortsContainer.style.transform = `translateY(${offset}%)`;
         }
+
+
+        // Botón de activar sonido
+        var volumen = document.querySelector('.Shorts-vd');
+
+        function toggleMute() {
+            if (volumen.muted) {
+                volumen.muted = false;
+            } else {
+                volumen.muted = true;
+            }
+        }
+
     </script>
-    
+
 </body>
+
 </html>

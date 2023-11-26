@@ -42,6 +42,7 @@ body {
     border-radius: 10px;
     text-align: center;
 }
+
 a{text-decoration: none;}
 
 /* -------------Boton modo claro---------------------------*/
@@ -54,7 +55,7 @@ a{text-decoration: none;}
     align-items: center;
 }
 
-/*Menu Bottom*/
+/*------------Menú Bottom Bar-----------*/
 
 .MenuBottom {
     position: fixed;
@@ -66,13 +67,19 @@ a{text-decoration: none;}
     display: flex;
     font-size: 40px;
     justify-content: space-around;
-    padding: 2%;
+    padding: 1%;
     align-items: center;
 }
 
 .MenuBottom-btn {
-    color: var(--default-box-color);
+    color: var(--default-BG-color);
     text-decoration: none;
+}
+
+.Logo-icon{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
 }
 
 
@@ -641,3 +648,403 @@ legend {
 .Special {
     color: var(--default-text-color);
 }
+
+
+/*------------Shorts-----------*/
+.Shorts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width:100vw;
+    height: 950%; 
+    transition: transform 1.5s ease;
+}
+
+.Shorts-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Shorts-vd{
+    height: 896px;
+
+
+}
+
+.Shorts-name{
+    color: var(--default-text-color);
+    position: absolute;
+    align-items: center;
+    margin: 5%;
+}
+
+.Shorts-vol{
+    color: var(--default-menu-color);
+    position: absolute;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+
+/*--------------Página Términos y Condiciones------------*/
+.privacidad{
+    margin: 1em;
+    padding: 1em;
+    color: var(--default-BG-color);
+    background-color: var(--default-menu-color);
+    border-radius: 10px;
+    text-align: justify;
+}
+
+
+/*-------------Landing, Registro e Inicio de sesión--------------*/
+/*animacion fondo*/
+.bg-animado{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(214,195,237);
+    background: linear-gradient(135deg, rgba(214,195,237,1) 0%, rgba(62,9,122,1) 100%);
+    background-size: 300% 100%;
+    animation: gradient 10s ease infinite;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.cajaLanding{
+    
+    background-color: var(--default-box2-color);
+    border-radius: 10px;
+    margin: 5%;
+    padding: 3%;
+    color: var(--default-text-color);
+    box-shadow:  3px 5px 19px  #261c39;
+}
+
+.bienvenida{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bienvenida-btns{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10%;
+    gap: 10px;
+    align-items: center;
+}
+
+.bienvenida-btn{
+    background-color: var(--default-highlight-color);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 2%;
+    color: var(--default-BG-color);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.inicio{
+    display: none;
+    margin-top: 30%;
+}
+
+.registro{
+    display: none;
+    margin-top: 10%;
+    
+}
+
+.form-list{
+    list-style-type: none;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+
+.form-imput{
+    border-radius: 5px;
+    border: transparent;
+    padding: 1%;
+    width: 300px;
+    height: 40px;
+}
+
+.form-btn{
+    background-color: var(--default-highlight-color);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 0;
+    padding: 0.4em;
+    margin: 1em;
+    color: var(--default-BG-color);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Quicksand';
+    width: 150px;
+    height: 20px;
+}
+
+.form-link{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--default-highlight-color);
+}
+
+/*Anuncio y animación landing*/
+.anuncio{
+    background-color: var(--default-text-color);
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    color: var(--default-BG-color);
+    font-size: 13px;
+    padding: 4%;
+    width: 70%;
+    position: relative;
+    margin-left: 7%;
+    animation: notification ease 7s infinite; 
+}
+
+@keyframes notification{
+    0% {
+        bottom: -800px;
+    }
+    50% {
+        opacity: 95%;
+    }
+    100% {
+        bottom: -600px;
+        opacity: 0;
+    }
+}
+
+.Landing-logo{
+    width: 100px;
+    margin: 5%;
+}
+
+
+/*-------------Perfil----------------*/
+.Profile{
+    margin-bottom: 200px;
+}
+
+.Bio{
+    background-color: var(--default-box2-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;  
+    padding: 2%;
+    color: var(--default-text-color);   
+}
+
+.Bio-btn{
+    background-color: var(--default-highlight-color);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1%;
+    color: var(--default-BG-color);
+    font-weight: 600;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.Bio-img{
+    width:100px;
+    height:100px;
+    border-radius:150px;
+    object-fit: cover; 
+    box-shadow:  1px 1px 4px #261c39;
+    background-color: white;
+}
+
+.Bio-banner-img{
+    width:100%;
+    height:150px;
+    border-radius:10px;
+    object-fit: cover; 
+    box-shadow:  1px 1px 4px #261c39;
+    background-color: white;
+}
+
+.Bio-info{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile-title{
+    color: var(--default-text-color);
+    margin: 2em;
+    margin-bottom: 0em;
+    font-size: 22px;
+}
+
+.Profile-Playlists{
+    background-color: var(--default-box-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;
+    padding: 2%;
+    color: var(--default-menu-color);
+    overflow: scroll;
+}
+
+.Profile-Playlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    color: var(--default-menu-color);
+    text-decoration: none;
+}
+
+.Playlist-img{
+    width: 155px;
+    height: 155px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow:  1px 1px 4px #261c39;
+}
+
+.Profile-Artists{
+    background-color: var(--default-box-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;
+    padding: 2%;
+    color: var(--default-menu-color);
+    gap: 15px;
+    overflow: scroll;
+}
+
+.Profile-Artist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--default-menu-color);
+    text-decoration: none;
+}
+
+.Artist-img{
+    width:75px;
+    height:75px;
+    border-radius:150px;
+    object-fit: cover; 
+    box-shadow:  1px 1px 4px #261c39;
+    background-color: white;
+}
+
+.Artist-name{
+    font-size: 14px;
+}
+
+.Profile-Albums{
+    background-color: var(--default-box-color);
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;
+    padding: 2%;
+    color: var(--default-menu-color);
+    gap: 15px;
+    overflow: scroll;
+}
+
+.Profile-Album{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.Album-img{
+    width: 155px;
+    height: 155px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow:  1px 1px 4px #261c39;
+}
+
+
+/*--------------Artista-------------*/
+.Artista{
+    margin-bottom: 200px;
+}
+
+.Artista-like{
+    font-size: 30px;
+    color: var(--default-BG-color);
+    background-color: var(--default-highlight-color);
+    padding: 3%;
+    border-radius: 150px;
+    position: absolute;
+    right: 20px;
+    top: 150px;
+}
+
+.Artista-Top5{
+    background-color: var(--default-menu-color);
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    color: var(--default-BG-color);
+    margin-top: 20px;
+}
+
+.Artista-Cancion{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.Artista-Cancion-img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow:  1px 1px 3px #261c39;
+}
+
+.Fieldset-profile{ 
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+
+.btnLody{
+    position: fixed;
+    width: 150px;
+    right: -15px;
+}
+
+

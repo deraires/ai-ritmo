@@ -1,88 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist - Tus Favoritas</title>
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
- <div class="Fullscreen">
-   <h1 class="Playlist-title">Las de siempre</h1>
+    <div class="Fullscreen">
+        <h1 class="Playlist-title">Las de siempre</h1>
 
-    <div class="Search-container">
-        <form id="Search-form" action="/HTML/Playlist.html">
-            <input class="Search-text" type="text" placeholder="Buscar canción">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    <div><a href="#Popup1">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-        <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json" background="transparent" speed="1" style= "width: 160px; height: 186px; float: right; margin-top: -50px;margin-left: -64px; position: fixed; " loop autoplay></dotlottie-player>
-      </a> </div>
-    </div>
+        <div class="Search-container">
+            <form id="Search-form" action="/HTML/Playlist.html">
+                <input class="Search-text" type="text" placeholder="Buscar canción">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div><a href="#Popup1">
+                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                        type="module"></script>
+                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                        type="module"></script>
+                    <dotlottie-player src="https://lottie.host/8bf59fc4-3a9c-49a3-aac5-3f38ba19cdb6/HIejuKnulu.json"
+                        background="transparent" speed="1"
+                        style="width: 160px; height: 186px; float: right; margin-top: -50px;margin-left: -64px; position: fixed; "
+                        loop autoplay></dotlottie-player>
+                </a> </div>
+        </div>
 
-    <!---------------------------------POPUP-------------------------------->
-   <div id="Popup1" class="Overlay">
+        <!---------------------------------POPUP-------------------------------->
+        <div id="Popup1" class="Overlay">
             <div class="Popup">
                 <form id="Popup-form">
                     <h2>¿En que puedo ayudarte?</h2>
                     <input class="Search-text-popup" type="text" placeholder="Texto">
-                        <fieldset>
-                            <legend>Crear Playlist</legend>
+                    <fieldset>
+                        <legend>Crear Playlist</legend>
 
                         <div class="Recommended-artist-list">
-                        <form class="Create-playlist" action="">
-                           <input class="SearchText-popup-playlist" type="text" placeholder="Título">
-                        </form>
-                    </div>
-                        </fieldset>
-                        <fieldset class="Fieldset-height">
-                            <legend>Añadir canciones</legend>
+                            <form class="Create-playlist" action="">
+                                <input class="SearchText-popup-playlist" type="text" placeholder="Título">
+                            </form>
+                        </div>
+                    </fieldset>
+                    <fieldset class="Fieldset-height">
+                        <legend>Añadir canciones</legend>
 
-                           <div class="Popup-playlist"> 
+                        <div class="Popup-playlist">
                             <div class="Popup-playlist--name">Answer</div>
                             <div class="Popup-playlist--artist">Ateez</div>
-                           </div>
-                           <div class="Popup-playlist"> 
+                        </div>
+                        <div class="Popup-playlist">
                             <div class="Popup-playlist--name">Celebrate</div>
                             <div class="Popup-playlist--artist">Ateez</div>
-                           </div>
-                           <div class="Popup-playlist"> 
+                        </div>
+                        <div class="Popup-playlist">
                             <div class="Popup-playlist--name">Say my name</div>
                             <div class="Popup-playlist--artist">Ateez</div>
-                           </div>
-                           <div class="Popup-playlist"> 
+                        </div>
+                        <div class="Popup-playlist">
                             <div class="Popup-playlist--name">Be with you</div>
                             <div class="Popup-playlist--artist">Ateez</div>
-                           </div>
-                           <div class="Popup-playlist"> 
+                        </div>
+                        <div class="Popup-playlist">
                             <div class="Popup-playlist--name">Take me home</div>
                             <div class="Popup-playlist--artist">Ateez</div>
-                           </div>
-                           <div class="Popup-playlist"> 
+                        </div>
+                        <div class="Popup-playlist">
                             <div class="Popup-playlist--name">Deja vu</div>
                             <div class="Popup-playlist--artist">Ateez</div>
-                           </div>
-                           <div class="Popup-playlist"> 
+                        </div>
+                        <div class="Popup-playlist">
                             <div class="Popup-playlist--name">Treasure</div>
                             <div class="Popup-playlist--artist">Ateez</div>
-                           </div>
+                        </div>
 
 
-                        </fieldset>
-    
+                    </fieldset>
+
                     <a class="close" href="#">&times;</a>
                     <div class="Content">
-                    <button id="check_button"> <a href="/playlist.html">Crear</a></button>
+                        <button id="check_button"> <a href="/playlist.html">Crear</a></button>
                 </form>
-                </div>
-            </div> </div>
-<!---------------------------------POPUP-------------------------------->
+            </div>
+        </div>
+    </div>
+    <!---------------------------------POPUP-------------------------------->
 
     <div class="Playlist" id="ListaPlaylist">
-    <!---- <div class="Playlist-one" id="Playlist-box">
+        <!---- <div class="Playlist-one" id="Playlist-box">
             <img id="Play-img" class="Playlist-img" > <h2 id="Play-name"></h2><h4 id="Play-time" class="Duration-text"></h4>
          </div>   
          <div class="Playlist-one">
@@ -107,7 +117,7 @@
             <img id="Play-img" class="Playlist-img" src="/img/playlist/Playlist-Domingo.jpeg" alt=""> <h2 id="Play-name"></h2> <h4 id="Play-time" class="Duration-text"></h4>
          </div> -->
 
-    
+
     </div>
 
     <!-------------Reproductor-------------------->
@@ -116,108 +126,113 @@
 
         <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
         <div class="Rep-name-song">
-        <h2 class="Rep-h2">Answer - Ateez</h2>
-        <div class="Line"> <div class="Rep-circle"></div>
-            <div class="Rep-icons">
-                <i class="fa-solid fa-forward fa-rotate-180"></i>
-                <div class="Play-icons"><i class="fa-solid fa-pause"></i>
-                <i class="fa-solid fa-play"></i></div>
-                <i class="fa-solid fa-forward"></i>
-            </div></div>
+            <h2 class="Rep-h2">Answer - Ateez</h2>
+            <div class="Line">
+                <div class="Rep-circle"></div>
+                <div class="Rep-icons">
+                    <i class="fa-solid fa-forward fa-rotate-180"></i>
+                    <div class="Play-icons"><i class="fa-solid fa-pause"></i>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
 
         </div>
     </div>
 
+    <!-------------Menú Bottom Bar-------------------->
     <footer class="MenuBottom">
-        <a class="MenuBottom-btn" href="./Index.html"><i class="fa-brands fa-octopus-deploy"></i></a>
+        <a class="MenuBottom-btn" href="../Index.html"><img class="Logo-icon" src="./img/logo/pulpologo.svg"
+                alt="Logo Ai-Ritmo"></a>
         <a class="MenuBottom-btn" href="./Shorts.html"><i class="fa-solid fa-film"></i></a>
         <a class="MenuBottom-btn" href="./Explorador.html"><i class="fa-solid fa-magnifying-glass"></i></a>
         <a class="MenuBottom-btn" href="./Perfil.html"><i class="fa-solid fa-headphones"></i></a>
     </footer>
- </div>   
+    </div>
 
-<script>
-const ListaPlaylist=document.getElementById("ListaPlaylist")
+    <script>
+        const ListaPlaylist = document.getElementById("ListaPlaylist")
 
-var lista= [{
+        var lista = [{
 
-      imagen_portada: "/img/albums/Album-Ateez-01.jpeg" ,
-      nombre: "Answer",
-      artista: "Ateez",
-     
-      }, {
+            imagen_portada: "/img/albums/Album-Ateez-01.jpeg",
+            nombre: "Answer",
+            artista: "Ateez",
 
-      imagen_portada: "/img/playlist/Playlist-Ducha.jpg" ,
-      nombre: "One of your girls",
-      artista: "Troye Sivan",
-     
-      },{
+        }, {
 
-      imagen_portada: "/img/playlist/Playlist-Navidad.jpg" ,
-      nombre: "Maroon",
-      artista:"Taylor Swift",
-     
-      },{
+            imagen_portada: "/img/playlist/Playlist-Ducha.jpg",
+            nombre: "One of your girls",
+            artista: "Troye Sivan",
 
-      imagen_portada: "/img/playlist/Playlist-Workout.jpg" ,
-      nombre: "Hunger",
-      artista: "Amaranthe",
-  
-      },{
+        }, {
 
-      imagen_portada: "/img/playlist/Playlist-Concierto.jpg" ,
-      nombre: "False God",
-      artista:"Taylor Swift" ,
-    
-      },{
+            imagen_portada: "/img/playlist/Playlist-Navidad.jpg",
+            nombre: "Maroon",
+            artista: "Taylor Swift",
 
-      imagen_portada: "/img/playlist/Playlist-Dormir.jpg" ,
-      nombre: "Paradise",
-      artista: "Ftisland" ,
-     
-      },{
+        }, {
 
-    imagen_portada: "/img/playlist/Playlist-Cofeetime.jpeg" ,
-      nombre: "Tú eres mi canción",
-      artista: "Lucía Gil",
-    
-    },{
+            imagen_portada: "/img/playlist/Playlist-Workout.jpg",
+            nombre: "Hunger",
+            artista: "Amaranthe",
 
-      imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-      nombre: "Sting",
-      artista:"Fletcher" ,
-     
-   },{
+        }, {
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-        nombre: "Secret Garden",
-        artista:"Oh my girl" ,
-       
-        },{
+            imagen_portada: "/img/playlist/Playlist-Concierto.jpg",
+            nombre: "False God",
+            artista: "Taylor Swift",
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-        nombre: "Sting",
-        artista:"Fletcher" ,
-       
-        },{
+        }, {
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-        nombre: "Sting",
-        artista:"Fletcher" ,
-        
-        },{
+            imagen_portada: "/img/playlist/Playlist-Dormir.jpg",
+            nombre: "Paradise",
+            artista: "Ftisland",
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-        nombre: "Sting",
-        artista:"Fletcher" ,
-       
+        }, {
+
+            imagen_portada: "/img/playlist/Playlist-Cofeetime.jpeg",
+            nombre: "Tú eres mi canción",
+            artista: "Lucía Gil",
+
+        }, {
+
+            imagen_portada: "/img/playlist/Playlist-Domingo.jpeg",
+            nombre: "Sting",
+            artista: "Fletcher",
+
+        }, {
+
+            imagen_portada: "/img/playlist/Playlist-Domingo.jpeg",
+            nombre: "Secret Garden",
+            artista: "Oh my girl",
+
+        }, {
+
+            imagen_portada: "/img/playlist/Playlist-Domingo.jpeg",
+            nombre: "Sting",
+            artista: "Fletcher",
+
+        }, {
+
+            imagen_portada: "/img/playlist/Playlist-Domingo.jpeg",
+            nombre: "Sting",
+            artista: "Fletcher",
+
+        }, {
+
+            imagen_portada: "/img/playlist/Playlist-Domingo.jpeg",
+            nombre: "Sting",
+            artista: "Fletcher",
+
         }];
 
 
-var PlaylistBox=""; 
-        
+        var PlaylistBox = "";
+
         lista.forEach(playlist => {
-            PlaylistBox = PlaylistBox  + `<div class="Playlist-one">
+            PlaylistBox = PlaylistBox + `<div class="Playlist-one">
                                             <img src="${playlist.imagen_portada}" class="Playlist-img" >
                                              <div class= "Playlist-column"> <h2 class= "Playlist-name">${playlist.nombre}</h2>
                                                 <h3 class= "Playlist-artist">${playlist.artista}</h3>
@@ -226,11 +241,12 @@ var PlaylistBox="";
         });
 
 
-ListaPlaylist.innerHTML=PlaylistBox;
+        ListaPlaylist.innerHTML = PlaylistBox;
 
-</script>
+    </script>
 
- 
+
 
 </body>
+
 </html>
