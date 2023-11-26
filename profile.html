@@ -17,6 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/aiRitmo.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="js/temas.js"></script>
     <title>Profile</title>
 </head>
 
@@ -25,11 +26,11 @@
 
 
 
-        
-            <div class="BoxProfile" >
-                <div id="infoprofile"></div>
 
-                <!-- <img src="img/foto.jpg" alt="">
+        <div class="BoxProfile">
+            <div id="infoprofile"></div>
+
+            <!-- <img src="img/foto.jpg" alt="">
                 <div class="TextProfile">
                     <h3>@conaiesmejor</h3>
                     <p>La música y las aventuras son mi vida, bienvienido a mi perfil donde encontras música de todos
@@ -37,15 +38,15 @@
                         tiempos y generos</p>
                 </div> -->
 
-            </div> 
+        </div>
 
-            <div>
-                <div class="PersonalInfo">
+        <div>
+            <div class="PersonalInfo">
 
 
-                    <div class="profilesongs">
-                        <div class="song">
-                            <!-- <p>Para tu amor </p><img src="img/Juanes.jpg" alt="">
+                <div class="profilesongs">
+                    <div class="song">
+                        <!-- <p>Para tu amor </p><img src="img/Juanes.jpg" alt="">
                         </div> -->
                         <div class="song">
                             <p>Usted</p> <img src="img/Diego Torres.png" alt="">
@@ -65,48 +66,198 @@
                         <div class="gener">Generos preferido 2</div>
                         <div class="gener">Generos preferido 3</div>
                         <div class="gener">Generos preferido 4</div>
-               
-            </div>
-        </main>
 
-
-        <nav class="Nav">
-
-            <div class="Nav-ai">
-
-                <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
-                    background="transparent" speed="1" style="width: 90px; " loop autoplay>
-                </dotlottie-player>
-                <div class="u-flex">
-
-                    <div class="Nav-ai-reproductor">
-                        <span>AI mucho ritmo</span>
-                        <span style="font-size: 70%; font-weight: 100;">Pepita. Ritmo</span>
                     </div>
-                    <i class="fa-solid fa-pause iconPause"></i>
+    </main>
+
+    <nav class="Nav">
+        <div class="Nav-ai">
+
+            <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
+                background="transparent" speed="1" style="width: 90px; " loop autoplay>
+            </dotlottie-player>
+            <div class="u-flex">
+
+                <div class="Nav-ai-reproductor" style="flex-grow: 1; margin-left: 20px;" onclick="Mostrar()">
+                    <span class="NombreTema"></span>
+                    <span class="NombreArtista" style="font-size: 70%; font-weight: 100;"></span>
+                </div>
+                <i class="fa-solid fa-pause iconPause"></i>
+                <i class="fa-solid fa-forward-step iconPause" onclick="TemaSiguiente()"></i>
+            </div>
+
+        </div>
+
+  
+        <ul class="Nav-list">
+            <li class="Nav-list-item"><a href="listatemas.html"><i
+                        class="fa-regular fa-heart Nav-list-item-icon "></i></a></li>
+            <li class="Nav-list-item"><a href="explorador.html"><i class="fa-solid fa-magnifying-glass Nav-list-item-icon"></i></a>
+            </li>
+            <li class="Nav-list-item"><a href="main.html"><i
+                        class="fa-solid fa-headphones Nav-list-item-icon--big"></i></a> </li>
+            <li class="Nav-list-item"><a href="shorts.html"><i class="fa-regular fa-circle Nav-list-item-icon"></i></a></li>
+            <li class="Nav-list-item"><a href="profile.html"><i class="fa-regular fa-user Nav-list-item-icon"></i></a></li>
+        </ul>
+    </nav>
+
+    <!--REPRODUCTOR-->
+    <div id="reproductor" class="isnot-active Reproductor">
+        <div style="display: flex; flex-direction: column;">
+
+            <div class="Reproductor-cerrar">
+                <button id="cerrar" class="Reproductor-cerrar-btn" onclick="Mostrar()">
+                    <i class="fa-solid fa-chevron-down" style="color: #ffffff; font-size: 120%;"></i>
+                </button>
+            </div>
+            <div class="Reproductor-contenedor">
+                <img id="ImagenTema" class="Reproductor-contenedor-image" src="" alt="disco">
+
+                <div class="Reproductor-contenedor-cancion">
+                    <span id="NombreArtista" class="Reproductor-contenedor-cancion-artist NombreArtista"></span>
+                    <a style="text-decoration: none; font-size: 70%;" class="u-colorTerciary" href="artista.html"><span id="NombreTema"
+                            class="Reproductor-contenedor-cancion-tit NombreTema"></span></a>
                 </div>
 
+                <div class="Reproductor-contenedor-tiempos">
+                    <span>0:00</span>
+                    <div class="Reproductor-contenedor-tiempos-barra"> </div>
+                    <span id="DuracionTema">3:24</span>
+                </div>
+
+                <div class="Reproductor-contenedor-botones">
+
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step u-iconSemiBig" onclick="TemaAnterior()"></i>
+                    <i id="play" class="fa-regular fa-circle-pause u-iconBig" onclick="Pausar()"></i>
+                    <i class="fa-solid fa-forward-step u-iconSemiBig" onclick="TemaSiguiente()"></i>
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+                <div id="anim" class="BolaReproductor" style="position: fixed; 
+                top: 458px; width: 10px; height: 10px; background-color: white; border-radius: 25px;">
+
+                </div>
             </div>
 
 
-            <ul class="Nav-list">
-                <li class="Nav-list-item"><i class="fa-regular fa-heart Nav-list-item-icon "></i></li>
-                <li class="Nav-list-item"><i class="fa-solid fa-magnifying-glass Nav-list-item-icon"></i></li>
-                <li class="Nav-list-item"><i class="fa-regular fa-circle Nav-list-item-icon"></i></i></li>
-                <li class="Nav-list-item"><i class="fa-regular fa-user Nav-list-item-icon"></i></i></li>
-            </ul>
-        </nav>
-
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-            type="module"></script>
 
 
-        <script>
+        </div>
 
-        const infoprofile=document.getElementById("infoprofile");
+    </div>
 
-            var  profilusers =            [ 
-                {
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+
+    <script>
+
+          /* Datos Nav y Reproductor -- introducido por Pablo*/
+          var ListadoTemas = [
+            {
+                artista: "Troye Sivan",
+                cancion: "My My My!",
+                genero: "Pop",
+                duracion: "3:24",
+                imagen: "img/troye.jpeg"
+            }, {
+                artista: "Juanes",
+                cancion: "Para Tu Amor",
+                genero: "Pop",
+                duracion: "3:57",
+                imagen: "img/juanes.jpeg"
+
+            }, {
+                artista: "Bad Gyal",
+                cancion: "Sin Carné",
+                genero: "Reggaeton",
+                duracion: "2:07",
+                imagen: "img/badgyal.jpeg"
+
+            }, {
+                artista: "Troye Sivan",
+                cancion: "Rush",
+                genero: "Reggaeton",
+                duracion: "2:36",
+                imagen: "img/troyeDisc.webp"
+
+            }, {
+                artista: "Emilia,TINI",
+                cancion: "La_Original.mp3",
+                genero: "Reggaeton",
+                duracion: "2:20",
+                imagen: "img/original.jpg"
+
+            }, {
+                artista: "Bad Gyal",
+                cancion: "Sin carné",
+                genero: "Reggaeton",
+                duracion: "2:07",
+                imagen: "img/badgyal.jpeg"
+
+            }, {
+                artista: "Troye Sivan",
+                cancion: "One Of Your Girls",
+                genero: "Pop",
+                duracion: "2:36",
+                imagen: "img/troyeDisc.webp"
+
+            }, {
+                artista: "Troye Sivan",
+                cancion: "Got Me Started",
+                genero: "Pop",
+                duracion: "2:36",
+                imagen: "img/troyeDisc.webp"
+            }, {
+                artista: "Bad Gyal, Tokischa, Young Miko",
+                cancion: "Chulo pt.2",
+                genero: "Reggaeton",
+                duracion: "2:07",
+                imagen: "img/chulo.png"
+
+            }
+
+
+        ]
+
+
+        /* VARIABLES REPRODUCTOR*/
+
+        var reproductor = document.getElementById("reproductor");
+        var animacion = document.getElementById("anim");
+        var botonPlay = document.getElementById("play");
+
+        var NombreTema = document.getElementById("NombreTema");
+        var ImagenTema = document.getElementById("ImagenTema");
+
+
+        var Artistas = document.querySelectorAll(".NombreArtista")
+        var Temas = document.querySelectorAll(".NombreTema")
+        var reproductor = document.getElementById("reproductor");
+        var animacion = document.getElementById("anim");
+        var botonPlay = document.getElementById("play");
+
+        var NombreTema = document.getElementById("NombreTema");
+        var ImagenTema = document.getElementById("ImagenTema");
+
+
+        var Artistas = document.querySelectorAll(".NombreArtista")
+        var Temas = document.querySelectorAll(".NombreTema")
+
+        var temaActual = 0;
+        var temasTotales = ListadoTemas.length;
+
+
+        Actualizar();
+
+
+
+        const infoprofile = document.getElementById("infoprofile");
+
+        var profilusers = [
+            {
                 imgProfileSrc: "..img/foto.png",
                 nombreUsuario: " Pete Pan",
                 nametag: "peterPan",
@@ -114,21 +265,21 @@
                 canciones: ["img/guetta.jpg", "Para tu amor"],
                 generos: ["pop", "rock", "house"],
             }
-                ];
-           
-             
-           
-            var infouserHTML="";
+        ];
 
-            // profiluser.forEach(persona =>
 
-            profilusers.forEach(usuario => {
-                
-               imageElement = document.getElementById('imgProfileSrc'); + `
+
+        var infouserHTML = "";
+
+        // profiluser.forEach(persona =>
+
+        profilusers.forEach(usuario => {
+
+            imageElement = document.getElementById('imgProfileSrc'); + `
                                                 ${usuario.imgProfileSrc}" alt=""> 
                                                 <div class="TextProfile">`
 
-                infouserHTML = infouserHTML + `
+            infouserHTML = infouserHTML + `
                                                     <h3>Nombre de Usuario:${usuario.nombreUsuario}</h3>
                                                     <h2>Nick Name: @${usuario.nametag}</h2>
                                                     <p>descripcion${usuario.descripcion}</p>
@@ -138,12 +289,15 @@
                                                 <p>${usuario.canciones} 
                                                 </div>
                                                 `;
-                                                
-            });
-            infoprofile.innerHTML=infouserHTML;
-            imageElement.src = usuario.imgProfileSrc;
-        
-        </script>
+
+        });
+        infoprofile.innerHTML = infouserHTML;
+        imageElement.src = usuario.imgProfileSrc;
+
+       
+
+
+    </script>
 
 </html>
 </body>

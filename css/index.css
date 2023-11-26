@@ -137,12 +137,13 @@ input {
 }
 
 .BotonTerms {
-    position: fixed;
+
     bottom: 0;
     right: 10px;
     background-color:var(--color-terciary) ;
     border: 1px solid white;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .u-marginTop {
