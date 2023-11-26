@@ -31,6 +31,7 @@
       margin: 0 auto;
       padding-top: 60px;
       position: relative;
+      padding: 30px;
     }
 
     
@@ -38,12 +39,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px;
       position: absolute;
-      top: 0;
+      top: -20px;
       left: 0;
       right: 0;
       z-index: 2; 
+      padding: 70px;
     }
 
     .back-button {
@@ -59,30 +60,28 @@
     .song-info-container {
       position: relative;
       text-align: center;
-      margin-top: 20px;
+      margin-top: -30px;
     }
 
     .song-cover {
       width: 100%;
-      height: 100%;
-      background:url('https://images.pexels.com/photos/5648352/pexels-photo-5648352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-      position: absolute;
-      top: 0;
+      height: 543px;
+      background-size: cover;
+      background-image: linear-gradient(1deg, #942d45, transparent), url(https://images.pexels.com/photos/957972/ship-chiemsee-bavaria-lake-957972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+      background-repeat: no-repeat;
+      position: relative;
+      top: 0px;
       left: 0;
       z-index: -1;
+
     }
 
-    #Gradient { background: linear-gradient(180deg, #ffffff, #942d45, #444444);
-    height: 400px;
-    width: 400px;
-    background-size: cover;
-    }
 
     .song-title {
       font-size: 1.5em;
       font-weight: 700;
-      margin-top: 10px;
       z-index: 1; 
+      margin-top: -149px;
     }
 
 
@@ -144,7 +143,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 0px;
     }
 
  
@@ -177,7 +176,7 @@
 
     .expand-button {
       position: absolute;
-      bottom: 10px;
+      top: 10px;
       right: 10px;
       font-size: 1.5em;
       color: #ffffff;
@@ -187,12 +186,35 @@
    
     .share-button {
       position: absolute;
-      bottom: 10px;
+      top: 10px;
       left: 10px;
       font-size: 1.5em;
       color: #ffffff;
       cursor: pointer;
     }
+
+
+     /* Play Button */
+  .play-button {
+    background-color: transparent;
+    color: #b18cfe;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+  }
+
+  /* Play Button Hover Effect */
+  .play-button:hover {
+    color: #b18cfe;
+  }
   </style>
 </head>
 <body>
@@ -209,9 +231,8 @@
 
   <div class="song-info-container">
     <div class="song-cover"></div>
-    <div id="Gradient"></div>
-    <div class="song-title">Things will be fine</div>
-    <div class="artist-name">Metronomy</div>
+    <div class="song-title">Náufrago</div>
+    <div class="artist-name">Siddhartha</div>
   </div>
 
   <div class="song-progress-container">
@@ -224,54 +245,176 @@
 
  
   <div class="song-controls-container">
-    <i class="far fa-backward-step song-control-icon"></i>
-    <i class="far fa-circle-play song-control-icon"></i>
-    <i class="far fa-forward-step song-control-icon" style="color: #ffffff;"></i>
+    <i class="fa-solid fa-shuffle" style="color: #ffffff;"></i>
+    <i class="fa fa-backward-step song-control-icon"></i>
+    <button class="play-button" id="playButton"><i class="far fa-circle-play"></i></button>
+    <i class="fa fa-forward-step song-control-icon" style="color: #ffffff;"></i>
+    <i class="fa-solid fa-repeat" style="color: #ffffff;"></i>
   </div>
 
 
   <div class="lyrics-container">
-    <div class="lyrics-text">
-      I remember the first time that I felt this weight on me
-      Yeah, I was only fifteen
-      And just like the first time in that teenage misery
-      Yeah, I wish things were as easy
-
-      But I might save the day
-      Yeah, I might change the world
-      Things will be fine
-      Things will be fine
-
-      The sooner you tell someone, the better you will feel
-      So please, put your trust in me
-      As soon as you do, I'll say when I've made up my mind
-      Oh, you know things will be fine
-
-      'Cause I might save the day
-      Yeah, I might change the world
-      You could be the one
-      To drag me out this hole
-
-      Yeah, I might save the day
-      Yeah, I might change the world
-      But I need you the most
-      Yeah, I need you to hold
-
-      Things will be fine
-      Things will be fine
-      Things will be fine
-      Things will be fine
-      Things will be fine
-      Things will be fine
-
-      I try to forget that I was only your lover
-    </div>
-  
     <i class="fas fa-expand expand-button"></i>
     <i class="fas fa-share-alt share-button"></i>
+
+    <div class="lyrics-text">
+      Cavernario en rascacielos
+Sedentario sin hogar
+Nómada de tiempo eterno
+Ermitaño que odia la soledad
+
+Calendario de los sueños
+¿Quién escribe tu final?
+Cementerio de secretos
+Nadie sabe a dónde irás
+
+No me voy, me alejo para ver mejor
+Es hora de enfrentarlo
+Ya no hay vuelta atrás
+
+Náufrago, es hora de pedir perdón
+Es hora de olvidarte, de la búsqueda
+De aquello, que pudo ser
+    </div>
   </div>
 
 </div>
 
+<script>
+     // Moving the progress bar
+    const progressIndicator = document.querySelector('.song-progress-indicator');
+    const progressBar = document.querySelector('.song-progress-bar');
+    const songDuration = 40;
+ function updateProgress(currentTime) {
+      const progress = (currentTime / songDuration) * 100;
+      progressIndicator.style.left = `${progress}%`;
+    }
+
+    let currentTime = 0;
+    setInterval(() => {
+      currentTime += 1; 
+      if (currentTime > songDuration) {
+        currentTime = 0; 
+      }
+      updateProgress(currentTime);
+    }, 1000);
+
+    // Changing the song with the next and before icon 
+    const songTitleElement = document.querySelector('.song-title');
+    const artistNameElement = document.querySelector('.artist-name');
+    const songCoverElement = document.querySelector('.song-cover');
+    const lyricsTextElement = document.querySelector('.lyrics-text');
+
+    const songs = [
+      {
+        title: 'Náufrago',
+        artist: 'Siddhartha',
+        cover: 'https://images.pexels.com/photos/957972/ship-chiemsee-bavaria-lake-957972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        lyrics: `Cavernario en rascacielos
+Sedentario sin hogar
+Nómada de tiempo eterno
+Ermitaño que odia la soledad
+
+Calendario de los sueños
+¿Quién escribe tu final?
+Cementerio de secretos
+Nadie sabe a dónde irás
+
+No me voy, me alejo para ver mejor
+Es hora de enfrentarlo
+Ya no hay vuelta atrás
+
+Náufrago, es hora de pedir perdón
+Es hora de olvidarte, de la búsqueda
+De aquello, que pudo ser`,
+        duration: '4:00'
+      },
+      {
+        title: 'Brújula',
+        artist: 'Siddharta',
+        cover: 'https://images.pexels.com/photos/8985530/pexels-photo-8985530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        lyrics: `¿Será que, aunque me mires, se irá la tempestad?
+¿Será, mientras me olvides, que alguien más llegará?
+
+No habrá más música, ni bailes, de repente
+Y aunque la brújula no sepa en donde estás
+Seré partículas que salgan de tu mente
+Quizá, en la búsqueda, me puedas perdonar
+
+Quizá
+La bruma no explique bien
+Que todo va a clarear al final
+Llegarán las endorfinas que
+Nos hagan liberar lo que oprime.`,
+        duration: '3:30'
+      },
+      {
+        title: 'Solo',
+        artist: 'Mauvaise Bouche',
+        cover: 'https://images.pexels.com/photos/6799972/pexels-photo-6799972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        lyrics: `À part un feu et son radar
+Qui flashent les govas des chauffards qui déboulent et dévalent mon avenue à fond la caisse
+Chez moi, y a rien à faire
+Le temps est long, je compte les heures, ouais
+Je vis au rythme des voisins, imagine c'que ça donne, 5 gamins dans un 2 pièces
+
+
+Et moi, j'suis solo, moi j'suis solo
+Il est tard
+Solo, j'broie du noir
+
+
+Ça fait une heure et demie que j'fais défiler mon feed sur Instagram
+J'vois des moments de vos vies bien choisis, que du rêve, que du fun
+Toujours cloué à mon lit, le regard moitié vide, moitié larmes
+
+
+Et moi, j'suis solo, solo, solo, solo
+Solo, solo, solo, solo, solo, solo
+Il est tard (solo, solo, solo, solo)
+Solo, j'broie du noir
+Solo, solo, solo`,
+        duration: '3:15'
+      }
+      
+    ];
+
+    let currentSongIndex = 0;
+
+    function changeSong() {
+      const song = songs[currentSongIndex];
+      songTitleElement.textContent = song.title;
+      artistNameElement.textContent = song.artist;
+      songCoverElement.style.backgroundImage = `linear-gradient(1deg, #942d45, transparent), url(${song.cover})`;
+      lyricsTextElement.textContent = song.lyrics;
+
+      updateProgress(0);
+    }
+
+    document.querySelector('.fa-forward-step').addEventListener('click', () => {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      changeSong();
+    });
+
+    document.querySelector('.fa-backward-step').addEventListener('click', () => {
+      currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+      changeSong();
+    });
+  </script>
+  <script>
+    const playButton = document.getElementById('playButton');
+  
+    playButton.addEventListener('mouseenter', function() {
+      playButton.innerHTML = '<i class="far fa-circle-pause"></i>';
+    });
+  
+    playButton.addEventListener('mouseleave', function() {
+      playButton.innerHTML = '<i class="far fa-circle-play"></i>';
+    });
+</script>
 </body>
 </html>
+</body>
+</html>
+
+

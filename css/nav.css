@@ -216,6 +216,7 @@ body {
     margin-bottom: 0px;
     margin-top: 20px;
     height: 70px;
+    text-decoration: none;
   }
 
   /* Nav Bar Hover Effect */
@@ -303,6 +304,7 @@ body {
     justify-content: center;
     backdrop-filter: blur(5px);
   }
+  
 
   /* Media query so it is responsive */
   @media (max-width: 600px) {

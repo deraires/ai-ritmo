@@ -71,13 +71,13 @@
   <div class="main-container">
   
   
-    <div class="player-container">
+    <div class="player-container" id="imgplayer">
       <img src="https://images.pexels.com/photos/7035238/pexels-photo-7035238.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Song Cover" class="song-cover">
   
       
       <div class="song-info">
-        <h3 class="song-title">Ruthless</h3>
-        <p class="artist">The Marias</p>
+        <h3 class="song-title" id="songplayer">Ruthless</h3>
+        <p class="artist" id="artistplayer">The Marias</p>
       </div>
   
       
@@ -111,37 +111,13 @@
       </div>
   
       <!-- AI -->
-      <div class="nav-item" onclick="selectNav('ai')">
-        <i class="fa-solid fa-message"></i>
+      <a href="conversation.html"><div class="nav-item" onclick="selectNav('ai')">
+      <i class="fa-solid fa-message"></i> 
         AI
-      </div>
+      </div></a>
     </div>
-  
   </div>
   
-<script>
-var Reproductor= {
-  temas: [{
-    canción: "I don't know you", 
-    artista:  "The Marias",
-    duración: "3:28",
-  },{
-    canción: "On Verra", 
-    artista:  "Nekfeu",
-    duración: "3:28",
-  },{
-    canción: "Pamplemosse", 
-    artista:  "Flavien Berger",
-    duración: "3:28",
-  },{
-    canción: "Brutalisme", 
-    artista:  "Flavien Berger",
-    duración: "3:28",
-  },]
-}
-
-</script>
-
   <script>
     const playButton = document.getElementById('playButton');
   
@@ -164,7 +140,59 @@ var Reproductor= {
       selectedNavItem.classList.add('selected');
     }
   </script>
-    <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
+
+<script>
+var reproductorHTML= "";
+
+var  temas= [{
+    song: "I don't know you", 
+    artista:  "The Marias",
+    duración: "3:28",
+    imageSrc: url('https://images.pexels.com/photos/7035238/pexels-photo-7035238.jpeg?auto=compress&cs=tinysrgb&w=600'),
+  },{
+    song: "On Verra", 
+    artista:  "Nekfeu",
+    duración: "3:28",
+    imageSrc: url('https://images.pexels.com/photos/2479321/pexels-photo-2479321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+  
+  },{
+    song: "Pamplemosse", 
+    artista:  "Flavien Berger",
+    duración: "3:28",
+    imageSrc: url('https://images.pexels.com/photos/17099461/pexels-photo-17099461/free-photo-of-a-woman-in-a-black-dress-holding-a-drink.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+  },{
+    song: "Brutalisme", 
+    artista:  "Flavien Berger",
+    duración: "3:28",
+  }];
+
+const imageElement = document.getElementById('imgplayer');
+const songElement = document.getElementById('songplayer');
+const artistElement = document.getElementById('artistplayer');
+
+</script>
+
+
+<!-- 
+  //temas.forEach(tema => {
+//reproductorHTML = reproductorHTML + ` <div class="player-container">
+//      <img src="https://images.pexels.com/photos/7035238/pexels-photo-7035238.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Song Cover" class="song-cover">
+  
+      
+ //     <div class="song-info">
+ //       <h3 class="song-title">${tema.song}</h3>
+ //       <p class="artist">${tema.artista}</p>
+ //     </div>
+  
+      
+ //    <button class="play-button" id="playButton"><i class="far fa-circle-play"></i></button>
+ //   </div>
+// `;
+//});
+//}
+-->
+
 
     
 </body>

@@ -55,7 +55,7 @@
    
     .video-controls-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
@@ -121,6 +121,12 @@
   <div class="video-container">
 
     <iframe class="video-iframe" src="https://player.vimeo.com/video/470603712" title="Vimeo video player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<div class="feed-icons">
+  <i class="far fa-heart video-control-icon"></i>
+    <i class="far fa-comment video-control-icon"></i>
+    <i class="far fa-save video-control-icon"></i>
+    <i class="fas fa-share-alt video-control-icon"></i>
+</div>
   </div>
 
  
@@ -187,6 +193,34 @@
         videos[currentVideoIndex].style.display = 'block';
       }
     });
+  </script>
+
+  <script>
+var shortiesHTML=[
+  {
+    videoinfo: "I don't know you", videoartist: "The Marias", videolink: src="https://player.vimeo.com/video/470603712",
+  },
+  {videoinfo: "Movements", videoartist: "Luca Musto"}, videolink: src="https://player.vimeo.com/video/874432669?title=0&portrait=0&byline=0&autoplay=1&muted=true",
+},
+];
+
+listaShorts.forEach(video => {
+  shortiesHTML = shortiesHTML +  ` <div class="video-container">
+
+<iframe class="video-iframe" ${videolink} title="Vimeo video player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+  
+  <div class="video-info" >
+
+                                <div class="video-title">${videoinfo}</div>
+
+                                <div class="video-artist">${videoartist}</div>
+                                </div>`;
+
+
+});
+
+shortiesHTML.innerHTML=shortiesHTML;
   </script>
 
 </body>
