@@ -1,0 +1,142 @@
+.contenidoHome {
+  width: 100%;
+  height: 70%;
+  margin-top: 18%;
+  background-color: var(--black);
+  overflow-y: scroll;
+  padding-bottom: 150px;
+  display: flex;
+  flex-flow: column;
+}
+
+.titulo {
+  color: white;
+  font-family: karla;
+  margin: 1rem;
+}
+
+.grupo {
+  height: 10%;
+  background-color: rgba(108, 101, 101, 0);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+.imagenGrupo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+.textoArtista {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  font-weight: lighter;
+  font-size: x-small;
+  color: rgba(255, 255, 255, 0.619);
+}
+
+.textoCancion {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.cardArtista {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1rem;
+}
+
+.textoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1rem;
+}
+
+.cardArtista {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1rem;
+}
+
+.cardArtista--activa {
+  background-color: rgb(78, 75, 75);
+}
+
+.listas {
+  clear: both;
+  margin-top: 40%;
+  color: white;
+}
+
+.cajasListas {
+  display: flex;
+  flex-direction: row;
+  height: min-content;
+  background-color: rgba(108, 101, 101, 0);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  color: white;
+}
+
+.cajaindividuallista {
+  width: 45%;
+  height: 10rem;
+  background-color: rgb(255, 162, 0);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: karla;
+  font-size: larger;
+  font-weight: bolder;
+  margin-right: 1rem;
+}
+
+.cajaindividuallista--mix {
+  background-color: rgb(66, 105, 142);
+}
+
+.cajaAlbum {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+  width: 100%;
+  height: 30rem;
+  flex-direction: row;
+  height: min-content;
+  background-color: rgba(187, 29, 29, 0);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  color: white;
+}
+
+.portadaAlbum {
+  border-radius: 50%; /* El valor 50% hace que la imagen sea completamente redonda */
+  width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+  object-fit: cover;
+  margin-top: 2rem;
+  border-color: white;
+  border-style: groove;
+}
+
+.portadas {
+  margin: 1rem;
+  margin-top: 0%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.contenedorPortadas {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+}

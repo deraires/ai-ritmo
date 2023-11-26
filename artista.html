@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiRitme</title>
+    <link rel="stylesheet" href="css/explorador.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/artista.css" />
+  </head>
+  <body>
+    <div class="Contenedor Contenedor--artista">
+        <div class="Atras">
+          <a href="javascript: history.go(-1)">
+            <i class="fa-solid fa-arrow-left icono-atras"></i
+          ></a>
+        </div>
+        <div class="contenidoArtista">
+            <div class="imagenArtista">
+                <img class="imagenPerfil" src="img/macdemarco.jfif" alt="macdemarco">
+                <H1 class="nombreArtista">Mac DeMarco</H1>
+                <button class="botonSeguir">Seguir</button>
+                <button class="oculto botonSeguir botonSeguir--Siguiendo" >Siguiendo</button>
+                <div class="play">
+                    <a><i class="fa-solid fa-play fa-xl"></i></a>
+                     </div>
+                    <div class="cancionesdelArtista"> <div class="cardArtista" id="cardArtista">
+                      <img class="imagenGrupo"
+                             src="img/portada.jpg"
+                             alt="cancionMac"
+                           />
+                           <div class="textoCard" >
+                            <p class="textoCancion">Salad Days</p>
+                            <p class="textoArtista">Mac DeMarco</p>
+                          </div> </div>
+                        </div>
+                        <h2 class="titulo">Álbumes</h2>
+                        <div class="cajaAlbum">
+                            <div class="contenedorPortadas">
+                            <div class="portadas"><img class="portadaAlbum" src="img/saladdays.jpg" alt="saladdays"></div>
+                            <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+                            <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+                            <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+                            <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+                            <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+                        </div>
+                        </div>
+                     </div>
+                     
+            </div>
+           </div>
+          
+        <div class="MenuInferior">
+            <div class="MenuInferior-opcion">
+              <a href="perfil.html"><i class="fa-regular fa-user icono-nav"></i></a>
+            </div>
+            <div class="MenuInferior-opcion">
+              <a href="explorador.html"
+                ><i class="fa-solid fa-magnifying-glass icono-nav"></i
+              ></a>
+            </div>
+            <div class="MenuInferior-opcion">
+              <a href="index.html"><i class="fa-solid fa-home icono-nav"></i></a>
+            </div>
+            <div class="MenuInferior-opcion" onclick="menu()">
+              <img class="Logo-1" src="img/logo-circulo.png" alt="" />
+            </div>
+            <div class="IA" id="Menu">
+              <div class="IA-option">
+                <a href="shorts.html"><i class="fa-solid fa-shuffle icono-IA"></i></a>
+              </div>
+              <div class="IA-option">
+                <i class="fa-solid fa-microphone icono-IA"></i>
+              </div>
+              <div class="IA-option">
+                <i class="fa-solid fa-keyboard icono-IA"></i>
+              </div>
+            </div>
+
+
+            <script>
+             document.addEventListener('DOMContentLoaded', function() {
+    const botonSeguir = document.querySelector('.botonSeguir');
+    const botonSiguiendo = document.querySelector('.botonSeguir--Siguiendo');
+
+    botonSeguir.addEventListener('click', function() {
+      botonSeguir.style.display = 'none';
+      botonSiguiendo.style.display = 'block';
+    });
+  });
+
+  const cancionesdelArtista = document.querySelector(".cancionesdelArtista");
+var cancionesdelArtistaHTML = "";
+
+const cancionArtista = [
+  {
+    cancion: "Salad Days",
+    artista: "Mac DeMarco",
+    imagen: "img/saladdays.jpg",
+  },
+  {
+    cancion: "My Kind of Woman",
+    artista: "Mac DeMarco",
+    imagen: "img/moonlight.jpg",
+  },
+  {
+    cancion: "Moonlight on the River",
+    artista: "Mac DeMarco",
+    imagen: "img/moonlight.jpg",
+  },
+];
+
+cancionArtista.forEach((ca) => {
+  cancionesdelArtistaHTML += `<div class="cardArtista" id="cardArtista">
+    <img class="imagenGrupo" src="${ca.imagen}" alt="${ca.cancion}" />
+    <div class="textoCard">
+      <p class="textoCancion">${ca.cancion}</p>
+      <p class="textoArtista">${ca.artista}</p>
+    </div>
+  </div>`;
+});
+
+cancionesdelArtista.innerHTML = cancionesdelArtistaHTML;
+
+      cardArtista.innerHTML = cancionArtistaHTML;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const imagen2 = document.querySelector(".Logo-1");
+
+        imagen2.classList.add("rotar");
+        });
+            </script>
+  </body>
+</html>

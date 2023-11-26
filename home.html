@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiRitme</title>
+    <link rel="stylesheet" href="css/explorador.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <div class="Contenedor">
+      <div class="Atras">
+        <a href="javascript: history.go(-1)">
+          <i class="fa-solid fa-arrow-left icono-atras"></i
+        ></a>
+      </div>
+      <div class="contenidoHome">
+        <h2 class="titulo">Escuchado recientemente</h2>
+        <div class="grupo" id="grupo"></div>
+        <h2 class="listas titulo">Listas para tí</h2>
+        <div class="cajasListas">
+          <div class="cajaindividuallista"><p>Mis Playlists</p></div>
+          <div class="cajaindividuallista cajaindividuallista--mix">
+            <p>Mix para tí</p>
+          </div>
+        </div>
+        <h2 class="titulo">Artistas escuchados recientemente</h2>
+        <div class="cajaAlbum">
+          <div class="contenedorPortadas">
+          <div class="portadas"><img class="portadaAlbum" src="img/saladdays.jpg" alt="saladdays"></div>
+          <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+          <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+          <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+          <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+          <div class="portadas"><img class="portadaAlbum" src="img/moonlight.jpg" alt="moonlight"></div>
+      </div>
+      </div>
+    </div>
+    <div class="MenuInferior">
+      <div class="MenuInferior-opcion">
+        <a href="perfil.html"><i class="fa-regular fa-user icono-nav"></i></a>
+      </div>
+      <div class="MenuInferior-opcion">
+        <a href="explorador.html"
+          ><i class="fa-solid fa-magnifying-glass icono-nav"></i
+        ></a>
+      </div>
+      <div class="MenuInferior-opcion">
+        <a href="index.html"><i class="fa-solid fa-home icono-nav"></i></a>
+      </div>
+      <div class="MenuInferior-opcion" onclick="menu()">
+        <img class="Logo-1" src="img/logo-circulo.png" alt="" />
+      </div>
+      <div class="IA" id="Menu">
+        <div class="IA-option">
+          <a href="shorts.html"><i class="fa-solid fa-shuffle icono-IA"></i></a>
+        </div>
+        <div class="IA-option">
+          <i class="fa-solid fa-microphone icono-IA"></i>
+        </div>
+        <div class="IA-option">
+          <i class="fa-solid fa-keyboard icono-IA"></i>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Animación rotar logo
+      document.addEventListener("DOMContentLoaded", function () {
+        const imagen2 = document.querySelector(".Logo-1");
+
+        imagen2.classList.add("rotar");
+      });
+
+      const grupo = document.getElementById("grupo");
+      var cancionArtistaHTML = "";
+
+      const cancionArtista = [
+        {
+          cancion: "Lotus Flower",
+          artista: "Radiohead",
+          imagen:
+            "img/10-datos-curiosos-sobre-‘Pablo-Honey-el-album-debut-de-Radiohead (1).jpg",
+        },
+        {
+          cancion: "Foimal",
+          artista: "Boogarins",
+          imagen: "img/boogarinsportada.jpg",
+        },
+        {
+          cancion: "Open Rythms",
+          artista: "Bodies of Water",
+          imagen: "img/bodies.jpg",
+        },
+      ];
+
+      cancionArtista.forEach((ca) => {
+        cancionArtistaHTML += `<div class="cardArtista"><img
+                class="imagenGrupo"
+                src="${ca.imagen}"
+                alt="Grupo"
+              />
+              <div class="textoCard" >
+                <p class="textoCancion">${ca.cancion}</p>
+                <p class="textoArtista">${ca.artista}</p>
+              </div></div>`;
+      });
+
+      grupo.innerHTML = cancionArtistaHTML;
+
+      const cardArtistas = document.getElementsByClassName("cardArtista");
+      for (let i = 0; i < cardArtistas.length; i++) {
+        cardArtistas[i].addEventListener("click", function () {
+          this.classList.toggle("cardArtista--activa");
+        });
+      }
+    </script>
+  </body>
+</html>
