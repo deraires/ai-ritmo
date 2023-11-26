@@ -201,6 +201,13 @@ body {
     box-shadow:  1px 1px 3px #261c39;
 }
 
+.Fieldset-profile{ 
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
 
 
 
