@@ -352,7 +352,8 @@ a{text-decoration: none;}
     align-items: center;
 
 }
-
+.Options-emotion-general:hover{ color: var(--default-box2-color) ;
+    transition: color 0.3s;}
 .Search-text-ai {
     padding: 10px;
     padding-right: 70px;
