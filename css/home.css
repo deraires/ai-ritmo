@@ -103,16 +103,13 @@
 }
 
 .cajaAlbum {
-  overflow-x: scroll;
+  /*overflow-x: scroll;*/
   white-space: nowrap;
-  display: flex;
   width: 100%;
-  height: 30rem;
+  height: 100%;
   flex-direction: row;
-  height: min-content;
   background-color: rgba(187, 29, 29, 0);
-  margin-left: 1rem;
-  margin-right: 1rem;
+  /*margin-left: 1rem;*/
   display: flex;
   color: white;
 }
@@ -130,13 +127,43 @@
 .portadas {
   margin: 1rem;
   margin-top: 0%;
-  overflow-x: scroll;
   white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  /*background-color: blue;*/
 }
 
 .contenedorPortadas {
+  /*background-color: aqua;*/
   display: flex;
+  width: 100%;
   flex-direction: row;
   overflow-x: scroll;
-  white-space: nowrap;
+  margin: 0px;
+}
+
+a{
+  color: inherit;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+  text-decoration: none;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotar {
+  animation: girar 5s infinite linear;
 }

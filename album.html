@@ -122,6 +122,8 @@
                 <i class="fa-solid fa-plus icono-reproductor"></i>
             </div>
             </div>
+        </div>
+        </div>
         <div class="MenuInferior">
           <div class="MenuInferior-opcion">
             <a href="perfil.html"
@@ -135,7 +137,7 @@
             ></a>
           </div>
           <div class="MenuInferior-opcion">
-            <a href="index.html"><i class="fa-solid fa-home icono-nav"></i></a>
+            <a href="home.html"><i class="fa-solid fa-home icono-nav"></i></a>
           </div>
           <div class="MenuInferior-opcion" onclick="menu()">
             <img class="Logo-1" src="img/logo-circulo.png" alt="" />
@@ -157,6 +159,21 @@
       </div>
     </div>
     <script>
+      // Menu de la Ia que aparece
+      function menu() {
+           var element = document.getElementById("Menu");
+           element.classList.toggle("mystyle");
+        }
+
+    </script>
+    <script>
+         // Animación rotar logo
+        document.addEventListener("DOMContentLoaded", function () {
+        const imagen2 = document.querySelector(".Logo-1");
+
+        imagen2.classList.add("rotar");
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
         const imagen2 = document.querySelector(".Logo-1");
 
