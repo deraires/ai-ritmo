@@ -120,23 +120,28 @@
 
     </div>
 
+
+
+
+    
+ 
+    
+
     <!-------------Reproductor-------------------->
 
     <div class="Reproductor">
 
-        <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
+        <div class="Rep-song"> <img id="myImage" src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> 
+         </div>
         <div class="Rep-name-song">
-            <h2 class="Rep-h2">Answer - Ateez</h2>
-            <div class="Line">
-                <div class="Rep-circle"></div>
-                <div class="Rep-icons">
-                    <i class="fa-solid fa-forward fa-rotate-180"></i>
-                    <div class="Play-icons"><i class="fa-solid fa-pause"></i>
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                    <i class="fa-solid fa-forward"></i>
-                </div>
-            </div>
+        <h2 class="Rep-h2">Answer - Ateez</h2>
+        <div class="Line"> <div class="Rep-circle"></div>
+            <div class="Rep-icons">
+                <i class="fa-solid fa-forward fa-rotate-180"></i>
+                <div class="Play-icons"><i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-play"></i></div>
+                <i class="fa-solid fa-forward"  onclick="changeImage()"></i>
+            </div></div>
 
         </div>
     </div>
@@ -243,8 +248,47 @@
 
         ListaPlaylist.innerHTML = PlaylistBox;
 
-    </script>
+   
 
+
+
+
+
+/* Cambiar imagen reproductor*/
+
+ 
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("Song")) {
+        image.src = "/img/playlist/Playlist-Ateez.jpeg";
+    } else {
+        image.src = "/img/portadasCanciones/Portada-Ftisland.jpg";
+    } 
+}
+  
+var cont=0
+function cambia() {
+cont++;
+switch(cont%4+1)
+ {
+ case 1:
+ document.getElementById("myImage").src="/img/portadasCanciones/Portada-Ftisland.jpg";
+ break;
+ case 2:
+ document.getElementById("myImage").src="/img/portadasCanciones/Portada-LuciaGil.jpg";
+ break;
+ case 3:
+ document.getElementById("fotocambia").src="/img/portadasCanciones/Portada-TroySivan.jpg";
+ break;
+ case 4:
+ document.getElementById("fotocambia").src="fotos/cuatro.jpg";
+ break;
+ }
+}
+
+
+
+</script>
 
 
 </body>
