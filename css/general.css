@@ -172,6 +172,7 @@ a{text-decoration: none;}
         top: 0px;
     }
 }
+#myimage1{ overflow: hidden;}
 
 /*---------------------Playlist---------------------*/
 
@@ -643,4 +644,6 @@ legend {
     color: var(--default-text-color);
 }
 
-#myimage1{ overflow: hidden;}
+
+/*------------------Fin POPUP---------------------------------------*/
+
