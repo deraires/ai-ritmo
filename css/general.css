@@ -42,6 +42,7 @@ body {
     border-radius: 10px;
     text-align: center;
 }
+a{text-decoration: none;}
 
 /* -------------Boton modo claro---------------------------*/
 
@@ -286,6 +287,17 @@ body {
     margin-top: -11px;
     font-size: 10px;
 }
+.SearchText-popup-playlist{padding: 10px;
+    padding-right: 70px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 45%;
+    height: 10px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+
+}
 
 
 
@@ -346,6 +358,7 @@ body {
     padding-right: 70px;
     border: none;
     font-size: 18px;
+    border: 2px solid var(--default-menu-color);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 70%;
@@ -389,7 +402,7 @@ body {
     margin-left: 10px;
     background: var(--default-box2-color);
     color: var(--default-text-color);
-    font-size: 14px;
+    font-size: 18px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
