@@ -19,10 +19,3 @@ Pablo| Kike |
 | Perfil Artista |  |
 | Lista de temas |  |
 
-
-
-
-Crear su propio branch con su propio README
-
-![Diagrama](img/excalidraw.png)
-
