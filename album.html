@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Album</title>
+    <link rel="stylesheet" href="css/explorador.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/album.css" />
+  </head>
+  <body>
+    <div class="Contenedor">
+      <div class="Atras Atras--album">
+        <a href="javascript: history.go(-1)"
+          ><i class="fa-solid fa-arrow-left icono-atras"></i
+        ></a>
+      </div>
+      <div class="contenidoAlbum">
+       <div class="portadaAlbum">
+       <img class="imagenPortada" src="img/moonlight.jpg" alt="moonlight">
+       </div class="nombres">
+       <H1 class="nombreArtista">This Old Dog</H1>
+       <p class="nombreArtistaAlbum" >Mac DeMarco</p>
+       <div class="acciones">
+        <a><i class="fa-solid fa-heart fa-xl"></i></a>
+        <a><i class="fa-solid fa-play fa-xl"></i></a>
+         </div>
+
+            <div class="cancionesdelArtista"> <div class="cardArtista" id="cardArtista">
+                      <img class="imagenGrupo"
+                             src="img/moonlight.jpg"
+                             alt="cancionMac"
+                           />
+                           <div class="textoCard" >
+                            <p class="textoCancion">Salad Days</p>
+                            <p class="textoArtista">Mac DeMarco</p>
+                          </div> </div>
+                        </div>
+                        <div class="cancionesdelArtista"> <div class="cardArtista" id="cardArtista">
+                            <img class="imagenGrupo"
+                                   src="img/moonlight.jpg"
+                                   alt="cancionMac"
+                                 />
+                                 <div class="textoCard" >
+                                  <p class="textoCancion">Today was bad</p>
+                                  <p class="textoArtista">Mac DeMarco</p>
+                                </div> </div>
+                              </div>
+                              <div class="cancionesdelArtista"> <div class="cardArtista" id="cardArtista">
+                                <img class="imagenGrupo"
+                                       src="img/moonlight.jpg"
+                                       alt="cancionMac"
+                                     />
+                                     <div class="textoCard" >
+                                      <p class="textoCancion">Men I knew</p>
+                                      <p class="textoArtista">Mac DeMarco</p>
+                                    </div> </div>
+                                  </div>
+                                  <div class="cancionesdelArtista"> <div class="cardArtista" id="cardArtista">
+                                    <img class="imagenGrupo"
+                                           src="img/moonlight.jpg"
+                                           alt="cancionMac"
+                                         />
+                                         <div class="textoCard" >
+                                          <p class="textoCancion">Do it well</p>
+                                          <p class="textoArtista">Mac DeMarco</p>
+                                        </div> </div>
+                                      </div>
+                                      <div class="cancionesdelArtista"> <div class="cardArtista" id="cardArtista">
+                                        <img class="imagenGrupo"
+                                               src="img/moonlight.jpg"
+                                               alt="cancionMac"
+                                             />
+                                             <div class="textoCard" >
+                                              <p class="textoCancion">When you are</p>
+                                              <p class="textoArtista">Mac DeMarco</p>
+                                            </div> </div>
+                                          </div>
+                                          <div class="cancionesdelArtista"> <div class="cardArtista" id="cardArtista">
+                                            <img class="imagenGrupo"
+                                                   src="img/moonlight.jpg"
+                                                   alt="cancionMac"
+                                                 />
+                                                 <div class="textoCard" >
+                                                  <p class="textoCancion">Things I do</p>
+                                                  <p class="textoArtista">Mac DeMarco</p>
+                                                </div> </div>
+                                              </div>
+
+                        
+      </div>
+     
+    </div>
+        </div>
+        <div class="Reproductor">
+            <div class="Foto">
+                <img src="img/portada.jpg" alt="">
+            </div>
+            <div class="Info">
+                <h4>Título canción</h4>
+                <div class="Reproducir">
+                <i class="fa-solid fa-backward icono-reproductor"></i>
+                <i class="fa-solid fa-play icono-reproductor"></i>
+                <i class="fa-solid fa-forward icono-reproductor"></i>
+                <i class="fa-solid fa-repeat icono-reproductor"></i>
+                <i class="fa-solid fa-plus icono-reproductor"></i>
+            </div>
+            </div>
+        <div class="MenuInferior">
+          <div class="MenuInferior-opcion">
+            <a href="perfil.html"
+              ><i class="fa-regular fa-user icono-nav"></i
+            ></a>
+          </div>
+          
+          <div class="MenuInferior-opcion">
+            <a href="explorador.html"
+              ><i class="fa-solid fa-magnifying-glass icono-nav"></i
+            ></a>
+          </div>
+          <div class="MenuInferior-opcion">
+            <a href="index.html"><i class="fa-solid fa-home icono-nav"></i></a>
+          </div>
+          <div class="MenuInferior-opcion" onclick="menu()">
+            <img class="Logo-1" src="img/logo-circulo.png" alt="" />
+          </div>
+          <div class="IA" id="Menu">
+            <div class="IA-option">
+              <a href="shorts.html"
+                ><i class="fa-solid fa-shuffle icono-IA"></i
+              ></a>
+            </div>
+            <div class="IA-option">
+              <i class="fa-solid fa-microphone icono-IA"></i>
+            </div>
+            <div class="IA-option">
+              <i class="fa-solid fa-keyboard icono-IA"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const imagen2 = document.querySelector(".Logo-1");
+
+        imagen2.classList.add("rotar");
+        });
+    </script>
+  </body>
+</html>

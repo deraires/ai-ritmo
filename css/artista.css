@@ -1,0 +1,166 @@
+.contenidoArtista {
+  width: 100%;
+  min-height: 70%;
+  margin-top: 18%;
+  background-color: var(--black);
+  overflow-y: auto;
+  padding-bottom: 150px;
+  display: flex;
+  flex-flow: column;
+  color: black;
+}
+
+.Contenedor--artista {
+  min-height: 100%;
+}
+
+.imagenArtista {
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.imagenPerfil {
+  border-radius: 50%; /* El valor 50% hace que la imagen sea completamente redonda */
+  width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+  object-fit: cover;
+  margin-top: 2rem;
+  border-color: white;
+  border-style: groove;
+}
+
+.nombreArtista {
+  color: white;
+  font-family: karla;
+  margin-top: 1rem;
+}
+
+.botonSeguir {
+  color: white;
+  font-family: karla;
+  border-color: blueviolet;
+  border-radius: 5px;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 3px;
+  padding: 5px;
+  font-weight: lighter;
+  font-size: small;
+}
+
+.botonSeguir--Siguiendo {
+  background-color: blueviolet;
+}
+
+.oculto {
+  display: none;
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+.play {
+  margin-top: 1rem;
+}
+.cardArtista {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1rem;
+}
+
+.cardArtista {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1rem;
+}
+
+.textoArtista {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  font-weight: lighter;
+  font-size: x-small;
+  color: rgba(255, 255, 255, 0.619);
+}
+
+.textoCancion {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.cardArtista {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1rem;
+  width: 100%;
+  margin-left: 1rem;
+}
+.imagenGrupo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+.textoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1rem;
+}
+.cancionesdelArtista {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70%;
+}
+
+.titulo {
+  color: white;
+  font-family: karla;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cajaAlbum {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  height: min-content;
+  background-color: rgba(187, 29, 29, 0);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  color: white;
+}
+
+.portadaAlbum {
+  border-radius: 50%; /* El valor 50% hace que la imagen sea completamente redonda */
+  width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+  object-fit: cover;
+  margin-top: 2rem;
+  border-color: white;
+  border-style: groove;
+}
+
+.portadas {
+  margin: 1rem;
+  margin-top: 0%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.contenedorPortadas {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
