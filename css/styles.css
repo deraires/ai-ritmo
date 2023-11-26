@@ -1,0 +1,318 @@
+:root {
+    --color-primary: black;
+    --color-secondary: white;
+    --color-terciary: #FCA311;
+    --color-quart: #CCCCCC;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0 10% 0;
+
+
+}
+
+.BoxPlays {
+    display: flex;
+    flex-direction: column;
+    height: 500% * 5;
+    width: 400vh;
+    /* Ancho total de las páginas (100% * número de páginas) */
+    transition: transform 1.5s ease;
+}
+
+.BoxPlay {
+
+    background-image: url("https://images.pexels.com/photos/730256/pexels-photo-730256.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay1 {
+
+    background-image: url("https://images.pexels.com/photos/67566/palm-tree-palm-ocean-summer-67566.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay2 {
+
+    background-image: url("https://images.pexels.com/photos/2242170/pexels-photo-2242170.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay3 {
+
+    background-image: url("https://oliveriotours.com/wp-content/uploads/2023/02/Oliverio-Tours-Entradas-Posts-Banner-Vertical-Cali-Salsa-y-cultura-3.png");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.BoxPlay4 {
+
+    background-image: url("https://images.pexels.com/photos/2422253/pexels-photo-2422253.jpeg?auto=compress&cs=tinysrgb&w=1460&h=1450&dpr=1");
+
+    max-width: -13PX;
+    height: 89vh;
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.headphones {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #FCA311;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.headphones img {
+
+    display: flex;
+    align-content: center;
+    top: 0;
+    left: 0;
+    animation: zoomAndPan 780ms linear infinite;
+    color: #FCA311;
+}
+
+@keyframes zoomAndPan {
+
+    0%,
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.4) translate(10%, 10%);
+    }
+}
+
+
+.RightIcons {
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.0rem;
+    justify-content: space-between;
+    color: #FCA311;
+    position: fixed;
+    right: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.606);
+    padding: 1.5rem;
+    border-radius: 15%;
+    top: 14rem;
+    padding: 1rem;
+}
+
+.movesong {
+    height: 10rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.0rem;
+    justify-content: space-between;
+    color: #FCA311;
+    position: fixed;
+    right: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.606);
+    padding: 1.5rem;
+    border-radius: 15%;
+    bottom: 10rem;
+
+}
+
+/* .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+
+.BoxProfile {
+    display: flex;
+    height: 150px;
+    max-width: auto;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .09);
+    /* padding: 1.5rem; */
+
+    font-weight: lighter;
+    justify-content: space-around;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-quart);
+    position: fixed;
+
+}
+
+.BoxProfile img {
+    border-radius: 100px;
+}
+
+.TextProfile {
+    margin: 1rem;
+}
+
+.PersonalInfo {
+
+    display: flex;
+
+    align-items: center;
+    max-width: auto;
+    color: var(--color-secondary);
+    margin-top: 40%;
+    height: 100%;
+    gap: 5rem;
+    
+
+}
+
+.twocolumns{
+    display: flex;
+    flex-direction: row;
+}
+
+.song {
+    width: 150px;
+    margin: 2rem 0 2rem 0;
+    border-radius: 10%;
+    color: var(--color-terciary);
+}
+
+
+
+
+
+.gener {
+    width: 150px;
+    height: 150px;
+    gap: 1rem;
+    margin: 2rem 0 2rem 0;
+    border-radius: 10%;
+    color: var(--color-terciary);
+
+}
+
+.Nav {
+    background-color: black;
+}
+
+
+.BoxPlayList {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 325px;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    /* Ancho de 150 píxeles */
+    height: 120px;
+    /* Alto de 150 píxeles */
+    background: rgb(228, 39, 39);
+    /* Fondo de color rojo */
+
+    /* Borde color negro y de 1 píxel de grosor */
+    align-items: center;
+
+
+
+}
+
+
+.BoxPlayList img {
+    border-radius: 10%;
+
+
+
+    width: 100px;
+    /* Ancho de 150 píxeles */
+    height: 100px;
+    /* Alto de 150 píxeles */
+}
+
+.BoxPlayList h3 {
+    font-size: auto;
+    margin: 0.5rem 2rem 0 1.5rem;
+
+
+}
+
+/* .BoxPlayList p {
+    color: #FCA311;
+    font-size: 12px;
+    margin: 1rem 0 1rem 2rem;
+
+} */
+
+.PlaySing {
+    display: flex;
+    align-items: center;
+    color: #FCA311;
+    font-size: 16px;
+    justify-content: space-between;
+    margin-left: 1.5rem;
+}
+
+.PlaySing p {
+    color: #CCCCCC;
+    font-size: larger;
+}
