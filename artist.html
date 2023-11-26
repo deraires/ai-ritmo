@@ -11,147 +11,72 @@
 </head>
 
 <body>
-    <div class="artist-container">
+    <div id="artist_container">
+        <h2 style="background-color: black;">Artist</h2>
         <div class="artist-main-content">
-            <img src="img/playlist-05.jpg" alt="">
+            <img src="img/playlist-05.jpg" alt="" id="artistTitle">
+         
             <div class="search-container-dera">
                 <div class="search-icon">
                     <i class="fas fa-search"></i>
                 </div>
                 <input type="text" class="search-input" placeholder="Search">
             </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
+            <div id="artist_cards_container">
+                
             </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
-            <div class="playlist-card">
-                <img src="/img/playlist-14.jpg" alt="">
-                <div class="playlist-card-body">
-                    <h2>Levitating</h2>
-                    <h3>Anthony Taylor</h3>
-                </div>
-                <i class="fa fa-ellipsis-v fa-xs" aria-hidden="true"></i>
-            </div>
+
         </div>
 
         <h3>You might also like</h3>
-        <div class="artist-carousel">
-            <div class="artist-carousel-card">
-                <img src="img/playlist-01.jpg" alt="">
-                <h2>Midnight 1 </h2>
-                <h3>Luna Rivers</h3>
-            </div>
-            <div class="artist-carousel-card">
-                <img src="img/playlist-01.jpg" alt="">
-                <h2>Midnight 2</h2>
-                <h3>Luna Rivers</h3>
-            </div>
-            <div class="artist-carousel-card">
-                <img src="img/playlist-01.jpg" alt="">
-                <h2>Midnight 3</h2>
-                <h3>Luna Rivers</h3>
-            </div>
-            <div class="artist-carousel-card">
-                <img src="img/playlist-01.jpg" alt="">
-                <h2>Midnight 4</h2>
-                <h3>Luna Rivers</h3>
-            </div>
-            <div class="artist-carousel-card">
-                <img src="img/playlist-01.jpg" alt="">
-                <h2>Midnight 5</h2>
-                <h3>Luna Rivers</h3>
+        <div id="artist-carousel-container"> 
+        </div>
+   
+   </div>
+    <!--Navigation bar in footer-->
+    <footer>
+        <!-- Main Container (The Player and Nav Bar) -->
+        <div class="main-container-footer">
+            <div class="nav-container-footer">
+
+                <a href="home.html"><div class="nav-item selected" onclick="selectNav('home')">
+                    <i class="fa fa-house"></i>
+                    Home
+                </div></a>
+
+                <!-- Playlists -->
+                <a href="playlists.html"><div class="nav-item" onclick="selectNav('playlists')">
+                    <i class="fa fa-music"></i>
+                    Playlists
+                </div></a>
+
+                <!-- Profile -->
+                <a href="artist.html"><div class="nav-item" onclick="selectNav('artist')">
+                    <i class="fa-solid fa-user"></i>
+                    Artist
+                </div></a>
+
+                <!-- Shorts -->
+                <a href="shorts.html"><div class="nav-item" onclick="selectNav('shorts')">
+                    <i class="fa fa-video"></i>
+                    Shorts
+                </div></a>
+
+                <!-- AI -->
+                <div class="nav-item" onclick="selectNav('ai')">
+                    <i class="fa-solid fa-message"></i>
+                    AI
+                </div>
             </div>
         </div>
+    </footer>
 
     </div>
 
 
     <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
-
+    <script src="homescript.js"></script>
+    <script src="/artistscript.js"></script>
 
 </body>
 
