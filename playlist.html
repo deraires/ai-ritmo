@@ -110,11 +110,19 @@
     
     </div>
 
+
+
+
+    
+ 
+    
+
     <!-------------Reproductor-------------------->
 
     <div class="Reproductor">
 
-        <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
+        <div class="Rep-song"> <img id="myImage" src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> 
+         </div>
         <div class="Rep-name-song">
         <h2 class="Rep-h2">Answer - Ateez</h2>
         <div class="Line"> <div class="Rep-circle"></div>
@@ -122,7 +130,7 @@
                 <i class="fa-solid fa-forward fa-rotate-180"></i>
                 <div class="Play-icons"><i class="fa-solid fa-pause"></i>
                 <i class="fa-solid fa-play"></i></div>
-                <i class="fa-solid fa-forward"></i>
+                <i class="fa-solid fa-forward"  onclick="changeImage()"></i>
             </div></div>
 
         </div>
@@ -147,69 +155,69 @@ var lista= [{
      
       }, {
 
-      imagen_portada: "/img/playlist/Playlist-Ducha.jpg" ,
+      imagen_portada: "/img/portadasCanciones/Portada-TroySivan.jpg" ,
       nombre: "One of your girls",
       artista: "Troye Sivan",
      
       },{
 
-      imagen_portada: "/img/playlist/Playlist-Navidad.jpg" ,
+      imagen_portada: "/img/portadasCanciones/Portada-TaylorMaroon.webp" ,
       nombre: "Maroon",
       artista:"Taylor Swift",
      
       },{
 
-      imagen_portada: "/img/playlist/Playlist-Workout.jpg" ,
+      imagen_portada: "/img/portadasCanciones/Portada-Amaranthe.jpg" ,
       nombre: "Hunger",
       artista: "Amaranthe",
   
       },{
 
-      imagen_portada: "/img/playlist/Playlist-Concierto.jpg" ,
+      imagen_portada: "/img/portadasCanciones/Portada-TaylorFalseGod.jpg" ,
       nombre: "False God",
       artista:"Taylor Swift" ,
     
       },{
 
-      imagen_portada: "/img/playlist/Playlist-Dormir.jpg" ,
+      imagen_portada: "/img/portadasCanciones/Portada-Ftisland.jpg" ,
       nombre: "Paradise",
       artista: "Ftisland" ,
      
       },{
 
-    imagen_portada: "/img/playlist/Playlist-Cofeetime.jpeg" ,
+    imagen_portada: "/img/portadasCanciones/Portada-LuciaGil.jpg" ,
       nombre: "Tú eres mi canción",
       artista: "Lucía Gil",
     
     },{
 
-      imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
+      imagen_portada: "/img/portadasCanciones/Portada-Fletcher.webp",
       nombre: "Sting",
       artista:"Fletcher" ,
      
    },{
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
+        imagen_portada:"/img/portadasCanciones/Portada-Ohmygirl.jpg" ,
         nombre: "Secret Garden",
         artista:"Oh my girl" ,
        
         },{
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-        nombre: "Sting",
-        artista:"Fletcher" ,
+        imagen_portada: "/img/portadasCanciones/Portada-AteezSay.webp" ,
+        nombre: "Say My Name",
+        artista:"Ateez" ,
        
         },{
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-        nombre: "Sting",
-        artista:"Fletcher" ,
+        imagen_portada: "/img/portadasCanciones/Portada-Wave.jpg" ,
+        nombre: "Wave",
+        artista:"Ateez" ,
         
         },{
 
-        imagen_portada: "/img/playlist/Playlist-Domingo.jpeg" ,
-        nombre: "Sting",
-        artista:"Fletcher" ,
+        imagen_portada: "/img/portadasCanciones/Portada-Infinite.webp" ,
+        nombre: "Bad",
+        artista:"Infinite" ,
        
         }];
 
@@ -227,6 +235,44 @@ var PlaylistBox="";
 
 
 ListaPlaylist.innerHTML=PlaylistBox;
+
+
+
+
+
+/* Cambiar imagen reproductor*/
+
+ 
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("Song")) {
+        image.src = "/img/playlist/Playlist-Ateez.jpeg";
+    } else {
+        image.src = "/img/portadasCanciones/Portada-Ftisland.jpg";
+    } 
+}
+  
+var cont=0
+function cambia() {
+cont++;
+switch(cont%4+1)
+ {
+ case 1:
+ document.getElementById("myImage").src="/img/portadasCanciones/Portada-Ftisland.jpg";
+ break;
+ case 2:
+ document.getElementById("myImage").src="/img/portadasCanciones/Portada-LuciaGil.jpg";
+ break;
+ case 3:
+ document.getElementById("fotocambia").src="/img/portadasCanciones/Portada-TroySivan.jpg";
+ break;
+ case 4:
+ document.getElementById("fotocambia").src="fotos/cuatro.jpg";
+ break;
+ }
+}
+
+
 
 </script>
 

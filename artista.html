@@ -30,7 +30,7 @@
                 <i class=" Artista-like fa-solid fa-heart"></i></button>
             </div>
             <!--Lody-->
-            <div>
+            <div><a href="#Popup1">
                 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
                     type="module"></script>
                 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
@@ -39,8 +39,46 @@
                     background="transparent" speed="1"
                     style="width: 160px; height: 186px; float: right; margin-top: -55px;margin-left: -95px; position: fixed; "
                     loop autoplay></dotlottie-player>
-            </div>
+                </a> </div>
         </section>
+<!--POPUP------------------------------------------------->
+        <div id="Popup1" class="Overlay">
+            <div class="Popup">
+                <form id="Popup-form">
+                    <h2>¿En que puedo ayudarte?</h2>
+                    <input class="Search-text-popup" type="text" placeholder="Texto">
+                        <fieldset>
+                            <legend>Artistas parecidos</legend>
+
+                        <div class="Recommended-artist-list">
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-Ftisland.jpg" alt="Artista Ftisland">
+                             <h4 class="Recommended-artist--name">Ftisland</h4>
+                        </div>
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-BTS.png" alt="Artista BTS">
+                            <h4 class="Recommended-artist--name">BTS</h4>
+                        </div>
+                         <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-twice.jpg" alt="Artista Twice">
+                            <h4 class="Recommended-artist--name">Twice</h4>
+                        </div>
+                        <div class="Recommended-artist">
+                            <img src="/img/artistas/Artista-TheRose.jpeg" alt="Artista The Rose">
+                             <h4 class="Recommended-artist--name">The Rose</h4>
+                            </div>
+
+                    </div>
+                        </fieldset>
+    
+                    <a class="close" href="#">&times;</a>
+                    <div class="Content">
+                    <button id="check_button"> <a href="/artista.html">Buscar</a></button>
+                </form>
+                </div>
+            </div> </div>
+<!--POPUP------------------------------------------------->
+
 
         <h1 class="Profile-title">Populares</h1>
         <section class="Artista-Top5">
@@ -123,22 +161,24 @@
 
 
 
-        <!-------------Reproductor-------------------->
-        <div class="Reproductor">
+    <!-------------Reproductor-------------------->
 
-            <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
-            <div class="Line">
-                <div class="Rep-circle"></div>
-                <div class="Rep-icons">
-                    <i class="fa-solid fa-forward fa-rotate-180"></i>
-                    <div class="Play-icons"><i class="fa-solid fa-pause"></i>
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                    <i class="fa-solid fa-forward"></i>
-                </div>
+    <div class="Reproductor">
 
-            </div>
+        <div class="Rep-song"> <img id="myImage" src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> 
+         </div>
+        <div class="Rep-name-song">
+        <h2 class="Rep-h2">Answer - Ateez</h2>
+        <div class="Line"> <div class="Rep-circle"></div>
+            <div class="Rep-icons">
+                <i class="fa-solid fa-forward fa-rotate-180"></i>
+                <div class="Play-icons"><i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-play"></i></div>
+                <i class="fa-solid fa-forward"  onclick="changeImage()"></i>
+            </div></div>
+
         </div>
+    </div>
 
         <!-------------Menú Bottom Bar-------------------->
         <footer class="MenuBottom">
@@ -223,6 +263,17 @@
 
             const userCard = document.getElementById("datosArtista");
 
+
+
+
+            function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("Song")) {
+        image.src = "/img/playlist/Playlist-Ateez.jpeg";
+    } else {
+        image.src = "/img/portadasCanciones/Portada-Ftisland.jpg";
+    } 
+}
         </script>
 </body>
 

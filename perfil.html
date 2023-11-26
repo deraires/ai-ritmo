@@ -151,7 +151,8 @@
 
     <div class="Reproductor">
 
-        <div class="Rep-song"> <img src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> </div>
+        <div class="Rep-song"> <img id="myImage" src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> 
+         </div>
         <div class="Rep-name-song">
         <h2 class="Rep-h2">Answer - Ateez</h2>
         <div class="Line"> <div class="Rep-circle"></div>
@@ -159,7 +160,7 @@
                 <i class="fa-solid fa-forward fa-rotate-180"></i>
                 <div class="Play-icons"><i class="fa-solid fa-pause"></i>
                 <i class="fa-solid fa-play"></i></div>
-                <i class="fa-solid fa-forward"></i>
+                <i class="fa-solid fa-forward"  onclick="changeImage()"></i>
             </div></div>
 
         </div>
@@ -229,6 +230,14 @@
                 }]}
 
 
+                function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("Song")) {
+        image.src = "/img/playlist/Playlist-Ateez.jpeg";
+    } else {
+        image.src = "/img/portadasCanciones/Portada-Ftisland.jpg";
+    } 
+}
         </script>
 </body>
 
